@@ -1,0 +1,115 @@
+:root {
+   /* Color palette */
+   --primary: #FF4500;
+   --secondary: #FF6347;
+   --background: #1A1A1A;
+   --surface: #2D2D2D;
+   --text: #FFFFFF;
+   --accent: #FFD700;
+   
+   /* Other utils */
+   --border-radius: 8px;
+   --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   --transition: all 0.3s ease;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Arial', sans-serif;
+   background-color: var(--background);
+   color: var(--text);
+   line-height: 1.6;
+}
+
+.header {
+   background-color: var(--surface);
+   padding: 1rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: var(--shadow);
+}
+
+.logo {
+   color: var(--accent);
+   font-size: 1.5rem;
+}
+
+.nav-link {
+   color: var(--text);
+   text-decoration: none;
+   margin-left: 1rem;
+   padding: 0.5rem 1rem;
+   border-radius: var(--border-radius);
+   transition: var(--transition);
+}
+
+.nav-link:hover {
+   background-color: var(--secondary);
+   color: var(--background);
+}
+
+.main {
+   padding: 2rem;
+   min-height: 80vh;
+}
+
+.section h2 {
+   text-align: center;
+   margin-bottom: 2rem;
+   color: var(--accent);
+}
+
+.grid-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 1rem;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.card-placeholder {
+   background-color: var(--surface);
+   padding: 1rem;
+   border-radius: var(--border-radius);
+   text-align: center;
+   box-shadow: var(--shadow);
+   transition: var(--transition);
+}
+
+.card-placeholder:hover {
+   transform: scale(1.05);
+   background-color: var(--secondary);
+}
+
+.footer {
+   background-color: var(--surface);
+   text-align: center;
+   padding: 1rem;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+}
+
+/* Ejemplo de botón principal usando variables (cópialo y úsalo en cards) */
+.btn-primary {
+   background-color: var(--primary);
+   color: var(--text);
+   border: none;
+   padding: 0.75rem 1.5rem;
+   border-radius: var(--border-radius);
+   cursor: pointer;
+   font-size: 1rem;
+   transition: var(--transition);
+   box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+   background-color: var(--secondary);
+   transform: translateY(-2px);
+}
