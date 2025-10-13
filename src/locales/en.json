@@ -1,0 +1,11 @@
+{
+   "title": "Welcome to DrinkWise Menu",
+   "button": {
+      "filter": "Filter"
+   },
+   "tags": {
+      "refreshing": "Light & Refreshing",
+      "sweet": "Sweet and fruity",
+      "strong": "Strong & Classic"
+   }
+}
