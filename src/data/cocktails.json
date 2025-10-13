@@ -198,5 +198,45 @@
     "ingredients": ["Lemon Juice", "Basil", "Soda Water", "Simple Syrup"],
     "tags": ["refreshing", "sweet"],
     "hasAlcohol": false
+  },
+  {
+    "id": 26,
+    "name": "Virgin Mary",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Tomato Juice", "Lemon Juice", "Worcestershire Sauce", "Tabasco"],
+    "tags": ["savory", "refreshing"],
+    "hasAlcohol": false
+  },
+  {
+    "id": 27,
+    "name": "Cucumber Cooler",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Cucumber Juice", "Lime Juice", "Soda Water", "Simple Syrup"],
+    "tags": ["refreshing", "sweet"],
+    "hasAlcohol": false
+  },
+  {
+    "id": 28,
+    "name": "Virgin Daiquiri",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Lime Juice", "Simple Syrup", "Ice"],
+    "tags": ["refreshing", "sweet"],
+    "hasAlcohol": false
+  },
+  {
+    "id": 29,
+    "name": "Arnold Palmer",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Iced Tea", "Lemonade"],
+    "tags": ["refreshing", "sweet"],
+    "hasAlcohol": false
+  },
+  {
+    "id": 30,
+    "name": "Pineapple Ginger Sparkler",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Pineapple Juice", "Ginger Ale", "Lime Juice"],
+    "tags": ["refreshing", "sweet"],
+    "hasAlcohol": false
   }
 ]
