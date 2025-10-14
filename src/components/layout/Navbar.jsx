@@ -3,25 +3,24 @@ import { Link, NavLink } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 
 export default function Navbar({ changeLanguage }) {
-   const { t } = useTranslation()
+   const { t, i18n } = useTranslation()
+
+   const currentLanguage = i18n.language.split("-")[0]
+   console.log(currentLanguage)
+   const nextLanguage = currentLanguage === "es" ? "en" : "es"
+   const flagIcon = nextLanguage === "es" ? "🇪🇸" : "🇬🇧"
 
    return (
       <header className="header">
-         <Link className="logo" to="/">DrinkWise</Link>
          <div className="nav-language">
             <button 
                className="btn-language"
-               onClick={() => changeLanguage("es")}
+               onClick={() => changeLanguage(nextLanguage)}
             >
-               {t("nav.language.es")}
-            </button>
-            <button 
-               className="btn-language"
-               onClick={() => changeLanguage("en")}
-            >
-               {t("nav.language.en")}
+               {flagIcon}
             </button>
          </div>
+         <Link className="logo" to="/">DrinkWise</Link>
          <nav>
             <NavLink 
                className={({ isActive }) => `nav-link ${isActive ? "active" : null}`}
