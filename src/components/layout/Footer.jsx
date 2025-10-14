@@ -1,7 +1,12 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
 
 export default function Footer() {
+   const { t } = useTranslation()
+
    return (
-      <h1>I'm the Footer</h1>
+      <footer className="footer">
+         <p>{t("footer.text")}</p>
+      </footer>
    )
 }

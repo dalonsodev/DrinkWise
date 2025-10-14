@@ -1,7 +1,34 @@
 {
    "title": "Bienvenidos a DrinkWise Menu",
+   "welcome": "Encuentra tu cóctel perfecto",
+   "welcome.description": "Explora nuestro menú de cócteles y mocktails o haz nuestro quiz para encontrar la bebida ideal para ti.",
    "button": {
-      "filter": "Filtrar"
+      "filter": "Filtrar",
+      "startQuiz": "Iniciar Quiz"
+   },
+   "nav": {
+      "home": "Inicio",
+      "quiz": "Quiz",
+      "menu": "Menú",
+      "language": {
+         "es": "Español",
+         "en": "Inglés"
+      }
+   },
+   "quiz": {
+      "title": "Encuentra Tu Bebida Ideal",
+      "description": "Te ayudamos a descubrir tu bebida perfecta."
+   },
+   "menu": {
+      "title": "Nuestro Menú de Bebidas",
+      "description": "Explora nuestra selección de cócteles con y sin alcohol."
+   },
+   "drinkDetails": {
+      "title": "Detalles de la Bebida",
+      "description": "Detalles de la bebida"
+   },
+   "footer": {
+      "text": "© 2025 DrinkWise Menu. Proyecto de Portafolio."
    },
    "category": {
       "Refreshing and light": "Refrescante y ligero",

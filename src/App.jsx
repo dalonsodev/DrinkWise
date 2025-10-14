@@ -1,22 +1,22 @@
 import React from "react"
-import { useTranslation } from "react-i18next"
-import Navbar from "./components/layout/Navbar"
-import Footer from "./components/layout/Footer"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Layout from "./components/layout/Layout"
+import Quiz from "./components/features/Quiz"
+import DrinkCard from "./components/features/DrinkCard"
+import HomePage from "./pages/HomePage"
+import MenuPage from "./pages/MenuPage"
 
 export default function App() {
-   const { t, i18n } = useTranslation()
-   
-   const changeLanguage = (lng) => {
-      i18n.changeLanguage(lng)
-   }
-
    return (
-      <div>
-         <Navbar />
-         <h1>{t("title")}</h1>
-         <button onClick={() => changeLanguage("es")}>Español</button>
-         <button onClick={() => changeLanguage("en")}>English</button>
-         <Footer />
-      </div>
+      <BrowserRouter>
+         <Routes>
+            <Route path="/" element={<Layout />} >
+               <Route index element={<HomePage />} />
+               <Route path="quiz" element={<Quiz />} />
+               <Route path="menu" element={<MenuPage />} />
+               <Route path="menu/:id" element={<DrinkCard />} />
+            </Route>
+         </Routes>
+      </BrowserRouter>
    )
 }
