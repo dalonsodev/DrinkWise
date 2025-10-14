@@ -1,242 +1,278 @@
 [
-  {
-    "id": 1,
-    "name": "Old Fashioned",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Whiskey", "Angostura Bitters", "Sugar", "Orange Peel"],
-    "tags": ["strong", "classic"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 2,
-    "name": "Negroni",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Gin", "Campari", "Sweet Vermouth"],
-    "tags": ["strong", "classic"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 3,
-    "name": "Margarita",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Tequila", "Triple Sec", "Lime Juice", "Salt"],
-    "tags": ["refreshing", "strong"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 4,
-    "name": "Daiquiri",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Rum", "Lime Juice", "Simple Syrup"],
-    "tags": ["refreshing", "sweet"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 5,
-    "name": "Dry Martini",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Gin", "Dry Vermouth", "Olive"],
-    "tags": ["strong", "classic"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 6,
-    "name": "Espresso Martini",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Vodka", "Coffee Liqueur", "Espresso", "Simple Syrup"],
-    "tags": ["strong", "sweet"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 7,
-    "name": "Whiskey Sour",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Whiskey", "Lemon Juice", "Simple Syrup", "Egg White"],
-    "tags": ["sweet", "strong"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 8,
-    "name": "Manhattan",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Whiskey", "Sweet Vermouth", "Angostura Bitters"],
-    "tags": ["strong", "classic"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 9,
-    "name": "Aperol Spritz",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Aperol", "Prosecco", "Soda Water", "Orange Slice"],
-    "tags": ["refreshing", "sweet"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 10,
-    "name": "Mojito",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Rum", "Mint", "Lime Juice", "Soda Water", "Sugar"],
-    "tags": ["refreshing", "sweet"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 11,
-    "name": "Moscow Mule",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Vodka", "Ginger Beer", "Lime Juice"],
-    "tags": ["refreshing", "strong"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 12,
-    "name": "Paloma",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Tequila", "Grapefruit Soda", "Lime Juice"],
-    "tags": ["refreshing", "strong"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 13,
-    "name": "Gin Tonic",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Gin", "Tonic Water", "Lime"],
-    "tags": ["refreshing", "classic"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 14,
-    "name": "Mai Tai",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Rum", "Orange Curaçao", "Lime Juice", "Orgeat Syrup"],
-    "tags": ["sweet", "refreshing"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 15,
-    "name": "Bloody Mary",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Vodka", "Tomato Juice", "Lemon Juice", "Worcestershire Sauce", "Tabasco"],
-    "tags": ["savory", "strong"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 16,
-    "name": "Cosmopolitan",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Vodka", "Cranberry Juice", "Triple Sec", "Lime Juice"],
-    "tags": ["sweet", "refreshing"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 17,
-    "name": "Tom Collins",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Gin", "Lemon Juice", "Simple Syrup", "Soda Water"],
-    "tags": ["refreshing", "classic"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 18,
-    "name": "Caipirinha",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Cachaça", "Lime", "Sugar"],
-    "tags": ["refreshing", "strong"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 19,
-    "name": "Piña Colada",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Rum", "Pineapple Juice", "Coconut Cream"],
-    "tags": ["sweet", "refreshing"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 20,
-    "name": "Sazerac",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Rye Whiskey", "Absinthe", "Peychaud's Bitters", "Sugar"],
-    "tags": ["strong", "classic"],
-    "hasAlcohol": true
-  },
-  {
-    "id": 21,
-    "name": "Virgin Mojito",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Mint", "Lime Juice", "Soda Water", "Sugar"],
-    "tags": ["refreshing", "sweet"],
-    "hasAlcohol": false
-  },
-  {
-    "id": 22,
-    "name": "Shirley Temple",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Ginger Ale", "Grenadine", "Maraschino Cherry"],
-    "tags": ["sweet", "refreshing"],
-    "hasAlcohol": false
-  },
-  {
-    "id": 23,
-    "name": "Virgin Piña Colada",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Pineapple Juice", "Coconut Cream", "Ice"],
-    "tags": ["sweet", "refreshing"],
-    "hasAlcohol": false
-  },
-  {
-    "id": 24,
-    "name": "Nojito",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Mint", "Lime Juice", "Soda Water", "Sugar"],
-    "tags": ["refreshing", "sweet"],
-    "hasAlcohol": false
-  },
-  {
-    "id": 25,
-    "name": "Lemon Basil Cooler",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Lemon Juice", "Basil", "Soda Water", "Simple Syrup"],
-    "tags": ["refreshing", "sweet"],
-    "hasAlcohol": false
-  },
-  {
-    "id": 26,
-    "name": "Virgin Mary",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Tomato Juice", "Lemon Juice", "Worcestershire Sauce", "Tabasco"],
-    "tags": ["savory", "refreshing"],
-    "hasAlcohol": false
-  },
-  {
-    "id": 27,
-    "name": "Cucumber Cooler",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Cucumber Juice", "Lime Juice", "Soda Water", "Simple Syrup"],
-    "tags": ["refreshing", "sweet"],
-    "hasAlcohol": false
-  },
-  {
-    "id": 28,
-    "name": "Virgin Daiquiri",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Lime Juice", "Simple Syrup", "Ice"],
-    "tags": ["refreshing", "sweet"],
-    "hasAlcohol": false
-  },
-  {
-    "id": 29,
-    "name": "Arnold Palmer",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Iced Tea", "Lemonade"],
-    "tags": ["refreshing", "sweet"],
-    "hasAlcohol": false
-  },
-  {
-    "id": 30,
-    "name": "Pineapple Ginger Sparkler",
-    "image": "https://via.placeholder.com/150",
-    "ingredients": ["Pineapple Juice", "Ginger Ale", "Lime Juice"],
-    "tags": ["refreshing", "sweet"],
-    "hasAlcohol": false
-  }
+   {
+      "id": 1,
+      "name": "Old Fashioned",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Whiskey", "Angostura Bitters", "Sugar", "Orange Peel"],
+      "category": "Bold and classic",
+      "spirit": "Whiskey",
+      "hasAlcohol": true,
+      "description": "A timeless classic with bold whiskey notes, softened by a touch of sugar and aromatic bitters."
+   },
+   {
+      "id": 2,
+      "name": "Negroni",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Gin", "Campari", "Sweet Vermouth"],
+      "category": "Bold and classic",
+      "spirit": "Gin",
+      "hasAlcohol": true,
+      "description": "A sophisticated blend of gin, Campari, and vermouth, delivering a bittersweet punch."
+   },
+   {
+      "id": 3,
+      "name": "Margarita",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Tequila", "Triple Sec", "Lime Juice", "Salt"],
+      "category": "Refreshing and light",
+      "hasAlcohol": true,
+      "description": "Zesty lime and tequila dance on your palate, with a salty rim for the perfect finish."
+   },
+   {
+      "id": 4,
+      "name": "Daiquiri",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Rum", "Lime Juice", "Simple Syrup"],
+      "category": "Sweet and fruity",
+      "hasAlcohol": true,
+      "description": "A vibrant mix of rum and lime, sweetened to perfection for a tropical escape."
+   },
+   {
+      "id": 5,
+      "name": "Dry Martini",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Gin", "Dry Vermouth", "Olive"],
+      "category": "Bold and classic",
+      "spirit": "Gin",
+      "hasAlcohol": true,
+      "description": "Crisp and elegant, with gin's botanical notes shining through a whisper of vermouth."
+   },
+   {
+      "id": 6,
+      "name": "Espresso Martini",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Vodka", "Coffee Liqueur", "Espresso", "Simple Syrup"],
+      "category": "Sweet and fruity",
+      "hasAlcohol": true,
+      "description": "Rich espresso meets smooth vodka, creating a bold yet velvety pick-me-up."
+   },
+   {
+      "id": 7,
+      "name": "Whiskey Sour",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Whiskey", "Lemon Juice", "Simple Syrup", "Egg White"],
+      "category": "Sweet and fruity",
+      "hasAlcohol": true,
+      "description": "A silky blend of whiskey and lemon, balanced with a touch of sweetness."
+   },
+   {
+      "id": 8,
+      "name": "Manhattan",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Whiskey", "Sweet Vermouth", "Angostura Bitters"],
+      "category": "Bold and classic",
+      "spirit": "Whiskey",
+      "hasAlcohol": true,
+      "description": "A refined mix of whiskey and vermouth, with bitters adding depth and allure."
+   },
+   {
+      "id": 9,
+      "name": "Aperol Spritz",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Aperol", "Prosecco", "Soda Water", "Orange Slice"],
+      "category": "Refreshing and light",
+      "hasAlcohol": true,
+      "description": "Effervescent and vibrant, with Aperol’s citrusy bitterness and a prosecco sparkle."
+   },
+   {
+      "id": 10,
+      "name": "Mojito",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Rum", "Mint", "Lime Juice", "Soda Water", "Sugar"],
+      "category": "Refreshing and light",
+      "hasAlcohol": true,
+      "description": "Fresh mint and lime mingle with rum for a crisp, invigorating sip."
+   },
+   {
+      "id": 11,
+      "name": "Moscow Mule",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Vodka", "Ginger Beer", "Lime Juice"],
+      "category": "Refreshing and light",
+      "hasAlcohol": true,
+      "description": "Spicy ginger beer and zesty lime meet vodka in a refreshing, copper-mug classic."
+   },
+   {
+      "id": 12,
+      "name": "Paloma",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Tequila", "Grapefruit Soda", "Lime Juice"],
+      "category": "Refreshing and light",
+      "hasAlcohol": true,
+      "description": "Tart grapefruit and tequila create a bright, bubbly delight."
+   },
+   {
+      "id": 13,
+      "name": "Gin Tonic",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Gin", "Tonic Water", "Lime"],
+      "category": "Refreshing and light",
+      "hasAlcohol": true,
+      "description": "Crisp gin and tonic with a citrus twist, effortlessly refreshing."
+   },
+   {
+      "id": 14,
+      "name": "Mai Tai",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Rum", "Orange Curaçao", "Lime Juice", "Orgeat Syrup"],
+      "category": "Sweet and fruity",
+      "hasAlcohol": true,
+      "description": "A tropical burst of rum, citrus, and almond sweetness, pure island bliss."
+   },
+   {
+      "id": 15,
+      "name": "Bloody Mary",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Vodka", "Tomato Juice", "Lemon Juice", "Worcestershire Sauce", "Tabasco"],
+      "category": "Bold and classic",
+      "spirit": "Vodka",
+      "hasAlcohol": true,
+      "description": "Savory and bold, with a spicy kick to awaken your senses."
+   },
+   {
+      "id": 16,
+      "name": "Cosmopolitan",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Vodka", "Cranberry Juice", "Triple Sec", "Lime Juice"],
+      "category": "Sweet and fruity",
+      "hasAlcohol": true,
+      "description": "A chic blend of cranberry and vodka, with a zesty lime finish."
+   },
+   {
+      "id": 17,
+      "name": "Tom Collins",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Gin", "Lemon Juice", "Simple Syrup", "Soda Water"],
+      "category": "Refreshing and light",
+      "hasAlcohol": true,
+      "description": "Bright lemon and gin fizz, a refreshing nod to tradition."
+   },
+   {
+      "id": 18,
+      "name": "Caipirinha",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Cachaça", "Lime", "Sugar"],
+      "category": "Refreshing and light",
+      "hasAlcohol": true,
+      "description": "Zesty lime and cachaça unite for a vibrant Brazilian escape."
+   },
+   {
+      "id": 19,
+      "name": "Piña Colada",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Rum", "Pineapple Juice", "Coconut Cream"],
+      "category": "Sweet and fruity",
+      "hasAlcohol": true,
+      "description": "Creamy coconut and pineapple transport you to a tropical paradise."
+   },
+   {
+      "id": 20,
+      "name": "Sazerac",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Rye Whiskey", "Absinthe", "Peychaud's Bitters", "Sugar"],
+      "category": "Bold and classic",
+      "spirit": "Whiskey",
+      "hasAlcohol": true,
+      "description": "A bold rye whiskey embrace with a hint of absinthe mystique."
+   },
+   {
+      "id": 21,
+      "name": "Virgin Mojito",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Mint", "Lime Juice", "Soda Water", "Sugar"],
+      "category": "Herbal",
+      "hasAlcohol": false,
+      "description": "Crisp mint and lime sparkle in this alcohol-free refresher."
+   },
+   {
+      "id": 22,
+      "name": "Shirley Temple",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Ginger Ale", "Grenadine", "Maraschino Cherry"],
+      "category": "Fruity",
+      "hasAlcohol": false,
+      "description": "Sweet grenadine and ginger ale, topped with a cherry delight."
+   },
+   {
+      "id": 23,
+      "name": "Virgin Piña Colada",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Pineapple Juice", "Coconut Cream", "Ice"],
+      "category": "Fruity",
+      "hasAlcohol": false,
+      "description": "Creamy coconut and pineapple for a non-alcoholic tropical escape."
+   },
+   {
+      "id": 24,
+      "name": "Nojito",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Mint", "Lime Juice", "Soda Water", "Sugar"],
+      "category": "Herbal",
+      "hasAlcohol": false,
+      "description": "A minty, lime-infused fizz, perfect for a refreshing break."
+   },
+   {
+      "id": 25,
+      "name": "Lemon Basil Cooler",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Lemon Juice", "Basil", "Soda Water", "Simple Syrup"],
+      "category": "Herbal",
+      "hasAlcohol": false,
+      "description": "Zesty lemon meets aromatic basil in a crisp, cooling sip."
+   },
+   {
+      "id": 26,
+      "name": "Virgin Mary",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Tomato Juice", "Lemon Juice", "Worcestershire Sauce", "Tabasco"],
+      "category": "Citrus",
+      "hasAlcohol": false,
+      "description": "A savory, spicy tomato blend with a bold, tangy kick."
+   },
+   {
+      "id": 27,
+      "name": "Cucumber Cooler",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Cucumber Juice", "Lime Juice", "Soda Water", "Simple Syrup"],
+      "category": "Citrus",
+      "hasAlcohol": false,
+      "description": "Cool cucumber and lime create a light, rejuvenating refresher."
+   },
+   {
+      "id": 28,
+      "name": "Virgin Daiquiri",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Lime Juice", "Simple Syrup", "Ice"],
+      "category": "Citrus",
+      "hasAlcohol": false,
+      "description": "Tart lime and subtle sweetness, a zesty non-alcoholic delight."
+   },
+   {
+      "id": 29,
+      "name": "Arnold Palmer",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Iced Tea", "Lemonade"],
+      "category": "Citrus",
+      "hasAlcohol": false,
+      "description": "A refreshing blend of iced tea and lemonade, perfectly balanced."
+   },
+   {
+      "id": 30,
+      "name": "Pineapple Ginger Sparkler",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": ["Pineapple Juice", "Ginger Ale", "Lime Juice"],
+      "category": "Fruity",
+      "hasAlcohol": false,
+      "description": "Tropical pineapple and spicy ginger ale for a vibrant sip."
+   }
 ]
