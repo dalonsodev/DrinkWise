@@ -37,14 +37,24 @@ body {
    min-height: 80vh;
 }
 
+main {
+   margin-top: 100px;
+}
+
 /* Header (Navbar) */
 .header {
+   position: fixed;
+   margin-top: -84px;
+   margin-left: 0.75em;
+   width: calc(100% - 1.5em);
    background-color: var(--surface);
    padding: 1em;
+   border-radius: var(--pill-radius);
    display: flex;
    justify-content: space-between;
    align-items: center;
    box-shadow: var(--shadow);
+   z-index: 10;
 }
 
 .logo {
@@ -312,6 +322,16 @@ body {
    background-color: var(--surface);
    text-align: center;
    padding: 1em;
+   box-shadow: var(--shadow);
+   margin-bottom: 1em;
+   margin-left: 0.75em;
+   width: calc(100% - 1.5em);
+   background-color: var(--surface);
+   padding: 1em;
+   border-radius: var(--pill-radius);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
    box-shadow: var(--shadow);
 }
 
