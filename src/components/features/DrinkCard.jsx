@@ -16,19 +16,29 @@ export default function DrinkCard({ cocktail }) {
          >
             <div className="cocktail-overlay">
                <div className="cocktail-heading">
-                  <h2 className="cocktail-name">{cocktailName}</h2>
-                  <i className="cocktail-category">{t(`category.${cocktailName}`)}</i>
+                  <h2 className="cocktail-name">
+                     {cocktailName}
+                  </h2>
+                  <i className="cocktail-category">
+                     {t(`category.${cocktailName}`)}
+                  </i>
                </div>
-               <p className="cocktail-description">{t(`description.${cocktailName}`) || cocktail.description}</p>
+               <p 
+                  className="cocktail-description"
+               >
+                  {t(`description.${cocktailName}`) || cocktail.description}
+               </p>
             </div>
          </div>
-         <div className="cocktail-content">
+         {/* <div className="cocktail-content">
             <ul className="cocktail-ingredients">
                {cocktail.ingredients.map((ingredient, index) => (
-                  <li key={index}>{t(`ingredients.${ingredient}`) || ingredient}</li>
+                  <li key={index}>
+                     {t(`ingredients.${ingredient}`) || ingredient}
+                  </li>
                ))}
             </ul>
-         </div>
+         </div> */}
       </article>
    )
 }
