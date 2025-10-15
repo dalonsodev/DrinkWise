@@ -5,7 +5,7 @@
       "image": "./public/old-fashioned.webp",
       "imageFallback": "./public/old-fashioned.png",
       "ingredients": ["Whiskey", "Angostura Bitters", "Sugar", "Orange Peel"],
-      "category": "Bold and classic",
+      "category": "Bold & Classic",
       "spirit": "Whiskey",
       "hasAlcohol": true,
       "description": "A timeless classic with bold whiskey notes, softened by a touch of sugar and aromatic bitters."
@@ -16,7 +16,7 @@
       "image": "./public/negroni.webp",
       "imageFallback": "./public/negroni.png",
       "ingredients": ["Gin", "Campari", "Sweet Vermouth"],
-      "category": "Bold and classic",
+      "category": "Bold & Classic",
       "spirit": "Gin",
       "hasAlcohol": true,
       "description": "A sophisticated blend of gin, Campari, and vermouth, delivering a bittersweet punch."
@@ -27,7 +27,7 @@
       "image": "./public/margarita.webp",
       "imageFallback": "./public/margarita.png",
       "ingredients": ["Tequila", "Triple Sec", "Lime Juice", "Salt"],
-      "category": "Refreshing and light",
+      "category": "Refreshing & light",
       "hasAlcohol": true,
       "description": "Zesty lime and tequila dance on your palate, with a salty rim for the perfect finish."
    },
@@ -37,7 +37,7 @@
       "image": "./public/daiquiri.webp",
       "imageFallback": "./public/daiquiri.png",
       "ingredients": ["Rum", "Lime Juice", "Simple Syrup"],
-      "category": "Sweet and fruity",
+      "category": "Sweet & fruity",
       "hasAlcohol": true,
       "description": "A vibrant mix of rum and lime, sweetened to perfection for a tropical escape."
    },
@@ -47,7 +47,7 @@
       "image": "./public/dry-martini.webp",
       "imageFallback": "./public/dry-martini.png",
       "ingredients": ["Gin", "Dry Vermouth", "Olive"],
-      "category": "Bold and classic",
+      "category": "Bold & Classic",
       "spirit": "Gin",
       "hasAlcohol": true,
       "description": "Crisp and elegant, with gin's botanical notes shining through a whisper of vermouth."
@@ -58,7 +58,7 @@
       "image": "./public/espresso-martini.webp",
       "imageFallback": "./public/espresso-martini.png",
       "ingredients": ["Vodka", "Coffee Liqueur", "Espresso", "Simple Syrup"],
-      "category": "Sweet and fruity",
+      "category": "Sweet & fruity",
       "hasAlcohol": true,
       "description": "Rich espresso meets smooth vodka, creating a bold yet velvety pick-me-up."
    },
@@ -68,7 +68,7 @@
       "image": "./public/whiskey-sour.webp",
       "imageFallback": "./public/whiskey-sour.png",
       "ingredients": ["Whiskey", "Lemon Juice", "Simple Syrup", "Egg White"],
-      "category": "Sweet and fruity",
+      "category": "Sweet & fruity",
       "hasAlcohol": true,
       "description": "A silky blend of whiskey and lemon, balanced with a touch of sweetness."
    },
@@ -78,7 +78,7 @@
       "image": "./public/manhattan.webp",
       "imageFallback": "./public/manhattan.png",
       "ingredients": ["Whiskey", "Sweet Vermouth", "Angostura Bitters"],
-      "category": "Bold and classic",
+      "category": "Bold & Classic",
       "spirit": "Whiskey",
       "hasAlcohol": true,
       "description": "A refined mix of whiskey and vermouth, with bitters adding depth and allure."
@@ -89,7 +89,7 @@
       "image": "./public/aperol-spritz.webp",
       "imageFallback": "./public/aperol-spritz.png",
       "ingredients": ["Aperol", "Prosecco", "Soda Water", "Orange Slice"],
-      "category": "Refreshing and light",
+      "category": "Refreshing & light",
       "hasAlcohol": true,
       "description": "Effervescent and vibrant, with Aperol’s citrusy bitterness and a prosecco sparkle."
    },
@@ -99,7 +99,7 @@
       "image": "./public/mojito.webp",
       "imageFallback": "./public/mojito.png",
       "ingredients": ["Rum", "Mint", "Lime Juice", "Soda Water", "Sugar"],
-      "category": "Refreshing and light",
+      "category": "Refreshing & light",
       "hasAlcohol": true,
       "description": "Fresh mint and lime mingle with rum for a crisp, invigorating sip."
    },
@@ -109,7 +109,7 @@
       "image": "./public/moscow-mule.webp",
       "imageFallback": "./public/moscow-mule.png",
       "ingredients": ["Vodka", "Ginger Beer", "Lime Juice"],
-      "category": "Refreshing and light",
+      "category": "Refreshing & light",
       "hasAlcohol": true,
       "description": "Spicy ginger beer and zesty lime meet vodka in a refreshing, copper-mug classic."
    },
@@ -119,7 +119,7 @@
       "image": "./public/paloma.webp",
       "imageFallback": "./public/paloma.png",
       "ingredients": ["Tequila", "Grapefruit Soda", "Lime Juice"],
-      "category": "Refreshing and light",
+      "category": "Refreshing & light",
       "hasAlcohol": true,
       "description": "Tart grapefruit and tequila create a bright, bubbly delight."
    },
@@ -129,7 +129,7 @@
       "image": "./public/gin-tonic.webp",
       "imageFallback": "./public/gin-tonic.png",
       "ingredients": ["Gin", "Tonic Water", "Lime"],
-      "category": "Refreshing and light",
+      "category": "Refreshing & light",
       "hasAlcohol": true,
       "description": "Crisp gin and tonic with a citrus twist, effortlessly refreshing."
    },
@@ -139,7 +139,7 @@
       "image": "./public/mai-tai.webp",
       "imageFallback": "./public/mai-tai.png",
       "ingredients": ["Rum", "Orange Curaçao", "Lime Juice", "Orgeat Syrup"],
-      "category": "Sweet and fruity",
+      "category": "Sweet & fruity",
       "hasAlcohol": true,
       "description": "A tropical burst of rum, citrus, and almond sweetness, pure island bliss."
    },
@@ -149,7 +149,7 @@
       "image": "./public/bloody-mary.webp",
       "imageFallback": "./public/bloody-mary.png",
       "ingredients": ["Vodka", "Tomato Juice", "Lemon Juice", "Worcestershire Sauce", "Tabasco"],
-      "category": "Bold and classic",
+      "category": "Bold & Classic",
       "spirit": "Vodka",
       "hasAlcohol": true,
       "description": "Savory and bold, with a spicy kick to awaken your senses."
@@ -160,7 +160,7 @@
       "image": "./public/cosmopolitan.webp",
       "imageFallback": "./public/cosmopolitan.png",
       "ingredients": ["Vodka", "Cranberry Juice", "Triple Sec", "Lime Juice"],
-      "category": "Sweet and fruity",
+      "category": "Bold & Classic",
       "hasAlcohol": true,
       "description": "A chic blend of cranberry and vodka, with a zesty lime finish."
    },
@@ -170,7 +170,7 @@
       "image": "./public/tom-collins.webp",
       "imageFallback": "./public/tom-collins.png",
       "ingredients": ["Gin", "Lemon Juice", "Simple Syrup", "Soda Water"],
-      "category": "Refreshing and light",
+      "category": "Refreshing & light",
       "hasAlcohol": true,
       "description": "Bright lemon and gin fizz, a refreshing nod to tradition."
    },
@@ -180,7 +180,7 @@
       "image": "./public/caipirinha.webp",
       "imageFallback": "./public/caipirinha.png",
       "ingredients": ["Cachaça", "Lime", "Sugar"],
-      "category": "Refreshing and light",
+      "category": "Refreshing & light",
       "hasAlcohol": true,
       "description": "Zesty lime and cachaça unite for a vibrant Brazilian escape."
    },
@@ -190,7 +190,7 @@
       "image": "./public/piña-colada.webp",
       "imageFallback": "./public/piña-colada.png",
       "ingredients": ["Rum", "Pineapple Juice", "Coconut Cream"],
-      "category": "Sweet and fruity",
+      "category": "Sweet & fruity",
       "hasAlcohol": true,
       "description": "Creamy coconut and pineapple transport you to a tropical paradise."
    },
@@ -200,7 +200,7 @@
       "image": "./public/sazerac.webp",
       "imageFallback": "./public/sazerac.png",
       "ingredients": ["Rye Whiskey", "Absinthe", "Peychaud's Bitters", "Sugar"],
-      "category": "Bold and classic",
+      "category": "Bold & Classic",
       "spirit": "Whiskey",
       "hasAlcohol": true,
       "description": "A bold rye whiskey embrace with a hint of absinthe mystique."
@@ -261,7 +261,7 @@
       "image": "./public/virgin-mary.webp",
       "imageFallback": "./public/virgin-mary.png",
       "ingredients": ["Tomato Juice", "Lemon Juice", "Worcestershire Sauce", "Tabasco"],
-      "category": "Citrus",
+      "category": "Herbal",
       "hasAlcohol": false,
       "description": "A savory, spicy tomato blend with a bold, tangy kick."
    },

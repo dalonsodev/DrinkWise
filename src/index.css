@@ -257,12 +257,32 @@ body {
   justify-content: flex-end;
 }
 
+.cocktail-heading {
+   display: flex;
+   gap: 1em;
+   align-items: center;
+   margin: 0 0 0.5em 0;
+}
+
 .cocktail-name {
   font-size: 1.6rem;
   font-weight: 600;
   color: #fff; /* Blanco para legibilidad */
-  margin: 0 0 0.5em 0;
   text-align: left; /* Esquina inferior izquierda */
+  white-space: nowrap;
+}
+
+.cocktail-category {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid var(--accent);
+   border-radius: calc(var(--border-radius) * 2);
+   padding: 0.1em 1em;
+   font-style: normal;
+   font-size: 0.75rem;
+   letter-spacing: 0.75px;
+   white-space: nowrap;
 }
 
 .cocktail-description {

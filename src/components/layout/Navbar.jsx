@@ -20,7 +20,7 @@ export default function Navbar({ changeLanguage }) {
             </button>
          </div>
          <Link className="logo" to="/">DrinkWise</Link>
-         <nav>
+         <nav className="nav-links">
             <NavLink 
                className={({ isActive }) => `nav-link ${isActive ? "active" : null}`}
                to="/quiz"

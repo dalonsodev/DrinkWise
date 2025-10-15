@@ -15,7 +15,10 @@ export default function DrinkCard({ cocktail }) {
             style={{ backgroundImage: background }}
          >
             <div className="cocktail-overlay">
-               <h2 className="cocktail-name">{cocktailName}</h2>
+               <div className="cocktail-heading">
+                  <h2 className="cocktail-name">{cocktailName}</h2>
+                  <i className="cocktail-category">{t(`category.${cocktailName}`)}</i>
+               </div>
                <p className="cocktail-description">{t(`description.${cocktailName}`) || cocktail.description}</p>
             </div>
          </div>
