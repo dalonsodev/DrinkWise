@@ -358,3 +358,23 @@ main {
    transform: scale(1.05);
    background-color: var(--secondary);
 }
+
+@media (max-width: 500px) {
+   .header {
+      margin-top: -84px;
+      margin-left: 0.5em;
+      width: calc(100% - 1.5em);
+      padding: 0.5em;
+   }
+
+   .nav-link {
+      font-size: 0.9rem;
+      padding: 0.25em 0.75em;
+   }
+
+   .btn-language {
+      width: 1.75em;
+      height: 1.75em;
+      font-size: 1.2rem;
+   }
+}
