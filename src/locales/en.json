@@ -21,7 +21,8 @@
    },
    "menu": {
       "title": "Our Drink Menu",
-      "description": "Explore our selection of cocktails and mocktails."
+      "description": "Explore our selection of cocktails and mocktails.",
+      "error": "Error: cocktails data is not an array or is undefined."
    },
    "drinkDetails": {
       "title": "Drink details",

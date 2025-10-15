@@ -6,7 +6,6 @@ export default function Navbar({ changeLanguage }) {
    const { t, i18n } = useTranslation()
 
    const currentLanguage = i18n.language.split("-")[0]
-   console.log(currentLanguage)
    const nextLanguage = currentLanguage === "es" ? "en" : "es"
    const flagIcon = nextLanguage === "es" ? "🇪🇸" : "🇬🇧"
 

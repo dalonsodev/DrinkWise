@@ -21,7 +21,8 @@
    },
    "menu": {
       "title": "Nuestro Menú de Bebidas",
-      "description": "Explora nuestra selección de cócteles con y sin alcohol."
+      "description": "Explora nuestra selección de cócteles con y sin alcohol.",
+      "error": "Error: los datos de cócteles no son pertenecen a arreglo válido o está sin definir."
    },
    "drinkDetails": {
       "title": "Detalles de la Bebida",
