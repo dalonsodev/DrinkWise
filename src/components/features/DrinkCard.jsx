@@ -16,13 +16,13 @@ export default function DrinkCard({ cocktail }) {
          >
             <div className="cocktail-overlay">
                <h2 className="cocktail-name">{cocktailName}</h2>
-               <p className="cocktail-description">{t(`description.${cocktailName}`)}</p>
+               <p className="cocktail-description">{t(`description.${cocktailName}`) || cocktail.description}</p>
             </div>
          </div>
          <div className="cocktail-content">
             <ul className="cocktail-ingredients">
                {cocktail.ingredients.map((ingredient, index) => (
-                  <li key={index}>{t(`ingredients.${ingredient}`)}</li>
+                  <li key={index}>{t(`ingredients.${ingredient}`) || ingredient}</li>
                ))}
             </ul>
          </div>
