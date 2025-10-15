@@ -1,5 +1,5 @@
 import React from "react"
-import useLazyBackground from "../common/useLazyBackground"
+import useLazyBackground from "../../hooks/useLazyBackground"
 
 export default function DrinkCard({ cocktail }) {
    const [background, ref] = useLazyBackground(cocktail.image)

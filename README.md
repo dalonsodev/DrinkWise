@@ -83,7 +83,7 @@ This project is built with a modular and scalable approach from the start. Key d
 ## 📅 Next Steps
 
 - Implement the recommendation quiz with a maximum of 3 questions (e.g., alcohol preference, flavor profile, spirit type).
-- Create mock data in `drinks.json` to support filtering and quiz logic.
+- Create mock data in `cocktails.json` to support filtering and quiz logic.
 - Add styling to components, adhering to CSS unit preferences.
 - Deploy to Netlify/Vercel for a live demo.
 
