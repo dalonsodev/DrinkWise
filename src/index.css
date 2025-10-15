@@ -203,6 +203,90 @@ body {
   margin-bottom: 1em;
 }
 
+/* MenuPage */
+.menu-page {
+  padding: 1.5em;
+  max-width: 600px; /* Límite para pantallas grandes */
+  margin: 0 auto;
+}
+
+.menu-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.cocktail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.cocktail-card {
+  display: flex;
+  flex-direction: column;
+  border: 6px solid #2D2D2D; /* Borde oscuro de la paleta */
+  border-radius: 2rem;
+  overflow: hidden;
+  background: #2D2D2D; /* Fondo oscuro de la paleta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.cocktail-image {
+  width: 100%;
+  aspect-ratio: 3 / 4.5; /* Vertical para fotos de vasos */
+  background-size: 130%;
+  background-position: center 80%;
+  position: relative;
+}
+
+.cocktail-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.2); /* Fondo oscuro semitransparente */
+  mask: linear-gradient(#0000, #000f 20%);
+  backdrop-filter: blur(8px); /* Efecto difuminado como en el CodePen */
+  -webkit-backdrop-filter: blur(8px); /* Soporte para WebKit */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cocktail-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff; /* Blanco para legibilidad */
+  margin: 0 0 0.5em 0;
+  text-align: left; /* Esquina inferior izquierda */
+}
+
+.cocktail-description {
+  font-size: 0.9rem;
+  color: #ddd; /* Gris claro para legibilidad */
+  margin: 0;
+  text-align: left; /* Esquina inferior izquierda */
+}
+
+.cocktail-content {
+  padding: 1em;
+}
+
+.cocktail-ingredients {
+  list-style: disc;
+  padding-left: 1.5em;
+  font-size: 0.9rem;
+  color: #ddd; /* Gris claro para contraste con fondo oscuro */
+}
+
+.cocktail-ingredients li {
+  margin-bottom: 0.3em;
+}
+
 /* Footer */
 .footer {
   background-color: var(--surface);

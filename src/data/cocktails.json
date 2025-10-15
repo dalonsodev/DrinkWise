@@ -2,7 +2,8 @@
    {
       "id": 1,
       "name": "Old Fashioned",
-      "image": "https://via.placeholder.com/150",
+      "image": "/old-fashioned.webp",
+      "imageFallback": "/old-fashioned.png",
       "ingredients": ["Whiskey", "Angostura Bitters", "Sugar", "Orange Peel"],
       "category": "Bold and classic",
       "spirit": "Whiskey",
@@ -12,7 +13,8 @@
    {
       "id": 2,
       "name": "Negroni",
-      "image": "https://via.placeholder.com/150",
+      "image": "/negroni.webp",
+      "imageFallback": "/negroni.png",
       "ingredients": ["Gin", "Campari", "Sweet Vermouth"],
       "category": "Bold and classic",
       "spirit": "Gin",
@@ -22,7 +24,8 @@
    {
       "id": 3,
       "name": "Margarita",
-      "image": "https://via.placeholder.com/150",
+      "image": "/margarita.webp",
+      "imageFallback": "/margarita.png",
       "ingredients": ["Tequila", "Triple Sec", "Lime Juice", "Salt"],
       "category": "Refreshing and light",
       "hasAlcohol": true,
@@ -31,7 +34,8 @@
    {
       "id": 4,
       "name": "Daiquiri",
-      "image": "https://via.placeholder.com/150",
+      "image": "/daiquiri.webp",
+      "imageFallback": "/daiquiri.png",
       "ingredients": ["Rum", "Lime Juice", "Simple Syrup"],
       "category": "Sweet and fruity",
       "hasAlcohol": true,
@@ -40,7 +44,8 @@
    {
       "id": 5,
       "name": "Dry Martini",
-      "image": "https://via.placeholder.com/150",
+      "image": "/dry-martini.webp",
+      "imageFallback": "/dry-martini.png",
       "ingredients": ["Gin", "Dry Vermouth", "Olive"],
       "category": "Bold and classic",
       "spirit": "Gin",
@@ -50,7 +55,8 @@
    {
       "id": 6,
       "name": "Espresso Martini",
-      "image": "https://via.placeholder.com/150",
+      "image": "/espresso-martini.webp",
+      "imageFallback": "/espresso-martini.png",
       "ingredients": ["Vodka", "Coffee Liqueur", "Espresso", "Simple Syrup"],
       "category": "Sweet and fruity",
       "hasAlcohol": true,
@@ -59,7 +65,8 @@
    {
       "id": 7,
       "name": "Whiskey Sour",
-      "image": "https://via.placeholder.com/150",
+      "image": "/whiskey-sour.webp",
+      "imageFallback": "/whiskey-sour.png",
       "ingredients": ["Whiskey", "Lemon Juice", "Simple Syrup", "Egg White"],
       "category": "Sweet and fruity",
       "hasAlcohol": true,
@@ -68,7 +75,8 @@
    {
       "id": 8,
       "name": "Manhattan",
-      "image": "https://via.placeholder.com/150",
+      "image": "/manhattan.webp",
+      "imageFallback": "/manhattan.png",
       "ingredients": ["Whiskey", "Sweet Vermouth", "Angostura Bitters"],
       "category": "Bold and classic",
       "spirit": "Whiskey",
@@ -78,7 +86,8 @@
    {
       "id": 9,
       "name": "Aperol Spritz",
-      "image": "https://via.placeholder.com/150",
+      "image": "/aperol-spritz.webp",
+      "imageFallback": "/aperol-spritz.png",
       "ingredients": ["Aperol", "Prosecco", "Soda Water", "Orange Slice"],
       "category": "Refreshing and light",
       "hasAlcohol": true,
@@ -87,7 +96,8 @@
    {
       "id": 10,
       "name": "Mojito",
-      "image": "https://via.placeholder.com/150",
+      "image": "/mojito.webp",
+      "imageFallback": "/mojito.png",
       "ingredients": ["Rum", "Mint", "Lime Juice", "Soda Water", "Sugar"],
       "category": "Refreshing and light",
       "hasAlcohol": true,
@@ -96,7 +106,8 @@
    {
       "id": 11,
       "name": "Moscow Mule",
-      "image": "https://via.placeholder.com/150",
+      "image": "/moscow-mule.webp",
+      "imageFallback": "/moscow-mule.png",
       "ingredients": ["Vodka", "Ginger Beer", "Lime Juice"],
       "category": "Refreshing and light",
       "hasAlcohol": true,
@@ -105,7 +116,8 @@
    {
       "id": 12,
       "name": "Paloma",
-      "image": "https://via.placeholder.com/150",
+      "image": "/paloma.webp",
+      "imageFallback": "/paloma.png",
       "ingredients": ["Tequila", "Grapefruit Soda", "Lime Juice"],
       "category": "Refreshing and light",
       "hasAlcohol": true,
@@ -114,7 +126,8 @@
    {
       "id": 13,
       "name": "Gin Tonic",
-      "image": "https://via.placeholder.com/150",
+      "image": "/gin-tonic.webp",
+      "imageFallback": "/gin-tonic.png",
       "ingredients": ["Gin", "Tonic Water", "Lime"],
       "category": "Refreshing and light",
       "hasAlcohol": true,
@@ -123,7 +136,8 @@
    {
       "id": 14,
       "name": "Mai Tai",
-      "image": "https://via.placeholder.com/150",
+      "image": "/mai-tai.webp",
+      "imageFallback": "/mai-tai.png",
       "ingredients": ["Rum", "Orange Curaçao", "Lime Juice", "Orgeat Syrup"],
       "category": "Sweet and fruity",
       "hasAlcohol": true,
@@ -132,7 +146,8 @@
    {
       "id": 15,
       "name": "Bloody Mary",
-      "image": "https://via.placeholder.com/150",
+      "image": "/bloody-mary.webp",
+      "imageFallback": "/bloody-mary.png",
       "ingredients": ["Vodka", "Tomato Juice", "Lemon Juice", "Worcestershire Sauce", "Tabasco"],
       "category": "Bold and classic",
       "spirit": "Vodka",
@@ -142,7 +157,8 @@
    {
       "id": 16,
       "name": "Cosmopolitan",
-      "image": "https://via.placeholder.com/150",
+      "image": "/cosmopolitan.webp",
+      "imageFallback": "/cosmopolitan.png",
       "ingredients": ["Vodka", "Cranberry Juice", "Triple Sec", "Lime Juice"],
       "category": "Sweet and fruity",
       "hasAlcohol": true,
@@ -151,7 +167,8 @@
    {
       "id": 17,
       "name": "Tom Collins",
-      "image": "https://via.placeholder.com/150",
+      "image": "/tom-collins.webp",
+      "imageFallback": "/tom-collins.png",
       "ingredients": ["Gin", "Lemon Juice", "Simple Syrup", "Soda Water"],
       "category": "Refreshing and light",
       "hasAlcohol": true,
@@ -160,7 +177,8 @@
    {
       "id": 18,
       "name": "Caipirinha",
-      "image": "https://via.placeholder.com/150",
+      "image": "/caipirinha.webp",
+      "imageFallback": "/caipirinha.png",
       "ingredients": ["Cachaça", "Lime", "Sugar"],
       "category": "Refreshing and light",
       "hasAlcohol": true,
@@ -169,7 +187,8 @@
    {
       "id": 19,
       "name": "Piña Colada",
-      "image": "https://via.placeholder.com/150",
+      "image": "/piña-colada.webp",
+      "imageFallback": "/piña-colada.png",
       "ingredients": ["Rum", "Pineapple Juice", "Coconut Cream"],
       "category": "Sweet and fruity",
       "hasAlcohol": true,
@@ -178,7 +197,8 @@
    {
       "id": 20,
       "name": "Sazerac",
-      "image": "https://via.placeholder.com/150",
+      "image": "/sazerac.webp",
+      "imageFallback": "/sazerac.png",
       "ingredients": ["Rye Whiskey", "Absinthe", "Peychaud's Bitters", "Sugar"],
       "category": "Bold and classic",
       "spirit": "Whiskey",
@@ -188,7 +208,8 @@
    {
       "id": 21,
       "name": "Virgin Mojito",
-      "image": "https://via.placeholder.com/150",
+      "image": "/virgin-mojito.webp",
+      "imageFallback": "/virgin-mojito.png",
       "ingredients": ["Mint", "Lime Juice", "Soda Water", "Sugar"],
       "category": "Herbal",
       "hasAlcohol": false,
@@ -197,7 +218,8 @@
    {
       "id": 22,
       "name": "Shirley Temple",
-      "image": "https://via.placeholder.com/150",
+      "image": "/shirley-temple.webp",
+      "imageFallback": "/shirley-temple.png",
       "ingredients": ["Ginger Ale", "Grenadine", "Maraschino Cherry"],
       "category": "Fruity",
       "hasAlcohol": false,
@@ -206,7 +228,8 @@
    {
       "id": 23,
       "name": "Virgin Piña Colada",
-      "image": "https://via.placeholder.com/150",
+      "image": "/virgin-piña-colada.webp",
+      "imageFallback": "/virgin-piña-colada.png",
       "ingredients": ["Pineapple Juice", "Coconut Cream", "Ice"],
       "category": "Fruity",
       "hasAlcohol": false,
@@ -215,7 +238,8 @@
    {
       "id": 24,
       "name": "Nojito",
-      "image": "https://via.placeholder.com/150",
+      "image": "/nojito.webp",
+      "imageFallback": "/nojito.png",
       "ingredients": ["Mint", "Lime Juice", "Soda Water", "Sugar"],
       "category": "Herbal",
       "hasAlcohol": false,
@@ -224,7 +248,8 @@
    {
       "id": 25,
       "name": "Lemon Basil Cooler",
-      "image": "https://via.placeholder.com/150",
+      "image": "/lemon-basil-cooler.webp",
+      "imageFallback": "/lemon-basil-cooler.png",
       "ingredients": ["Lemon Juice", "Basil", "Soda Water", "Simple Syrup"],
       "category": "Herbal",
       "hasAlcohol": false,
@@ -233,7 +258,8 @@
    {
       "id": 26,
       "name": "Virgin Mary",
-      "image": "https://via.placeholder.com/150",
+      "image": "/virgin-mary.webp",
+      "imageFallback": "/virgin-mary.png",
       "ingredients": ["Tomato Juice", "Lemon Juice", "Worcestershire Sauce", "Tabasco"],
       "category": "Citrus",
       "hasAlcohol": false,
@@ -242,7 +268,8 @@
    {
       "id": 27,
       "name": "Cucumber Cooler",
-      "image": "https://via.placeholder.com/150",
+      "image": "/cucumber-cooler.webp",
+      "imageFallback": "/cucumber-cooler.png",
       "ingredients": ["Cucumber Juice", "Lime Juice", "Soda Water", "Simple Syrup"],
       "category": "Citrus",
       "hasAlcohol": false,
@@ -251,7 +278,8 @@
    {
       "id": 28,
       "name": "Virgin Daiquiri",
-      "image": "https://via.placeholder.com/150",
+      "image": "/virgin-daiquiri.webp",
+      "imageFallback": "/virgin-daiquiri.png",
       "ingredients": ["Lime Juice", "Simple Syrup", "Ice"],
       "category": "Citrus",
       "hasAlcohol": false,
@@ -260,7 +288,8 @@
    {
       "id": 29,
       "name": "Arnold Palmer",
-      "image": "https://via.placeholder.com/150",
+      "image": "/arnold-palmer.webp",
+      "imageFallback": "/arnold-palmer.png",
       "ingredients": ["Iced Tea", "Lemonade"],
       "category": "Citrus",
       "hasAlcohol": false,
@@ -269,7 +298,8 @@
    {
       "id": 30,
       "name": "Pineapple Ginger Sparkler",
-      "image": "https://via.placeholder.com/150",
+      "image": "/pineapple-ginger-sparkler.webp",
+      "imageFallback": "/pineapple-ginger-sparkler.png",
       "ingredients": ["Pineapple Juice", "Ginger Ale", "Lime Juice"],
       "category": "Fruity",
       "hasAlcohol": false,
