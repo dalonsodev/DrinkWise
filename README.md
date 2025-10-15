@@ -13,7 +13,7 @@ A **React-based web application** designed for bars in Spain to showcase an inte
    - `rem` for font sizes to ensure consistent scaling.
    - `em` for margins and paddings for proportional spacing.
    - `px` for border-radius and specific width constraints.
-- **Modular Architecture:** Organized component structure with reusable components, custom hooks, and global state management via React Context.
+- **Modular Architecture:** Organized component structure with reusable components (DrinkCard, Layout), custom hooks (useLazyBackground), and centralized styles in index.css.
 
 ---
 
@@ -24,7 +24,7 @@ A **React-based web application** designed for bars in Spain to showcase an inte
 | React           | Dynamic, component-based UI                  |
 | React Router    | Client-side navigation                       |
 | react-i18next   | Internationalization (Spanish/English)       |
-| SCSS            | Modular styles with custom CSS units         |
+| CSS             | Centralized styles with custom CSS units     |
 | React Context   | Global state management                      |
 | Vite            | Fast development environment                 |
 
@@ -39,10 +39,10 @@ src/
 │   ├── layout/         # Layout components (e.g., Navbar, Footer)
 │   └── features/       # Feature-specific components (e.g., Quiz, DrinkCard)
 ├── pages/              # Page-level components (e.g., HomePage, DrinkDetailPage)
-├── hooks/              # Custom hooks (e.g., useQuiz, useMenu)
+├── hooks/              # Custom hooks (e.g., useQuiz, useLazyBackground)
 ├── locales/            # Translation files (es.json, en.json)
 ├── data/               # Mock data (e.g., drinks.json)
-├── styles/             # Global and module-specific SCSS
+├── styles/             # Global styles (index.css)
 ├── i18n.js             # i18next configuration
 ├── App.jsx             # Main app component
 ├── index.jsx           # Entry point
@@ -76,15 +76,16 @@ This project is built with a modular and scalable approach from the start. Key d
 
 - **Early i18n Integration:** Implemented `react-i18next` from the beginning to support Spanish and English, avoiding costly refactors and ensuring a seamless multilingual experience.
 - **CSS Units:** Using `rem` for font sizes, `em` for margins/paddings, and `px` for border-radius to ensure accessibility and responsiveness.
-- **Git Workflow:** Descriptive commits (e.g., `feat: setup i18n with react-i18next`) and feature branches (e.g., `feat/quiz-recommendations`) to maintain a clean and collaborative codebase.
+- **Custom Hook:** Developed useLazyBackground for efficient image loading in DrinkCard components.
+- **Git Workflow:** Descriptive commits (e.g., `feat: setup i18n with react-i18next`) to maintain a clean codebase.
 
 ---
 
 ## 📅 Next Steps
 
 - Implement the recommendation quiz with a maximum of 3 questions (e.g., alcohol preference, flavor profile, spirit type).
-- Create mock data in `cocktails.json` to support filtering and quiz logic.
-- Add styling to components, adhering to CSS unit preferences.
+- Add filtering functionality to MenuPage.jsx to sort cocktails by category or ingredient.
+- Enhance responsiveness with media queries in index.css for better mobile support (e.g., adjust cocktail-card layout).
 - Deploy to Netlify/Vercel for a live demo.
 
 ---
