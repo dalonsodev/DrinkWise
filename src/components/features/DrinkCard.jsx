@@ -1,8 +1,11 @@
 import React from "react"
 import useLazyBackground from "../../hooks/useLazyBackground"
+import { useTranslation } from "react-i18next"
 
 export default function DrinkCard({ cocktail }) {
+   const { t } = useTranslation()
    const [background, ref] = useLazyBackground(cocktail.image)
+   const cocktailName = cocktail.name
    
    return (
       <article className="cocktail-card">
@@ -12,14 +15,14 @@ export default function DrinkCard({ cocktail }) {
             style={{ backgroundImage: background }}
          >
             <div className="cocktail-overlay">
-               <h2 className="cocktail-name">{cocktail.name}</h2>
-               <p className="cocktail-description">{cocktail.description}</p>
+               <h2 className="cocktail-name">{cocktailName}</h2>
+               <p className="cocktail-description">{t(`description.${cocktailName}`)}</p>
             </div>
          </div>
          <div className="cocktail-content">
             <ul className="cocktail-ingredients">
                {cocktail.ingredients.map((ingredient, index) => (
-                  <li key={index}>{ingredient}</li>
+                  <li key={index}>{t(`ingredients.${ingredient}`)}</li>
                ))}
             </ul>
          </div>
