@@ -297,9 +297,9 @@
    },
    {
       "id": 30,
-      "name": "Pineapple Ginger Sparkler",
-      "image": "./public/pineapple-ginger-sparkler.webp",
-      "imageFallback": "./public/pineapple-ginger-sparkler.png",
+      "name": "Tropical Sparkler",
+      "image": "./public/tropical-sparkler.webp",
+      "imageFallback": "./public/tropical-sparkler.png",
       "ingredients": ["Pineapple Juice", "Ginger Ale", "Lime Juice"],
       "category": "Fruity",
       "hasAlcohol": false,
