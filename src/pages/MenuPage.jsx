@@ -11,6 +11,7 @@ export default function Menu() {
    
    const alcoholFilter = searchParams.get("hasAlcohol") || "true"
    const categoryFilter = searchParams.get("category")
+   const spiritFilter = searchParams.get("spirit")
 
    useEffect(() => {
       if (!searchParams.get("hasAlcohol")) {
@@ -26,13 +27,14 @@ export default function Menu() {
 
    const drinksToDisplay = cocktails.filter(cocktail => {
       const matchesAlcohol = cocktail.hasAlcohol === (alcoholFilter === "true")
-      const matchesCategory = categoryFilter ? cocktail.category === categoryFilter : true
-      return matchesAlcohol && matchesCategory
+      const matchesCategory = categoryFilter 
+         ? cocktail.category === categoryFilter 
+         : true
+      const matchesSpirit = alcoholFilter === "true" && spiritFilter 
+         ? cocktail.spirit === spiritFilter 
+         : true
+      return matchesAlcohol && matchesCategory && matchesSpirit
    })
-
-   // const drinksToDisplay = alcoholFilter === "true"
-   //    ? cocktails.filter(cocktail => cocktail.hasAlcohol === true)
-   //    : cocktails.filter(cocktail => cocktail.hasAlcohol === false)
 
    console.log(drinksToDisplay.length)
 
@@ -42,17 +44,29 @@ export default function Menu() {
 
    function handleAlcoholFilterChange() {
       const category = searchParams.get("category")
+      const newAlcoholFilter = alcoholFilter === "true" ? "false" : "true"
       setSearchParams({ 
-         hasAlcohol: alcoholFilter === "true" ? "false" : "true",
-         ...(category && { category })
+         hasAlcohol: newAlcoholFilter,
+         ...(category && { category }),
+         ...(newAlcoholFilter === "true" && spiritFilter && { spirit: spiritFilter })
       })
    }
-
+   
    function handleCategoryFilterChange(value) {
       const hasAlcohol = searchParams.get("hasAlcohol")
       setSearchParams({ 
          category: value,
          hasAlcohol: hasAlcohol
+      })
+   }
+   
+   function handleSpiritFilterChange(value) {
+      const category = searchParams.get("category")
+      const hasAlcohol = searchParams.get("hasAlcohol")
+      setSearchParams({
+         hasAlcohol: hasAlcohol,
+         ...(category && { category }),
+         spirit: value
       })
    }
 
@@ -83,26 +97,35 @@ export default function Menu() {
             {alcoholFilter === "true" && 
                <div className="menu-filter menu-filter-flavour">
                   <button 
-                     className={`menu-filter-btn ${categoryFilter === "Sweet and Fruity" ? "active" : ""}`}
+                     className={`menu-filter-btn 
+                        ${categoryFilter === "Sweet and Fruity" ? "active" : ""}`}
                      onClick={() => handleCategoryFilterChange("Sweet and Fruity")}
                   >Sweet & Fruity</button>
 
                   <button 
-                     className={`menu-filter-btn ${categoryFilter === "Refreshing and Light" ? "active" : ""}`}
+                     className={`menu-filter-btn 
+                        ${categoryFilter === "Refreshing and Light" ? "active" : ""}`}
                      onClick={() => handleCategoryFilterChange("Refreshing and Light")}
                   >Refreshing & Light</button>
 
                   <button 
-                     className={`menu-filter-btn ${categoryFilter === "Bold and Classic" ? "active" : ""}`}
+                     className={`menu-filter-btn 
+                        ${categoryFilter === "Bold and Classic" ? "active" : ""}`}
                      onClick={() => handleCategoryFilterChange("Bold and Classic")}
                   >Bold & Classic</button>
                </div>
             }
             {alcoholFilter === "false" && 
                <div className="menu-filter menu-filter-flavour">
-                  <button className="menu-filter-btn">Citrus</button>
-                  <button className="menu-filter-btn">Fruity</button>
-                  <button className="menu-filter-btn">Herbal</button>
+                  <button 
+                     className="menu-filter-btn"
+                  >Citrus</button>
+                  <button 
+                     className="menu-filter-btn"
+                  >Fruity</button>
+                  <button 
+                     className="menu-filter-btn"
+                  >Herbal</button>
                </div>
             }
 
@@ -110,12 +133,30 @@ export default function Menu() {
                <>
                   <p className="menu-filter-label">Main spirit</p>
                   <div className="menu-filter menu-filter-spirit">
-                     <button className="menu-filter-btn">Whiskey</button>
-                     <button className="menu-filter-btn">Gin</button>
-                     <button className="menu-filter-btn">Vodka</button>
-                     <button className="menu-filter-btn">Rum</button>
-                     <button className="menu-filter-btn">Tequila</button>
-                     <button className="menu-filter-btn">Others</button>
+                     <button 
+                        className="menu-filter-btn"
+                        onClick={() => handleSpiritFilterChange("Whiskey")}
+                     >Whiskey</button>
+                     <button 
+                        className="menu-filter-btn"
+                        onClick={() => handleSpiritFilterChange("Gin")}
+                     >Gin</button>
+                     <button 
+                        className="menu-filter-btn"
+                        onClick={() => handleSpiritFilterChange("Vodka")}
+                     >Vodka</button>
+                     <button 
+                        className="menu-filter-btn"
+                        onClick={() => handleSpiritFilterChange("Rum")}
+                     >Rum</button>
+                     <button 
+                        className="menu-filter-btn"
+                        onClick={() => handleSpiritFilterChange("Tequila")}
+                     >Tequila</button>
+                     <button 
+                        className="menu-filter-btn"
+                        onClick={() => handleSpiritFilterChange("Others")}
+                     >Others</button>
                   </div>
                </>
             }
