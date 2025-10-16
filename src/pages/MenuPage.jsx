@@ -83,17 +83,17 @@ export default function Menu() {
             {alcoholFilter === "true" && 
                <div className="menu-filter menu-filter-flavour">
                   <button 
-                     className="menu-filter-btn"
+                     className={`menu-filter-btn ${categoryFilter === "Sweet and Fruity" ? "active" : ""}`}
                      onClick={() => handleCategoryFilterChange("Sweet and Fruity")}
                   >Sweet & Fruity</button>
 
                   <button 
-                     className="menu-filter-btn"
+                     className={`menu-filter-btn ${categoryFilter === "Refreshing and Light" ? "active" : ""}`}
                      onClick={() => handleCategoryFilterChange("Refreshing and Light")}
                   >Refreshing & Light</button>
 
                   <button 
-                     className="menu-filter-btn"
+                     className={`menu-filter-btn ${categoryFilter === "Bold and Classic" ? "active" : ""}`}
                      onClick={() => handleCategoryFilterChange("Bold and Classic")}
                   >Bold & Classic</button>
                </div>
