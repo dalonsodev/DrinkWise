@@ -10,6 +10,7 @@ export default function Menu() {
    const [searchParams, setSearchParams] = useSearchParams()
    
    const alcoholFilter = searchParams.get("hasAlcohol") || "true"
+   const categoryFilter = searchParams.get("category")
 
    useEffect(() => {
       if (!searchParams.get("hasAlcohol")) {
@@ -23,9 +24,15 @@ export default function Menu() {
       return <p>{t("menu.error")}</p>
    }
 
-   const drinksToDisplay = alcoholFilter === "true"
-      ? cocktails.filter(cocktail => cocktail.hasAlcohol === true)
-      : cocktails.filter(cocktail => cocktail.hasAlcohol === false)
+   const drinksToDisplay = cocktails.filter(cocktail => {
+      const matchesAlcohol = cocktail.hasAlcohol === (alcoholFilter === "true")
+      const matchesCategory = categoryFilter ? cocktail.category === categoryFilter : true
+      return matchesAlcohol && matchesCategory
+   })
+
+   // const drinksToDisplay = alcoholFilter === "true"
+   //    ? cocktails.filter(cocktail => cocktail.hasAlcohol === true)
+   //    : cocktails.filter(cocktail => cocktail.hasAlcohol === false)
 
    console.log(drinksToDisplay.length)
 
@@ -33,8 +40,20 @@ export default function Menu() {
       <DrinkCard key={cocktail.id} cocktail={cocktail} />
    ))
 
-   function handleFilterChange() {
-      setSearchParams({ hasAlcohol: alcoholFilter === "true" ? "false" : "true"})
+   function handleAlcoholFilterChange() {
+      const category = searchParams.get("category")
+      setSearchParams({ 
+         hasAlcohol: alcoholFilter === "true" ? "false" : "true",
+         ...(category && { category })
+      })
+   }
+
+   function handleCategoryFilterChange(value) {
+      const hasAlcohol = searchParams.get("hasAlcohol")
+      setSearchParams({ 
+         category: value,
+         hasAlcohol: hasAlcohol
+      })
    }
 
    return (
@@ -47,7 +66,7 @@ export default function Menu() {
                   <input 
                      type="checkbox"
                      checked={alcoholFilter === "true"}
-                     onChange={handleFilterChange}
+                     onChange={handleAlcoholFilterChange}
                      className="toggle-input"
                   />
                   <span className="toggle-slider"></span>
@@ -61,21 +80,45 @@ export default function Menu() {
             </div>
 
             <p className="menu-filter-label">Flavour profile</p>
-            <div className="menu-filter menu-filter-flavour">
-               <button className="menu-filter-btn">Sweet & Fruity</button>
-               <button className="menu-filter-btn">Refreshing & Light</button>
-               <button className="menu-filter-btn">Bold & Classic</button>
-            </div>
+            {alcoholFilter === "true" && 
+               <div className="menu-filter menu-filter-flavour">
+                  <button 
+                     className="menu-filter-btn"
+                     onClick={() => handleCategoryFilterChange("Sweet and Fruity")}
+                  >Sweet & Fruity</button>
 
-            <p className="menu-filter-label">Main spirit</p>
-            <div className="menu-filter menu-filter-spirit">
-               <button className="menu-filter-btn">Whiskey</button>
-               <button className="menu-filter-btn">Gin</button>
-               <button className="menu-filter-btn">Vodka</button>
-               <button className="menu-filter-btn">Rum</button>
-               <button className="menu-filter-btn">Tequila</button>
-               <button className="menu-filter-btn">Others</button>
-            </div>
+                  <button 
+                     className="menu-filter-btn"
+                     onClick={() => handleCategoryFilterChange("Refreshing and Light")}
+                  >Refreshing & Light</button>
+
+                  <button 
+                     className="menu-filter-btn"
+                     onClick={() => handleCategoryFilterChange("Bold and Classic")}
+                  >Bold & Classic</button>
+               </div>
+            }
+            {alcoholFilter === "false" && 
+               <div className="menu-filter menu-filter-flavour">
+                  <button className="menu-filter-btn">Citrus</button>
+                  <button className="menu-filter-btn">Fruity</button>
+                  <button className="menu-filter-btn">Herbal</button>
+               </div>
+            }
+
+            {alcoholFilter === "true" &&
+               <>
+                  <p className="menu-filter-label">Main spirit</p>
+                  <div className="menu-filter menu-filter-spirit">
+                     <button className="menu-filter-btn">Whiskey</button>
+                     <button className="menu-filter-btn">Gin</button>
+                     <button className="menu-filter-btn">Vodka</button>
+                     <button className="menu-filter-btn">Rum</button>
+                     <button className="menu-filter-btn">Tequila</button>
+                     <button className="menu-filter-btn">Others</button>
+                  </div>
+               </>
+            }
 
          </div>
          <div className="cocktail-list">
