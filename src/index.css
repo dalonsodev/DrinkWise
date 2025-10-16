@@ -5,6 +5,7 @@
    --secondary: #FF6347; /* Tomato */
    --background: #1A1A1A; /* Dark gray */
    --surface: #2D2D2D; /* Medium gray */
+   --text-subtle: #ccc; /* Light gray */
    --text: #FFFFFF; /* White */
    --accent: #FFD700; /* Gold */
 
@@ -58,7 +59,7 @@ main {
 }
 
 .logo {
-   color: var(--accent);
+   color: var(--text);
    font-size: 1.5rem;
    font-weight: bold;
    text-decoration: none;
@@ -70,7 +71,8 @@ main {
    gap: 0.5em;
 }
 
-.nav-link {
+.nav-link,
+.menu-filter-btn {
    color: var(--text);
    text-decoration: none;
    font-size: 1rem;
@@ -183,7 +185,7 @@ main {
    width: 2.5em;
    height: 2.5em;
    font-size: 1.2rem; 
-   border: 1px solid #ccc;
+   border: 1px solid var(--text-subtle);
    border-radius: 50%; 
    background: transparent;
    cursor: pointer;
@@ -196,6 +198,95 @@ main {
 
 .btn-language:active {
    transform: translateY(0);
+}
+
+/* Menu filters */
+/* Toggle for Alcohol Filter */
+.menu-filter-alcohol {
+   display: flex;
+   align-items: center;
+   margin-bottom: 1em;
+}
+
+.toggle-label {
+   display: flex;
+   align-items: center;
+   gap: 0.75em; 
+   font-size: 1rem;
+   color: var(--text);
+   cursor: pointer;
+}
+
+.toggle-text {
+   font-weight: bold;
+}
+
+.toggle-input {
+   display: none;
+}
+
+.toggle-slider {
+   position: relative;
+   width: 4em;
+   height: 2em; 
+   background-color: var(--surface); 
+   border: 2px solid var(--accent); 
+   border-radius: var(--pill-radius); 
+   transition: var(--transition);
+}
+
+.toggle-slider::before {
+   content: '';
+   position: absolute;
+   width: 1.6em; 
+   height: 1.6em;
+   top: 0.05em;
+   left: 0.15em;
+   background-color: var(--text); 
+   border-radius: 50%;
+   transition: var(--transition);
+}
+
+.toggle-input:checked + .toggle-slider {
+   background-color: var(--accent); 
+   border-color: var(--accent);
+}
+
+.toggle-input:checked + .toggle-slider::before {
+   transform: translateX(2em); 
+   background-color: var(--background); 
+}
+
+.toggle-label:hover .toggle-slider {
+   box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5); 
+}
+
+
+.menu-filter {
+   display: flex;
+   gap: 0.5em;
+   overflow-x: auto;
+   padding-bottom: 0.5em;
+}
+
+.menu-filter-btn {
+   padding: 0.5em 1.5em;
+   border-width: 2px;
+   border-color: var(--surface);
+   color: var(--text-subtle);
+   white-space: nowrap;
+   letter-spacing: 1px;
+}
+
+.menu-filter-btn:hover,
+.menu-filter-btn.active {
+   background-color: var(--background);
+   color: var(--text);
+   border-color: var(--accent);
+}
+
+.menu-filter-label {
+   padding: 1em 0 0.5em 0;
 }
 
 /* Page styles */
@@ -216,7 +307,7 @@ main {
 
 /* MenuPage */
 .menu-page {
-   padding: 1.5em;
+   padding: 0 1.5em 1.5em;
    max-width: 600px; 
    margin: 0 auto;
 }
@@ -224,7 +315,7 @@ main {
 .menu-title {
    font-size: 1.8rem;
    font-weight: bold;
-   margin-bottom: 1em;
+   margin-bottom: 0.5em;
    text-align: center;
 }
 
@@ -241,7 +332,8 @@ main {
    border-radius: 2rem;
    overflow: hidden;
    background: #2D2D2D;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   margin-top: 1em; 
 }
 
 .cocktail-image {
@@ -359,6 +451,8 @@ main {
    background-color: var(--secondary);
 }
 
+
+/* ESTO TIENE QUE IR FUERA, TENEMOS QUE HACER MOBILE FIRST!! */
 @media (max-width: 500px) {
    .header {
       margin-top: -84px;

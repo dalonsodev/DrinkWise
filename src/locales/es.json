@@ -22,7 +22,11 @@
    "menu": {
       "title": "Nuestro Menú de Bebidas",
       "description": "Explora nuestra selección de cócteles con y sin alcohol.",
-      "error": "Error: los datos de cócteles no son pertenecen a arreglo válido o está sin definir."
+      "error": "Error: los datos de cócteles no pertenecen a un arreglo válido o está sin definir.",
+      "filter": {
+         "withAlcohol": "Con Alcohol",
+         "noAlcohol": "SIN Alcohol"
+      }
    },
    "drinkDetails": {
       "title": "Detalles de la Bebida",
@@ -160,6 +164,7 @@
       "Vodka": "Vodka",
       "Rum": "Ron",
       "Cachaça": "Cachaça",
-      "Tequila": "Tequila"
+      "Tequila": "Tequila",
+      "Others": "Otros"
    }
 }
