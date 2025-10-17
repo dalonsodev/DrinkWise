@@ -43,12 +43,9 @@ export default function Menu() {
    ))
 
    function handleAlcoholFilterChange() {
-      const category = searchParams.get("category")
       const newAlcoholFilter = alcoholFilter === "true" ? "false" : "true"
       setSearchParams({ 
-         hasAlcohol: newAlcoholFilter,
-         ...(category && { category }),
-         ...(newAlcoholFilter === "true" && spiritFilter && { spirit: spiritFilter })
+         hasAlcohol: newAlcoholFilter
       })
    }
    
