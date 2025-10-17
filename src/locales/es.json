@@ -26,14 +26,16 @@
       "filter": {
          "withAlcohol": "Con Alcohol",
          "noAlcohol": "SIN Alcohol"
-      }
+      },
+         "no-results": "No se encontraron cócteles con esos filtros."
    },
    "drinkDetails": {
       "title": "Detalles de la Bebida",
       "description": "Detalles de la bebida"
    },
    "footer": {
-      "text": "© 2025 DrinkWise Menu. Proyecto de Portafolio."
+      "text-copy": "© 2025 DrinkWise Menu.",
+      "text-other": "Proyecto de Portafolio"
    },
    "category": {
       "Refreshing and light": "Refrescante y ligero",

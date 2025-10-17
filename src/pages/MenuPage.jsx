@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom"
 import cocktails from "../data/cocktails.json"
 import { useTranslation } from "react-i18next"
 import DrinkCard from "../components/features/DrinkCard"
-
+import NotFound from "../components/common/NotFound"
 
 export default function Menu() {
    const { t } = useTranslation()
@@ -36,8 +36,7 @@ export default function Menu() {
       return matchesAlcohol && matchesCategory && matchesSpirit
    })
 
-   console.log(drinksToDisplay.length)
-
+   
    const cocktailEls = drinksToDisplay.map(cocktail => (
       <DrinkCard key={cocktail.id} cocktail={cocktail} />
    ))
@@ -165,7 +164,9 @@ export default function Menu() {
 
          </div>
          <div className="cocktail-list">
-            {cocktailEls}
+            {cocktailEls.length > 0 
+               ? cocktailEls 
+               : <NotFound />}
          </div>
       </section>
   );

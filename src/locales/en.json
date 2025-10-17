@@ -26,14 +26,16 @@
       "filter": {
          "withAlcohol": "With Alcohol",
          "noAlcohol": "NO Alcohol"
-      }
+      },
+      "no-results": "No cocktails found with your selected filters."
    },
    "drinkDetails": {
       "title": "Drink details",
       "description": "Details for"
    },
    "footer": {
-      "text": "© 2025 DrinkWise Menu. Portfolio Project."
+      "text-copy": "© 2025 DrinkWise Menu.",
+      "text-other": "Portfolio Project"
    },
    "category": {
       "Refreshing and light": "Light & Refreshing",
