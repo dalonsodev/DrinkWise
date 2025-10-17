@@ -9,6 +9,7 @@ A **React-based web application** designed for bars in Spain to showcase an inte
 - **Interactive Drink Menu:** Browse and filter cocktails by category (e.g., alcoholic, non-alcoholic, flavor profile, main spirit).
 - **Cocktail Count Display:** Shows the number of cocktails available after applying filters, with the number highlighted in gold (--accent) for better UX.
 - **Clear Filters Button:** A subtle button to reset category and spirit filters, displayed only when filters are active.
+- **Filter Logic Abstraction:** Uses a custom hook (useDrinkFilters) and a FilterControls component for modular and reusable filter management.
 - **Recommendation Quiz:** A quick, 3-step quiz to suggest drinks based on user preferences (e.g., alcohol content, flavor profile, spirit type).
 - **Multilingual Support:** Fully localized in Spanish and English using `react-i18next` for seamless language switching.
 - **Responsive Design:** Mobile-first UI with CSS units tailored for scalability:
@@ -40,9 +41,9 @@ src/
 ├── components/          # Reusable components
 │   ├── common/         # Shared components (e.g., NotFound)
 │   ├── layout/         # Layout components (e.g., Navbar, Footer)
-│   └── features/       # Feature-specific components (e.g., Quiz, DrinkCard)
+│   └── features/       # Feature-specific components (e.g., Quiz, DrinkCard, FilterControls)
 ├── pages/              # Page-level components (e.g., HomePage, DrinkDetailPage)
-├── hooks/              # Custom hooks (e.g., useQuiz, useLazyBackground)
+├── hooks/              # Custom hooks (e.g., useDrinkFilters, useLazyBackground)
 ├── locales/            # Translation files (es.json, en.json)
 ├── data/               # Mock data (e.g., drinks.json)
 ├── styles/             # Global styles (index.css)
@@ -78,9 +79,10 @@ src/
 This project is built with a modular and scalable approach from the start. Key decisions include:
 
 - **Early i18n Integration:** Implemented `react-i18next` from the beginning to support Spanish and English, avoiding costly refactors and ensuring a seamless multilingual experience.
-- **Cocktail Count and Filters:** Added a cocktail count display with a highlighted number in gold (--accent) for better UX, along with a subtle "Clear filters" button that appears only when filters are active.
 - **CSS Units:** Using `rem` for font sizes, `em` for margins/paddings, and `px` for border-radius to ensure accessibility and responsiveness.
-- **Custom Hook:** Developed useLazyBackground for efficient image loading in DrinkCard components.
+- **Cocktail Count and Filters:** Added a cocktail count display with a highlighted number in gold (--accent) for better UX, along with a subtle "Clear filters" button that appears only when filters are active.
+- **Filter Logic Abstraction:** Extracted filter logic into a custom hook (useDrinkFilters) and UI into FilterControls to improve modularity and maintainability.
+- **Custom Hooks:** Developed useLazyBackground for efficient image loading in DrinkCard components and useDrinkFilters to improve modularity and mantainability.
 - **Git Workflow:** Descriptive commits (e.g., `feat: setup i18n with react-i18next`) to maintain a clean codebase.
 
 ---
