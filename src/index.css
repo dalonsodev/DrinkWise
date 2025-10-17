@@ -352,7 +352,7 @@ main {
    position: relative;
    width: 100%;
    min-height: 60vh;
-   background-image: url('/images/hero-home.webp'); /* Reemplaza con la ruta real de tu imagen */
+   background-image: url('/images/hero-home.webp');
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
