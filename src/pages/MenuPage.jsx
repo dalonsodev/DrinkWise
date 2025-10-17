@@ -51,15 +51,17 @@ export default function Menu() {
    
    function handleCategoryFilterChange(value) {
       const hasAlcohol = searchParams.get("hasAlcohol")
+      const spirit = searchParams.get("spirit")
       setSearchParams({ 
+         hasAlcohol: hasAlcohol,
          category: value,
-         hasAlcohol: hasAlcohol
+         ...(spirit && { spirit })
       })
    }
    
    function handleSpiritFilterChange(value) {
-      const category = searchParams.get("category")
       const hasAlcohol = searchParams.get("hasAlcohol")
+      const category = searchParams.get("category")
       setSearchParams({
          hasAlcohol: hasAlcohol,
          ...(category && { category }),
@@ -134,27 +136,27 @@ export default function Menu() {
                   <p className="menu-filter-label">Main spirit</p>
                   <div className="menu-filter menu-filter-spirit">
                      <button 
-                        className="menu-filter-btn"
+                        className={`menu-filter-btn ${spiritFilter === "Whiskey" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Whiskey")}
                      >Whiskey</button>
                      <button 
-                        className="menu-filter-btn"
+                        className={`menu-filter-btn ${spiritFilter === "Gin" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Gin")}
                      >Gin</button>
                      <button 
-                        className="menu-filter-btn"
+                        className={`menu-filter-btn ${spiritFilter === "Vodka" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Vodka")}
                      >Vodka</button>
                      <button 
-                        className="menu-filter-btn"
+                        className={`menu-filter-btn ${spiritFilter === "Rum" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Rum")}
                      >Rum</button>
                      <button 
-                        className="menu-filter-btn"
+                        className={`menu-filter-btn ${spiritFilter === "Tequila" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Tequila")}
                      >Tequila</button>
                      <button 
-                        className="menu-filter-btn"
+                        className={`menu-filter-btn ${spiritFilter === "Others" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Others")}
                      >Others</button>
                   </div>
