@@ -6,7 +6,7 @@ export default function Home() {
    const { t } = useTranslation()
 
    return (
-      <div className="page">
+      <div className="page home-hero">
          <h1 className="page-title">{t("welcome")}</h1>
          <p className="page-description">{t("welcome.description")}</p>
          <Link to="/quiz" className="btn-primary">
