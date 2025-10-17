@@ -25,7 +25,9 @@
       "error": "Error: cocktails data is not an array or is undefined.",
       "filter": {
          "withAlcohol": "With Alcohol",
-         "noAlcohol": "NO Alcohol"
+         "noAlcohol": "NO Alcohol",
+         "flavorProfile": "Flavor profile",
+         "mainSpirit": "Main spirit"
       },
       "no-results": "No cocktails found with your selected filters."
    },
@@ -38,12 +40,12 @@
       "text-other": "Portfolio Project"
    },
    "category": {
-      "Refreshing and light": "Light & Refreshing",
-      "Sweet and fruity": "Sweet and fruity",
-      "Bold and classic": "Strong & Classic",
-      "Citrus": "Citrus",
-      "Fruity": "Fruity",
-      "Herbal": "Herbal",
+      "refreshingAndLight": "Light & Refreshing",
+      "sweetAndFruity": "Sweet & fruity",
+      "boldAndClassic": "Strong & Classic",
+      "citrus": "Citrus",
+      "fruity": "Fruity",
+      "herbal": "Herbal",
 
       "Old Fashioned": "Bold & Classic",
       "Negroni": "Bold & Classic",
@@ -51,7 +53,7 @@
       "Daiquiri": "Sweet & fruity",
       "Dry Martini": "Bold & Classic",
       "Espresso Martini": "Sweet & fruity",
-      "Whiskey Sour": "Sweet & fruity",
+      "Whisky Sour": "Sweet & fruity",
       "Manhattan": "Bold & Classic",
       "Aperol Spritz": "Refreshing & light",
       "Mojito": "Refreshing & light",
@@ -77,14 +79,14 @@
       "Tropical Sparkler": "Fruity"
    },
    "description": {
-      "Old Fashioned": "A timeless classic with bold whiskey notes, softened by a touch of sugar and aromatic bitters.",
+      "Old Fashioned": "A timeless classic with bold whisky notes, softened by a touch of sugar and aromatic bitters.",
       "Negroni": "A sophisticated blend of gin, Campari, and vermouth, delivering an addictive bittersweet punch.",
       "Margarita": "Zesty lime and tequila dance on your palate, with a salty rim for the perfect finish.",
       "Daiquiri": "A vibrant mix of rum and lime, sweetened to perfection for a tropical escape.",
       "Dry Martini": "Crisp and elegant, with gin's botanical notes shining through a whisper of vermouth.",
       "Espresso Martini": "Rich espresso meets smooth vodka, creating a bold yet velvety pick-me-up.",
-      "Whiskey Sour": "A silky blend of whiskey and lemon, balanced with a touch of sweetness.",
-      "Manhattan": "A refined mix of whiskey and vermouth, with bitters adding depth and allure.",
+      "Whisky Sour": "A silky blend of whisky and lemon, balanced with a touch of sweetness.",
+      "Manhattan": "A refined mix of whisky and vermouth, with bitters adding depth and allure.",
       "Aperol Spritz": "Effervescent and vibrant, with Aperol’s citrusy bitterness and a prosecco sparkle.",
       "Mojito": "Fresh mint and lime mingle with rum for a crisp, invigorating sip.",
       "Moscow Mule": "Spicy ginger beer and zesty lime meet vodka in a refreshing, copper-mug classic.",
@@ -96,7 +98,7 @@
       "Tom Collins": "Bright lemon and gin fizz, a refreshing nod to tradition.",
       "Caipirinha": "Zesty lime and cachaça unite for a vibrant Brazilian escape.",
       "Piña Colada": "Creamy coconut and pineapple transport you to a tropical paradise.",
-      "Sazerac": "A bold rye whiskey embrace with a hint of absinthe mystique.",
+      "Sazerac": "A bold rye whisky embrace with a hint of absinthe mystique.",
       "Virgin Mojito": "Crisp mint and lime sparkle in this alcohol-free refresher.",
       "Shirley Temple": "Sweet grenadine and ginger ale, topped with a cherry delight.",
       "Virgin Piña Colada": "Creamy coconut and pineapple for a non-alcoholic tropical escape.",
@@ -109,7 +111,7 @@
       "Tropical Sparkler": "Tropical pineapple and spicy ginger ale for a vibrant sip."
    },
    "ingredients": {
-      "Whiskey": "Whiskey",
+      "Whisky": "Whisky",
       "Angostura Bitters": "Angostura Bitters",
       "Sugar": "Sugar",
       "Orange Peel": "Orange Peel",
@@ -148,7 +150,7 @@
       "Pineapple Juice": "Pineapple Juice",
       "Coconut Cream": "Coconut Cream",
       "Ice": "Ice",
-      "Rye Whiskey": "Rye Whiskey",
+      "Rye Whisky": "Rye Whisky",
       "Absinthe": "Absinthe",
       "Peychaud's Bitters": "Peychaud's Bitters",
       "Grenadine": "Grenadine",
@@ -160,8 +162,8 @@
       "Ginger Ale": "Ginger Ale"
    },
    "spirit": {
-      "Whiskey": "Whiskey",
-      "Rye Whiskey": "Rye Whiskey",
+      "Whisky": "Whisky",
+      "Rye Whisky": "Rye Whisky",
       "Gin": "Gin",
       "Vodka": "Vodka",
       "Rum": "Rum",

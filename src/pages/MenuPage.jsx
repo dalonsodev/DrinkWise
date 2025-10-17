@@ -91,73 +91,73 @@ export default function Menu() {
                </label>
             </div>
 
-            <p className="menu-filter-label">Flavour profile</p>
+            <p className="menu-filter-label">{t("menu.filter.flavorProfile")}</p>
             {alcoholFilter === "true" && 
                <div className="menu-filter menu-filter-flavour">
                   <button 
                      className={`menu-filter-btn 
-                        ${categoryFilter === "Sweet and Fruity" ? "active" : ""}`}
-                     onClick={() => handleCategoryFilterChange("Sweet and Fruity")}
-                  >Sweet & Fruity</button>
+                        ${categoryFilter === "sweetAndFruity" ? "active" : ""}`}
+                     onClick={() => handleCategoryFilterChange("sweetAndFruity")}
+                  >{t("category.sweetAndFruity")}</button>
 
                   <button 
                      className={`menu-filter-btn 
-                        ${categoryFilter === "Refreshing and Light" ? "active" : ""}`}
-                     onClick={() => handleCategoryFilterChange("Refreshing and Light")}
-                  >Refreshing & Light</button>
+                        ${categoryFilter === "refreshingAndLight" ? "active" : ""}`}
+                     onClick={() => handleCategoryFilterChange("refreshingAndLight")}
+                  >{t("category.refreshingAndLight")}</button>
 
                   <button 
                      className={`menu-filter-btn 
-                        ${categoryFilter === "Bold and Classic" ? "active" : ""}`}
-                     onClick={() => handleCategoryFilterChange("Bold and Classic")}
-                  >Bold & Classic</button>
+                        ${categoryFilter === "boldAndClassic" ? "active" : ""}`}
+                     onClick={() => handleCategoryFilterChange("boldAndClassic")}
+                  >{t("category.boldAndClassic")}</button>
                </div>
             }
             {alcoholFilter === "false" && 
                <div className="menu-filter menu-filter-flavour">
                   <button 
-                     className={`menu-filter-btn ${categoryFilter === "Citrus" ? "active" : ""}`}
-                     onClick={() => handleCategoryFilterChange("Citrus")}
-                  >Citrus</button>
+                     className={`menu-filter-btn ${categoryFilter === "citrus" ? "active" : ""}`}
+                     onClick={() => handleCategoryFilterChange("citrus")}
+                  >{t("category.citrus")}</button>
                   <button 
-                     className={`menu-filter-btn ${categoryFilter === "Fruity" ? "active" : ""}`}
-                     onClick={() => handleCategoryFilterChange("Fruity")}
-                  >Fruity</button>
+                     className={`menu-filter-btn ${categoryFilter === "fruity" ? "active" : ""}`}
+                     onClick={() => handleCategoryFilterChange("fruity")}
+                  >{t("category.fruity")}</button>
                   <button 
-                     className={`menu-filter-btn ${categoryFilter === "Herbal" ? "active" : ""}`}
-                     onClick={() => handleCategoryFilterChange("Herbal")}
-                  >Herbal</button>
+                     className={`menu-filter-btn ${categoryFilter === "herbal" ? "active" : ""}`}
+                     onClick={() => handleCategoryFilterChange("herbal")}
+                  >{t("category.herbal")}</button>
                </div>
             }
 
             {alcoholFilter === "true" &&
                <>
-                  <p className="menu-filter-label">Main spirit</p>
+                  <p className="menu-filter-label">{t("menu.filter.mainSpirit")}</p>
                   <div className="menu-filter menu-filter-spirit">
                      <button 
-                        className={`menu-filter-btn ${spiritFilter === "Whiskey" ? "active" : ""}`}
-                        onClick={() => handleSpiritFilterChange("Whiskey")}
-                     >Whiskey</button>
+                        className={`menu-filter-btn ${spiritFilter === "Whisky" ? "active" : ""}`}
+                        onClick={() => handleSpiritFilterChange("Whisky")}
+                     >{t("spirit.Whisky")}</button>
                      <button 
                         className={`menu-filter-btn ${spiritFilter === "Gin" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Gin")}
-                     >Gin</button>
+                     >{t("spirit.Gin")}</button>
                      <button 
                         className={`menu-filter-btn ${spiritFilter === "Vodka" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Vodka")}
-                     >Vodka</button>
+                     >{t("spirit.Vodka")}</button>
                      <button 
                         className={`menu-filter-btn ${spiritFilter === "Rum" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Rum")}
-                     >Rum</button>
+                     >{t("spirit.Rum")}</button>
                      <button 
                         className={`menu-filter-btn ${spiritFilter === "Tequila" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Tequila")}
-                     >Tequila</button>
+                     >{t("spirit.Tequila")}</button>
                      <button 
                         className={`menu-filter-btn ${spiritFilter === "Others" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Others")}
-                     >Others</button>
+                     >{t("spirit.Others")}</button>
                   </div>
                </>
             }

@@ -25,7 +25,9 @@
       "error": "Error: los datos de cócteles no pertenecen a un arreglo válido o está sin definir.",
       "filter": {
          "withAlcohol": "Con Alcohol",
-         "noAlcohol": "SIN Alcohol"
+         "noAlcohol": "SIN Alcohol",
+         "flavorProfile": "Perfil de sabor",
+         "mainSpirit": "Destilado principal"
       },
          "no-results": "No se encontraron cócteles con esos filtros."
    },
@@ -38,12 +40,12 @@
       "text-other": "Proyecto de Portafolio"
    },
    "category": {
-      "Refreshing and light": "Refrescante y ligero",
-      "Sweet and Afrutado": "Dulce y Afrutado",
-      "Bold and classic": "Fuerte y Clásico",
-      "Cítrico": "Cítrico",
-      "Afrutado": "Afrutado",
-      "Herbal": "Herbal",
+      "refreshingAndLight": "Refrescante y ligero",
+      "sweetAndFruity": "Dulce y Afrutado",
+      "boldAndClassic": "Fuerte y Clásico",
+      "citrus": "Cítrico",
+      "fruity": "Afrutado",
+      "herbal": "Herbal",
 
       "Old Fashioned": "Potente y clásico",
       "Negroni": "Potente y clásico",
@@ -51,7 +53,7 @@
       "Daiquiri": "Dulce y Afrutado",
       "Dry Martini": "Potente y clásico",
       "Espresso Martini": "Dulce y Afrutado",
-      "Whiskey Sour": "Dulce y Afrutado",
+      "Whisky Sour": "Dulce y Afrutado",
       "Manhattan": "Potente y clásico",
       "Aperol Spritz": "Refrescante y ligero",
       "Mojito": "Refrescante y ligero",
@@ -77,14 +79,14 @@
       "Tropical Sparkler": "Afrutado"
    },
    "description": {
-      "Old Fashioned": "Un clásico atemporal con notas audaces de whiskey, suavizadas por azúcar y bitters aromáticos.",
+      "Old Fashioned": "Un clásico atemporal con notas audaces de whisky, suavizadas por azúcar y bitters aromáticos.",
       "Negroni": "Una mezcla sofisticada de ginebra, Campari y vermut, con un adictivo toque agridulce.",
       "Margarita": "Lima vibrante y tequila danzan en el paladar, con un borde salado perfecto.",
       "Daiquiri": "Una vibrante mezcla de ron y lima, endulzada para una escapada tropical.",
       "Dry Martini": "Crujiente y elegante, con las notas botánicas de la ginebra y un susurro de vermut.",
       "Espresso Martini": "Cuando el delicioso Espresso se encuentra con el suave vodka, un impulso aterciopelado.",
-      "Whiskey Sour": "Una mezcla sedosa de whiskey y limón, equilibrada con un toque dulzón.",
-      "Manhattan": "Una mezcla refinada de whiskey y vermut, con bitters que añaden profundidad.",
+      "Whisky Sour": "Una mezcla sedosa de whisky y limón, equilibrada con un toque dulzón.",
+      "Manhattan": "Una mezcla refinada de whisky y vermut, con bitters que añaden profundidad.",
       "Aperol Spritz": "Efervescente y vibrante, con la amargura cítrica de Aperol y un brillo de prosecco.",
       "Mojito": "Menta fresca y lima se mezclan con ron para un sorbo vigorizante.",
       "Moscow Mule": "Cerveza de jengibre picante y lima se unen al vodka en un clásico refrescante.",
@@ -96,7 +98,7 @@
       "Tom Collins": "Limón brillante y ginebra fizz, un guiño refrescante a la tradición.",
       "Caipirinha": "Lima vibrante y cachaça se unen para una escapada brasileña.",
       "Piña Colada": "Coco cremoso y piña te transportan a un paraíso tropical.",
-      "Sazerac": "Un audaz abrazo de whiskey de centeno con un toque de absenta mística.",
+      "Sazerac": "Un audaz abrazo de whisky de centeno con un toque de absenta mística.",
       "Virgin Mojito": "Menta crujiente y lima brillan en este refrescante cóctel sin alcohol.",
       "Shirley Temple": "Granadina dulce y ginger ale, coronado con una cereza deliciosa.",
       "Virgin Piña Colada": "Coco cremoso y piña para una escapada tropical sin alcohol.",
@@ -109,7 +111,7 @@
       "Tropical Sparkler": "Piña tropical y ginger ale para un sorbo vibrante y con un toque picante."
    },
    "ingredients": {
-      "Whiskey": "Whiskey",
+      "Whisky": "Whisky",
       "Angostura Bitters": "Bitters Angostura",
       "Sugar": "Azúcar",
       "Orange Peel": "Cáscara de naranja",
@@ -148,7 +150,7 @@
       "Pineapple Juice": "Zumo de piña",
       "Coconut Cream": "Crema de coco",
       "Ice": "Hielo",
-      "Rye Whiskey": "Whiskey de centeno",
+      "Rye Whisky": "Whisky de centeno",
       "Absinthe": "Absenta",
       "Peychaud's Bitters": "Bitters Peychaud",
       "Grenadine": "Granadina",
@@ -160,8 +162,8 @@
       "Ginger Ale": "Ginger ale"
    },
    "spirit": {
-      "Whiskey": "Whiskey",
-      "Rye Whiskey": "Whiskey de centeno",
+      "Whisky": "Whisky",
+      "Rye Whisky": "Whisky de centeno",
       "Gin": "Ginebra",
       "Vodka": "Vodka",
       "Rum": "Ron",
