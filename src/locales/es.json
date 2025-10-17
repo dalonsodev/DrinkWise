@@ -29,7 +29,9 @@
          "flavorProfile": "Perfil de sabor",
          "mainSpirit": "Destilado principal"
       },
-         "no-results": "No se encontraron cócteles con esos filtros."
+      "cocktailCount": "{count, plural, one {Cóctel encontrado} other {Cócteles encontrados}}",
+      "clearFilters": "Limpiar filtros",
+      "no-results": "No se encontraron cócteles con esos filtros."
    },
    "drinkDetails": {
       "title": "Detalles de la Bebida",

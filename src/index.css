@@ -285,6 +285,50 @@ main {
    border-color: var(--accent);
 }
 
+.clear-filters-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.2em 0;
+  padding: 0;
+}
+
+/* Estilos para el contador de cócteles */
+.cocktail-count {
+  font-size: 1rem;
+  color: var(--text-subtle);
+  opacity: 0.7;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+/* Estilos para el número de cócteles */
+.cocktail-count-number {
+  font-size: 1.2rem;
+  color: var(--accent); /* Dorado para énfasis */
+  font-weight: bold;
+}
+
+/* Estilos para el botón Clear Filters (discreto) */
+.clear-filters-btn {
+  font-size: 0.8rem;
+  padding: 0.3em 0.8em;
+  margin: 0;
+  border: 1px solid var(--text-subtle);
+  border-radius: var(--pill-radius);
+  background: transparent;
+  color: var(--text-subtle);
+  opacity: 0.6;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.clear-filters-btn:hover {
+  opacity: 0.8;
+  color: var(--text);
+}
+
 .menu-filter-label {
    padding: 1em 0 0.5em 0;
 }

@@ -33,9 +33,9 @@ export default function Menu() {
       const matchesSpirit = alcoholFilter === "true" && spiritFilter 
          ? cocktail.spirit === spiritFilter 
          : true
+      
       return matchesAlcohol && matchesCategory && matchesSpirit
    })
-
    
    const cocktailEls = drinksToDisplay.map(cocktail => (
       <DrinkCard key={cocktail.id} cocktail={cocktail} />
@@ -43,6 +43,7 @@ export default function Menu() {
 
    function handleAlcoholFilterChange() {
       const newAlcoholFilter = alcoholFilter === "true" ? "false" : "true"
+      
       setSearchParams({ 
          hasAlcohol: newAlcoholFilter
       })
@@ -51,6 +52,7 @@ export default function Menu() {
    function handleCategoryFilterChange(value) {
       const hasAlcohol = searchParams.get("hasAlcohol")
       const spirit = searchParams.get("spirit")
+      
       setSearchParams({ 
          hasAlcohol: hasAlcohol,
          category: value,
@@ -61,6 +63,7 @@ export default function Menu() {
    function handleSpiritFilterChange(value) {
       const hasAlcohol = searchParams.get("hasAlcohol")
       const category = searchParams.get("category")
+      
       setSearchParams({
          hasAlcohol: hasAlcohol,
          ...(category && { category }),
@@ -68,11 +71,15 @@ export default function Menu() {
       })
    }
 
+   function handleClearFilters() {
+      const hasAlcohol = searchParams.get("hasAlcohol")
+      setSearchParams({ hasAlcohol })
+   }
+
    return (
       <section className="menu-page">
          <h1 className="menu-title">{t("menu.title")}</h1>
          <div className="menu-filters">
-
             <div className="menu-filter-alcohol">
                <label className="toggle-label">
                   <input 
@@ -95,38 +102,55 @@ export default function Menu() {
             {alcoholFilter === "true" && 
                <div className="menu-filter menu-filter-flavour">
                   <button 
+                     onClick={() => handleCategoryFilterChange("sweetAndFruity")}
                      className={`menu-filter-btn 
                         ${categoryFilter === "sweetAndFruity" ? "active" : ""}`}
-                     onClick={() => handleCategoryFilterChange("sweetAndFruity")}
-                  >{t("category.sweetAndFruity")}</button>
+                  >
+                     {t("category.sweetAndFruity")}
+                  </button>
 
                   <button 
+                     onClick={() => handleCategoryFilterChange("refreshingAndLight")}
                      className={`menu-filter-btn 
                         ${categoryFilter === "refreshingAndLight" ? "active" : ""}`}
-                     onClick={() => handleCategoryFilterChange("refreshingAndLight")}
-                  >{t("category.refreshingAndLight")}</button>
+                  >
+                     {t("category.refreshingAndLight")}
+                  </button>
 
                   <button 
+                     onClick={() => handleCategoryFilterChange("boldAndClassic")}
                      className={`menu-filter-btn 
                         ${categoryFilter === "boldAndClassic" ? "active" : ""}`}
-                     onClick={() => handleCategoryFilterChange("boldAndClassic")}
-                  >{t("category.boldAndClassic")}</button>
+                  >
+                     {t("category.boldAndClassic")}
+                  </button>
                </div>
             }
             {alcoholFilter === "false" && 
                <div className="menu-filter menu-filter-flavour">
                   <button 
-                     className={`menu-filter-btn ${categoryFilter === "citrus" ? "active" : ""}`}
                      onClick={() => handleCategoryFilterChange("citrus")}
-                  >{t("category.citrus")}</button>
+                     className={`menu-filter-btn 
+                        ${categoryFilter === "citrus" ? "active" : ""}`}
+                  >
+                     {t("category.citrus")}
+                  </button>
+
                   <button 
-                     className={`menu-filter-btn ${categoryFilter === "fruity" ? "active" : ""}`}
                      onClick={() => handleCategoryFilterChange("fruity")}
-                  >{t("category.fruity")}</button>
+                     className={`menu-filter-btn 
+                        ${categoryFilter === "fruity" ? "active" : ""}`}
+                  >
+                     {t("category.fruity")}
+                  </button>
+
                   <button 
-                     className={`menu-filter-btn ${categoryFilter === "herbal" ? "active" : ""}`}
                      onClick={() => handleCategoryFilterChange("herbal")}
-                  >{t("category.herbal")}</button>
+                     className={`menu-filter-btn 
+                        ${categoryFilter === "herbal" ? "active" : ""}`}
+                  >
+                     {t("category.herbal")}
+                  </button>
                </div>
             }
 
@@ -135,33 +159,71 @@ export default function Menu() {
                   <p className="menu-filter-label">{t("menu.filter.mainSpirit")}</p>
                   <div className="menu-filter menu-filter-spirit">
                      <button 
-                        className={`menu-filter-btn ${spiritFilter === "Whisky" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Whisky")}
-                     >{t("spirit.Whisky")}</button>
+                        className={`menu-filter-btn 
+                           ${spiritFilter === "Whisky" ? "active" : ""}`}
+                     >
+                        {t("spirit.Whisky")}
+                     </button>
+
                      <button 
-                        className={`menu-filter-btn ${spiritFilter === "Gin" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Gin")}
-                     >{t("spirit.Gin")}</button>
+                        className={`menu-filter-btn 
+                           ${spiritFilter === "Gin" ? "active" : ""}`}
+                     >
+                        {t("spirit.Gin")}
+                     </button>
+
                      <button 
-                        className={`menu-filter-btn ${spiritFilter === "Vodka" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Vodka")}
-                     >{t("spirit.Vodka")}</button>
+                        className={`menu-filter-btn 
+                           ${spiritFilter === "Vodka" ? "active" : ""}`}
+                     >
+                        {t("spirit.Vodka")}
+                     </button>
+
                      <button 
-                        className={`menu-filter-btn ${spiritFilter === "Rum" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Rum")}
-                     >{t("spirit.Rum")}</button>
+                        className={`menu-filter-btn 
+                           ${spiritFilter === "Rum" ? "active" : ""}`}
+                     >
+                        {t("spirit.Rum")}
+                     </button>
+
                      <button 
-                        className={`menu-filter-btn ${spiritFilter === "Tequila" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Tequila")}
-                     >{t("spirit.Tequila")}</button>
+                        className={`menu-filter-btn 
+                           ${spiritFilter === "Tequila" ? "active" : ""}`}
+                     >
+                        {t("spirit.Tequila")}
+                     </button>
+
                      <button 
-                        className={`menu-filter-btn ${spiritFilter === "Others" ? "active" : ""}`}
                         onClick={() => handleSpiritFilterChange("Others")}
-                     >{t("spirit.Others")}</button>
+                        className={`menu-filter-btn 
+                           ${spiritFilter === "Others" ? "active" : ""}`}
+                     >
+                        {t("spirit.Others")}
+                     </button>
                   </div>
                </>
             }
-
+            <div className="clear-filters-container">
+               <p className="cocktail-count">
+                  <span className="cocktail-count-number">
+                     {drinksToDisplay.length}
+                  </span>
+                  {t("menu.cocktailCount", { count: drinksToDisplay.length })}
+               </p>
+               {categoryFilter || spiritFilter ? (
+                  <button
+                  onClick={() => handleClearFilters()}
+                  className="clear-filters-btn"   
+                  >
+                     {t("menu.clearFilters")}
+                  </button>
+               ) : null}
+            </div>
          </div>
          <div className="cocktail-list">
             {cocktailEls.length > 0 

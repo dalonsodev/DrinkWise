@@ -29,6 +29,8 @@
          "flavorProfile": "Flavor profile",
          "mainSpirit": "Main spirit"
       },
+      "cocktailCount": "{count, plural, one {Cocktail found} other {Cocktails found}}",
+      "clearFilters": "Clear filters",
       "no-results": "No cocktails found with your selected filters."
    },
    "drinkDetails": {

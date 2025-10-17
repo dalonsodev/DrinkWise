@@ -68,8 +68,8 @@
    {
       "id": 7,
       "name": "Whisky Sour",
-      "image": "/cocktail-images/whisky-sour.webp",
-      "imageFallback": "/cocktail-images/whisky-sour.png",
+      "image": "/cocktail-images/whiskey-sour.webp",
+      "imageFallback": "/cocktail-images/whiskey-sour.png",
       "ingredients": ["Whisky", "Lemon Juice", "Simple Syrup", "Egg White"],
       "category": "sweetAndFruity",
       "spirit": "Whisky",
