@@ -25,11 +25,11 @@ export default function Menu() {
    }
 
    const drinksToDisplay = cocktails.filter(cocktail => {
-      const matchesAlcohol = cocktail.hasAlcohol === (alcoholFilter === "true")
+      const matchesAlcohol = cocktail.hasAlcohol === alcoholFilter
       const matchesCategory = categoryFilter 
          ? cocktail.category === categoryFilter 
          : true
-      const matchesSpirit = alcoholFilter === "true" && spiritFilter 
+      const matchesSpirit = alcoholFilter && spiritFilter 
          ? cocktail.spirit === spiritFilter 
          : true
       

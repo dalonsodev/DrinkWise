@@ -13,7 +13,7 @@ export default function ToggleAlcohol({
             <input 
                id="alcohol-toggle"
                type="checkbox"
-               checked={alcoholFilter === "true"}
+               checked={alcoholFilter}
                onChange={onToggle}
                className="toggle-input"
             />
