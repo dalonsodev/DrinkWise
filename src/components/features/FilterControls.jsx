@@ -1,5 +1,6 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
+import ToggleAlcohol from "../common/ToggleAlcohol"
 
 export default function FilterControls({
    alcoholFilter,
@@ -15,7 +16,7 @@ export default function FilterControls({
 
    return (
       <div className="menu-filters">
-         <div className="menu-filter-alcohol">
+         {/* <div className="menu-filter-alcohol">
             <label className="toggle-label">
                <input 
                   type="checkbox"
@@ -31,7 +32,11 @@ export default function FilterControls({
                   )}
                </span>
             </label>
-         </div>
+         </div> */}
+         <ToggleAlcohol 
+            alcoholFilter={alcoholFilter}
+            onToggle={handleAlcoholFilterChange}
+         />
 
          <p className="menu-filter-label">{t("menu.filter.flavorProfile")}</p>
          {alcoholFilter === "true" && 
