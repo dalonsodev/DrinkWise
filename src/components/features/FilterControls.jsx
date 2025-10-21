@@ -16,30 +16,13 @@ export default function FilterControls({
 
    return (
       <div className="menu-filters">
-         {/* <div className="menu-filter-alcohol">
-            <label className="toggle-label">
-               <input 
-                  type="checkbox"
-                  checked={alcoholFilter === "true"}
-                  onChange={handleAlcoholFilterChange}
-                  className="toggle-input"
-               />
-               <span className="toggle-slider"></span>
-               <span className="toggle-text">
-                  {t(`menu.filter.${alcoholFilter === "true" 
-                     ? "withAlcohol" 
-                     : "noAlcohol"}`
-                  )}
-               </span>
-            </label>
-         </div> */}
          <ToggleAlcohol 
             alcoholFilter={alcoholFilter}
             onToggle={handleAlcoholFilterChange}
          />
 
          <p className="menu-filter-label">{t("menu.filter.flavorProfile")}</p>
-         {alcoholFilter === "true" && 
+         {alcoholFilter && 
             <div className="menu-filter menu-filter-flavour">
                <button 
                   onClick={() => handleCategoryFilterChange("sweetAndFruity")}
@@ -66,7 +49,7 @@ export default function FilterControls({
                </button>
             </div>
          }
-         {alcoholFilter === "false" && 
+         {!alcoholFilter && 
             <div className="menu-filter menu-filter-flavour">
                <button 
                   onClick={() => handleCategoryFilterChange("citrus")}
@@ -94,7 +77,7 @@ export default function FilterControls({
             </div>
          }
 
-         {alcoholFilter === "true" &&
+         {alcoholFilter &&
             <>
                <p className="menu-filter-label">{t("menu.filter.mainSpirit")}</p>
                <div className="menu-filter menu-filter-spirit">

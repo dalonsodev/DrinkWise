@@ -19,7 +19,7 @@ export default function ToggleAlcohol({
             />
             <span className="toggle-slider"></span>
             <span className="toggle-text">
-               {t(`menu.filter.${alcoholFilter === "true" 
+               {t(`menu.filter.${alcoholFilter 
                   ? "withAlcohol" 
                   : "noAlcohol"}`
                )}
