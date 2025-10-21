@@ -1,14 +1,19 @@
-const questionsNoAlcohol = [
+export default [
    {
-      text: "¿Qué sabor te apetece experimentar?",
-      options: ["Cítrico", "Afrutado", "Herbal"],
+      textKey: "quiz.flavorExperience",
+      options: [
+         { key: "quiz.citrus" },
+         { key: "quiz.fruity" },
+         { key: "quiz.herbal" },
+      ],
       isMulti: false
    },
    {
-      text: "Trago suave o con burbujas?",
-      options: ["Suave y sedoso", "Burbujeante"],
+      textKey: "quiz.smoothBubbles",
+      options: [
+         { key: "quiz.smoothSilky" },
+         { key: "quiz.bubbly" },
+      ],
       isMulti: false
    }
 ]
-
-export default questionsNoAlcohol

@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
 import ToggleAlcohol from "../common/ToggleAlcohol"
 
 export default function QuizConfirmation({
@@ -6,20 +7,22 @@ export default function QuizConfirmation({
    onToggle,
    onStart
 }) {
+   const { t } = useTranslation()
+
    return (
       <div className="quiz-confirmation">
-         <h2>Antes de empezar...</h2>
-         <p>Confirma que quieres opciones con alcohol.</p>
+         <h2>{t("quiz.beforeStart")}</h2>
+         <p>{t("quiz.confirmAlcohol")}</p>
          <ToggleAlcohol 
             alcoholFilter={quizAlcohol}
             onToggle={onToggle}
          />
-         <p>(Desmarca si quieres cócteles sin alcohol.)</p>
+         <p>{t("quiz.withoutAlcohol")}</p>
          <button 
             onClick={onStart}
             className="btn-quiz"
          >
-            Comenzar quiz
+            {t("quiz.start")}
          </button>
       </div>
    )

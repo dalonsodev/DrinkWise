@@ -1,19 +1,33 @@
-const questionsWithAlcohol = [
+export default [
    {
-      text: "¿En qué momento lo tomarás?",
-      options: ["Aperitivo", "En la comida", "Postre/Sobremesa", "Tarde/Noche"],
+      textKey: "quiz.whenDrink",
+      options: [
+         { key: "quiz.appetizer" },
+         { key: "quiz.withMeal" },
+         { key: "quiz.dessert" },
+         { key: "quiz.eveningNight" }
+      ],
       isMulti: false
-   }, 
+   },
    {
-      text: "¿Qué estilo de cóctel te apetece?",
-      options: ["Dulce y/o Afrutado", "Refrescante y ligero", "Potente y clásico"],
+      textKey: "quiz.cocktailStyle",
+      options: [
+         { key: "quiz.sweetFruity" },
+         { key: "quiz.refreshingLight" },
+         { key: "quiz.strongClassic" }
+      ],
       isMulti: false
-   }, 
+   },
    {
-      text: "¿Qué espirituosos te gustan?",
-      options: ["Whisky", "Ginebra", "Vodka", "Ron", "Tequila", "Otros"],
+      textKey: "quiz.spirits",
+      options: [
+         { key: "quiz.whisky" },
+         { key: "quiz.gin" },
+         { key: "quiz.vodka" },
+         { key: "quiz.rum" },
+         { key: "quiz.tequila" },
+         { key: "quiz.others" }
+      ],
       isMulti: true
    }
 ]
-
-export default questionsWithAlcohol

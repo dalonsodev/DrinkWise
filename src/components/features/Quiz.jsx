@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
 import ProgressIndicator from "../common/ProgressIndicator"
 import Question from "../common/Question"
 import Option from "../common/Option"
@@ -6,6 +7,7 @@ import QuizConfirmation from "./QuizConfirmation"
 import useQuizLogic from "../../hooks/useQuizLogic"
 
 export default function Quiz() {
+   const { t } = useTranslation()
    const {
       showConfirmation,
       quizAlcohol,
@@ -68,7 +70,7 @@ export default function Quiz() {
                            className="quiz-prev-btn"
                            onClick={handlePrevStep}
                         >
-                           ‹ Volver
+                           {t("quiz.back")}
                         </button>
                      )}
 
@@ -84,7 +86,7 @@ export default function Quiz() {
                               onClick={handleNextStep}
                               disabled={isResultsBtnDisabled()}
                            >
-                              Ver resultados
+                              {t("quiz.results")}
                            </button>
                         )}
                      </div>

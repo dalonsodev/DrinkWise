@@ -1,15 +1,27 @@
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 import questionsWithAlcohol from "../data/questions/withAlcohol"
 import questionsNoAlcohol from "../data/questions/noAlcohol"
 
 export default function useQuizLogic() {
+   const { t } = useTranslation()
+
    const [showConfirmation, setShowConfirmation] = useState(true)
    const [quizAlcohol, setQuizAlcohol] = useState(true)
    const [answers, setAnswers] = useState([])
    const [currentStep, setCurrentStep] = useState(0)
    const [lastAnsweredStep, setLastAnsweredStep] = useState(-1)
 
-   const currentQuestions = quizAlcohol ? questionsWithAlcohol : questionsNoAlcohol
+   function translateQuestions(questions) {
+      return questions.map(q => ({
+         ...q,
+         text: t(q.textKey),
+         options: q.options.map(opt => t(opt.key))
+      }))
+   }
+
+   const currentQuestionsBase = quizAlcohol ? questionsWithAlcohol : questionsNoAlcohol
+   const currentQuestions = translateQuestions(currentQuestionsBase)
 
    useEffect(() => {
       if (currentStep < currentQuestions.length) {
