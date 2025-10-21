@@ -15,7 +15,7 @@ export default function useLazyBackground(imageUrl) {
                }
             })
          },
-         { rootMargin: "100px" }
+         { rootMargin: "200px" }
       )
 
       if (node) {

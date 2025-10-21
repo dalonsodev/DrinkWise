@@ -49,7 +49,7 @@
       "bubbly": "Burbujeante"
    },
    "menu": {
-      "title": "Nuestro Menú de Bebidas",
+      "title": "Nuestros Cócteles",
       "description": "Explora nuestra selección de cócteles con y sin alcohol.",
       "error": "Error: los datos de cócteles no pertenecen a un arreglo válido o está sin definir.",
       "filter": {
