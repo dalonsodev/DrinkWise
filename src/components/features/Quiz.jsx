@@ -4,7 +4,7 @@ import questionsNoAlcohol from "../../data/questions/noAlcohol"
 import ProgressIndicator from "../common/ProgressIndicator"
 import Question from "../common/Question"
 import Option from "../common/Option"
-import ToggleAlcohol from "../common/ToggleAlcohol"
+import QuizConfirmation from "./QuizConfirmation"
 
 export default function Quiz() {
    const [showConfirmation, setShowConfirmation] = useState(true)
@@ -121,19 +121,11 @@ export default function Quiz() {
          <h1>Quiz page</h1>
          <div className="quiz-container">
             {showConfirmation ? (
-                  <div className="quiz-confirmation">
-                     <h2>Antes de empezar...</h2>
-                     <p>Confirma que quieres opciones con alcohol.</p>
-                     <ToggleAlcohol 
-                        alcoholFilter={quizAlcohol}
-                        onToggle={handleQuizAlcoholToggle}
-                     />
-                     <p>(Desmarca si quieres cócteles sin alcohol.)</p>
-                     <button 
-                        onClick={handleStartQuiz}
-                        className="btn-quiz"
-                     >Comenzar quiz</button>
-                  </div>
+               <QuizConfirmation 
+                  quizAlcohol={quizAlcohol}
+                  onToggle={handleQuizAlcoholToggle}
+                  onStart={handleStartQuiz}
+               />
                ) : (
                   <>
                      <ProgressIndicator 
