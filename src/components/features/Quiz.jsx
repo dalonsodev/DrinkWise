@@ -51,14 +51,16 @@ export default function Quiz() {
 
    return (
       <section className="page quiz-page">
-         <h1>Quiz page</h1>
          <div className="quiz-container">
             {showConfirmation ? (
-               <QuizConfirmation 
-                  quizAlcohol={quizAlcohol}
-                  onToggle={handleQuizAlcoholToggle}
-                  onStart={handleStartQuiz}
-               />
+               <>
+                  <h1 className="quiz-title">Quiz page</h1>
+                  <QuizConfirmation 
+                     quizAlcohol={quizAlcohol}
+                     onToggle={handleQuizAlcoholToggle}
+                     onStart={handleStartQuiz}
+                  />
+               </>
                ) : (
                   <>
                      <ProgressIndicator 

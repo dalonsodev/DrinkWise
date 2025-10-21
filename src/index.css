@@ -423,8 +423,19 @@ main {
    min-height: 60vh;
    display: flex;
    flex-direction: column;
-   justify-content: center;
    align-items: center;
+}
+
+.quiz-confirmation {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: auto 0;
+}
+
+.quiz-confirmation p {
+   color: var(--text-subtle);
 }
 
 .quiz-confirmation button {
@@ -466,7 +477,8 @@ main {
    margin: 0 auto;
 }
 
-.menu-title {
+.menu-title,
+.quiz-title {
    font-size: 1.8rem;
    font-weight: bold;
    margin-bottom: 0.5em;
@@ -673,7 +685,6 @@ main {
    font-size: 0.9rem;
    cursor: pointer;
    padding: 0.5em 0;
-   margin: 1em 0;
    display: inline-flex;
    align-items: center;
    gap: 0.25em;
