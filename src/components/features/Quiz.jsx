@@ -43,7 +43,7 @@ export default function Quiz() {
 
    function renderResults() {
       return (
-         <div>
+         <div className="results-container">
             Resultados aquí (answers: {JSON.stringify(answers)})
          </div>
       )
