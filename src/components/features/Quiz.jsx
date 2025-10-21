@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import questionsWithAlcohol from "../../data/questions/withAlcohol"
+import questionsNoAlcohol from "../../data/questions/noAlcohol"
 import ProgressIndicator from "../common/ProgressIndicator"
 import Question from "../common/Question"
 import Option from "../common/Option"
@@ -11,35 +13,6 @@ export default function Quiz() {
    const [currentStep, setCurrentStep] = useState(0)
    const [lastAnsweredStep, setLastAnsweredStep] = useState(-1)
    
-   const questionsWithAlcohol = [
-      {
-         text: "¿En qué momento lo tomarás?",
-         options: ["Aperitivo", "En la comida", "Postre/Sobremesa", "Tarde/Noche"],
-         isMulti: false
-      }, 
-      {
-         text: "¿Qué estilo de cóctel te apetece?",
-         options: ["Dulce y/o Afrutado", "Refrescante y ligero", "Potente y clásico"],
-         isMulti: false
-      }, 
-      {
-         text: "¿Qué espirituosos te gustan?",
-         options: ["Whisky", "Ginebra", "Vodka", "Ron", "Tequila", "Otros"],
-         isMulti: true
-      }
-   ]
-   const questionsNoAlcohol = [
-      {
-         text: "¿Qué sabor te apetece experimentar?",
-         options: ["Cítrico", "Afrutado", "Herbal"],
-         isMulti: false
-      },
-      {
-         text: "Trago suave o con burbujas?",
-         options: ["Suave y sedoso", "Burbujeante"],
-         isMulti: false
-      }
-   ]
    const currentQuestions = quizAlcohol ? questionsWithAlcohol : questionsNoAlcohol
 
    useEffect(() => {
