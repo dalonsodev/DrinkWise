@@ -432,7 +432,7 @@ main {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   margin: auto 2em;
+   margin: auto 1em;
 }
 
 .quiz-confirmation p {
