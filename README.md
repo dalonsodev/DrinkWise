@@ -7,6 +7,10 @@ A **React-based web application** designed for bars in Spain to showcase an inte
 ## 🚀 Features
 
 - **Interactive Drink Menu:** Browse and filter cocktails by category (e.g., alcoholic, non-alcoholic, flavor profile, main spirit).
+   -**Horizontal swipe:** Achieve 0 vertical scroll
+   -**CSS Grid:** 80vw cards + 10vw padding + 5vw gaps
+   -**Scroll Snap:** x mandatory + center align
+   -**Peek Cards:** 10% next cocktail visible (invitation to swipe)
 - **Cocktail Count Display:** Shows the number of cocktails available after applying filters, with the number highlighted in gold (--accent) for better UX.
 - **Clear Filters Button:** A subtle button to reset category and spirit filters, displayed only when filters are active.
 - **Filter Logic Abstraction:** Uses a custom hook (useDrinkFilters) and a FilterControls component for modular and reusable filter management.
@@ -101,6 +105,8 @@ This project is built with a modular and scalable approach from the start. Key d
 
 - [x] Add filtering functionality to MenuPage.jsx to sort cocktails by category or ingredient.
 - [x] Implement the recommendation quiz with a maximum of 3 questions (e.g., alcohol preference, flavor profile, spirit type).
+- [x] Implement cocktail carousel in ManuPage.
+- [x] Implement cocktail carousel to show suggested cocktail drinks.
 - [] Add ability for the user to see cocktail details (e.g. ingredients, allergens) by tapping the drink card.
 - [] Enhance responsiveness with media queries in index.css for better mobile support (e.g., adjust cocktail-card layout).
 - [] Deploy to Netlify for a live demo.
