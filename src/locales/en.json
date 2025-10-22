@@ -49,13 +49,13 @@
       "bubbly": "Let's go Bubbly!"
    },
    "menu": {
-      "title": "Our Drink Menu",
+      "title": "Cocktails",
       "description": "Explore our selection of cocktails and mocktails.",
       "error": "Error: cocktails data is not an array or is undefined.",
       "filter": {
          "withAlcohol": "With Alcohol",
          "noAlcohol": "NO Alcohol",
-         "flavorProfile": "Flavor profile",
+         "flavorProfile": "Flavor",
          "mainSpirit": "Main spirit"
       },
       "cocktailCount": "{count, plural, one {Cocktail found} other {Cocktails found}}",

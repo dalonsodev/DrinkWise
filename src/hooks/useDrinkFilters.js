@@ -7,6 +7,8 @@ export default function useDrinkFilters() {
 
    function handleAlcoholFilterChange() {
       setAlcoholFilter(prev => !prev)
+      setCategoryFilter("")
+      setSpiritFilter("")
    }
    
    function handleCategoryFilterChange(category) {

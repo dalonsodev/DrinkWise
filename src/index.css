@@ -636,9 +636,9 @@ main {
    gap: 5vw;
    overflow-x: auto;
    overflow-y: hidden;
-   height: calc(100vh - 144px);
+   height: calc(100vh - 320px);
+   padding: 1em 10vw 1em 10vw;
    scroll-snap-type: x mandatory;
-   padding: 1em 0;
    scrollbar-width: none;
    -ms-overflow-style: none;
    -webkit-overflow-scrolling: touch;
@@ -651,23 +651,6 @@ main {
 .cocktail-card-wrapper.carousel-item {
    scroll-snap-align: center;
    height: 90vh;
-}
-
-.cocktail-card-wrapper.carousel-item:first-child {
-   scroll-snap-align: start;
-}
-
-
-/* Grid Normal */
-.cocktail-list:not(.carousel) {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-   gap: 2em;
-   padding: 2em 1.5em;
-}
-
-.cocktail-card-wrapper.grid-item {
-   width: 100%;
 }
 
 

@@ -10,6 +10,12 @@ export default function ToggleAlcohol({
    return (
       <div className="menu-filter-alcohol">
          <label className="toggle-label" htmlFor="alcohol-toggle">
+            <span className="toggle-text">
+               {t(`menu.filter.${alcoholFilter 
+                  ? "withAlcohol" 
+                  : "noAlcohol"}`
+               )}
+            </span>
             <input 
                id="alcohol-toggle"
                type="checkbox"
@@ -18,12 +24,6 @@ export default function ToggleAlcohol({
                className="toggle-input"
             />
             <span className="toggle-slider"></span>
-            <span className="toggle-text">
-               {t(`menu.filter.${alcoholFilter 
-                  ? "withAlcohol" 
-                  : "noAlcohol"}`
-               )}
-            </span>
          </label>
       </div>
    )

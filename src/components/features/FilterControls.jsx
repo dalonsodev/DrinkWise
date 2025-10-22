@@ -1,49 +1,45 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
-import ToggleAlcohol from "../common/ToggleAlcohol"
 
 export default function FilterControls({
    alcoholFilter,
    categoryFilter,
    spiritFilter,
    handleClearFilters,
-   handleAlcoholFilterChange,
    handleCategoryFilterChange,
    handleSpiritFilterChange,
-   drinksToDisplayLength,
+   drinksToDisplayLength
 }) {
    const { t } = useTranslation()
 
    return (
       <div className="menu-filters">
-         <ToggleAlcohol 
-            alcoholFilter={alcoholFilter}
-            onToggle={handleAlcoholFilterChange}
-         />
-
-         <p className="menu-filter-label">{t("menu.filter.flavorProfile")}</p>
          {alcoholFilter && 
             <div className="menu-filter menu-filter-flavour">
+               <p className="menu-filter-label">{t("menu.filter.flavorProfile")}:</p>
                <button 
                   onClick={() => handleCategoryFilterChange("sweetAndFruity")}
-                  className={`menu-filter-btn 
-                     ${categoryFilter === "sweetAndFruity" ? "active" : ""}`}
+                  className={`menu-filter-btn ${categoryFilter === "sweetAndFruity" 
+                     ? "active" 
+                     : ""}`}
                >
                   {t("category.sweetAndFruity")}
                </button>
 
                <button 
                   onClick={() => handleCategoryFilterChange("refreshingAndLight")}
-                  className={`menu-filter-btn 
-                     ${categoryFilter === "refreshingAndLight" ? "active" : ""}`}
+                  className={`menu-filter-btn ${categoryFilter === "refreshingAndLight" 
+                     ? "active" 
+                     : ""}`}
                >
                   {t("category.refreshingAndLight")}
                </button>
 
                <button 
                   onClick={() => handleCategoryFilterChange("boldAndClassic")}
-                  className={`menu-filter-btn 
-                     ${categoryFilter === "boldAndClassic" ? "active" : ""}`}
+                  className={`menu-filter-btn ${categoryFilter === "boldAndClassic" 
+                     ? "active" 
+                     : ""}`}
                >
                   {t("category.boldAndClassic")}
                </button>
@@ -51,6 +47,7 @@ export default function FilterControls({
          }
          {!alcoholFilter && 
             <div className="menu-filter menu-filter-flavour">
+               <p className="menu-filter-label">{t("menu.filter.flavorProfile")}:</p>
                <button 
                   onClick={() => handleCategoryFilterChange("citrus")}
                   className={`menu-filter-btn 
@@ -79,8 +76,8 @@ export default function FilterControls({
 
          {alcoholFilter &&
             <>
-               <p className="menu-filter-label">{t("menu.filter.mainSpirit")}</p>
                <div className="menu-filter menu-filter-spirit">
+                  <p className="menu-filter-label">{t("menu.filter.mainSpirit")}:</p>
                   <button 
                      onClick={() => handleSpiritFilterChange("Whisky")}
                      className={`menu-filter-btn 

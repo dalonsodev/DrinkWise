@@ -49,14 +49,14 @@
       "bubbly": "Burbujeante"
    },
    "menu": {
-      "title": "Nuestros Cócteles",
+      "title": "Cócteles",
       "description": "Explora nuestra selección de cócteles con y sin alcohol.",
       "error": "Error: los datos de cócteles no pertenecen a un arreglo válido o está sin definir.",
       "filter": {
          "withAlcohol": "Con Alcohol",
          "noAlcohol": "SIN Alcohol",
-         "flavorProfile": "Perfil de sabor",
-         "mainSpirit": "Destilado principal"
+         "flavorProfile": "Sabor",
+         "mainSpirit": "Destilado"
       },
       "cocktailCount": "{count, plural, one {Cóctel encontrado} other {Cócteles encontrados}}",
       "clearFilters": "Limpiar filtros",
