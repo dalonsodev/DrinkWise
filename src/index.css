@@ -1,40 +1,39 @@
-/* Global styles */
+/* Variables & Reset */
 :root {
-   /* Color palette */
-   --primary: #FF4500; /* OrangeRed */
-   --secondary: #FF6347; /* Tomato */
-   --background: #1A1A1A; /* Dark gray */
-   --surface: #2D2D2D; /* Medium gray */
-   --text-subtle: #ccc; /* Light gray */
-   --text: #FFFFFF; /* White */
-   --accent: #FFD700; /* Gold */
-
-   /* Other utils */
+   --primary: #FF4500;
+   --secondary: #FF6347;
+   --background: #1A1A1A;
+   --surface: #2D2D2D;
+   --text: #FFFFFF;
+   --text-subtle: #ccc;
+   --accent: #FFD700;
    --border-radius: 8px;
-   --pill-radius: 50px; 
-   --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   --pill-radius: 50px;
+   --shadow: 0 4px 8px rgba(0,0,0,0.2);
    --transition: all 0.3s ease;
+   --font-main: 'Arial', sans-serif;
 }
 
-* {
+*, 
+*::before, 
+*::after {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
 
 body {
-   font-family: 'Arial', sans-serif;
+   font-family: var(--font-main);
    background-color: var(--background);
    color: var(--text);
    line-height: 1.6;
    font-size: 1rem;
 }
 
-/* Site-wrapper */
+/* Layout */
 .site-wrapper {
    max-width: 1200px;
    margin: 0 auto;
-   /* padding: 2em; */
    min-height: 80vh;
 }
 
@@ -42,11 +41,10 @@ main {
    margin-top: 100px;
 }
 
-/* Header (Navbar) */
+/* Header & Navigation */
 .header {
    position: fixed;
    margin-top: -84px;
-   /* margin-top: 1em; */
    margin-left: 0.5em;
    width: calc(100% - 1.5em);
    background-color: var(--surface);
@@ -201,8 +199,7 @@ main {
    transform: translateY(0);
 }
 
-/* Menu filters */
-/* Toggle for Alcohol Filter */
+/* Menu Filters */
 .menu-filter-alcohol {
    display: flex;
    align-items: center;
@@ -218,14 +215,8 @@ main {
    cursor: pointer;
 }
 
-.toggle-text {
-   font-weight: bold;
-}
-
-.toggle-input {
-   display: none;
-}
-
+.toggle-text { font-weight: bold; }
+.toggle-input { display: none; }
 .toggle-slider {
    position: relative;
    width: 4em;
@@ -262,12 +253,14 @@ main {
    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5); 
 }
 
-
 .menu-filter {
    display: flex;
+   align-items: center;
    gap: 0.5em;
    overflow-x: auto;
    padding-bottom: 0.5em;
+   margin-bottom: 0.5em;
+   scrollbar-width: none;
 }
 
 .menu-filter-btn {
@@ -279,7 +272,6 @@ main {
    letter-spacing: 1px;
 }
 
-.menu-filter-btn:hover,
 .menu-filter-btn.active {
    background-color: var(--background);
    color: var(--text);
@@ -288,9 +280,10 @@ main {
 
 .clear-filters-container {
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    align-items: center;
-   margin: 1.2em 0;
+   gap: 1em;
+   margin: 1.2em 0 0 0;
    padding: 0;
 }
 
@@ -328,11 +321,11 @@ main {
 }
 
 .menu-filter-label {
-   padding: 1em 0 0.5em 0;
+   white-space: nowrap;
+   font-weight: bold;
 }
 
-
-/* Page styles */
+/* Page Styles */
 .page {
    text-align: center;
 }
@@ -348,7 +341,7 @@ main {
    margin-bottom: 1em;
 }
 
-/* Home Hero Styles */
+/* Home Hero */
 .home-hero {
    position: relative;
    width: 100%;
@@ -372,7 +365,11 @@ main {
    left: 0;
    width: 100%;
    height: 100%;
-   background: linear-gradient(to bottom, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.7));
+   background: linear-gradient(
+      to bottom, 
+      rgba(26, 26, 26, 0.9),
+      rgba(26, 26, 26, 0.7)
+   );
    z-index: 1;
 }
 
@@ -413,8 +410,7 @@ main {
    box-shadow: 0 6px 16px rgba(255, 69, 0, 0.7);
 }
 
-/* Quiz page */
-
+/* Quiz Page */
 .quiz-page .menu-filter-alcohol {
    justify-self: center;
    margin-top: 1em;
@@ -474,13 +470,45 @@ main {
    margin-bottom: 0.5em;
 }
 
-
 /* MenuPage */
-.menu-page,
+.menu-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.menu-title {
+   font-size: 1.5rem;
+   font-weight: bold;
+   margin: 0;
+   text-align: left;
+}
+
+.menu-filters {
+   margin-top: 0.25em;
+}
+
 .quiz-page {
    padding: 0 1.5em 1.5em;
    max-width: 600px; 
    margin: 0 auto;
+}
+
+.menu-header,
+.clear-filters-container {
+   padding: 0 1.5em;
+}
+
+.menu-page,
+.quiz-page {
+   max-width: 600px; 
+   margin: 0 auto;
+}
+
+.menu-header,
+.menu-filters,
+.clear-filters-container {
+   padding-left: 1.5em;
 }
 
 .menu-title,
@@ -491,6 +519,7 @@ main {
    text-align: center;
 }
 
+/* Cocktail Cards */
 .cocktail-list {
    display: flex;
    flex-direction: column;
@@ -510,7 +539,7 @@ main {
 
 .cocktail-image {
    width: 100%;
-   aspect-ratio: 3 / 4.5; /* Vertical para fotos de vasos */
+   aspect-ratio: 3 / 4.5;
    background-size: 130%;
    background-position: center 80%;
    position: relative;
@@ -582,6 +611,7 @@ main {
    margin-bottom: 0.3em;
 }
 
+
 /* Footer */
 .footer {
    background-color: var(--surface);
@@ -591,36 +621,53 @@ main {
    margin-bottom: 1em;
    margin-left: 0.75em;
    width: calc(100% - 1.5em);
-   background-color: var(--surface);
-   padding: 1em;
    border-radius: var(--pill-radius);
    display: flex;
    justify-content: space-between;
    align-items: center;
-   box-shadow: var(--shadow);
 }
 
-/* Grid for DrinkCards (future) */
-.grid-container {
+
+/* Carousel */
+.cocktail-list.carousel {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-   gap: 1em;
-   max-width: 1200px;
-   margin: 0 auto;
+   grid-auto-columns: 80vw;
+   grid-auto-flow: column;
+   gap: 5vw;
+   overflow-x: auto;
+   overflow-y: hidden;
+   height: calc(100vh - 144px);
+   scroll-snap-type: x mandatory;
+   padding: 1em 0;
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+   -webkit-overflow-scrolling: touch;
 }
 
-.card-placeholder {
-   background-color: var(--surface);
-   padding: 1em;
-   border-radius: var(--border-radius);
-   text-align: center;
-   box-shadow: var(--shadow);
-   transition: var(--transition);
+.cocktail-list.carousel::-webkit-scrollbar {
+   display: none;
 }
 
-.card-placeholder:hover {
-   transform: scale(1.05);
-   background-color: var(--secondary);
+.cocktail-card-wrapper.carousel-item {
+   scroll-snap-align: center;
+   height: 90vh;
+}
+
+.cocktail-card-wrapper.carousel-item:first-child {
+   scroll-snap-align: start;
+}
+
+
+/* Grid Normal */
+.cocktail-list:not(.carousel) {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 2em;
+   padding: 2em 1.5em;
+}
+
+.cocktail-card-wrapper.grid-item {
+   width: 100%;
 }
 
 
@@ -652,6 +699,8 @@ main {
    font-weight: bold;
 }
 
+
+/* Quiz Navigation */
 .quiz-page .menu-filter-btn {
    padding: 0.5em 1.5em;
    border-width: 2px;
@@ -708,8 +757,7 @@ main {
    color: var(--accent);
 }
 
-
-/* ESTO TIENE QUE IR FUERA, TENEMOS QUE HACER MOBILE FIRST!! */
+/* Media Queries */
 @media (min-width: 500px) {
    .btn-language {
       width: 2.5em;
