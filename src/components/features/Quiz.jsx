@@ -43,11 +43,8 @@ export default function Quiz() {
    }
    
    const { items, hasResults } = useCocktailLayout(filteredCocktails)
-   
-   console.log(items)
 
    function renderResults() {
-
       return (
          <div className="results-container">
             <h2>
@@ -68,7 +65,7 @@ export default function Quiz() {
          <div className="quiz-container">
             {showConfirmation ? (
                <>
-                  <h1 className="quiz-title">Quiz page</h1>
+                  <h1 className="quiz-title sr-only">Quiz page</h1>
                   <QuizConfirmation 
                      quizAlcohol={quizAlcohol}
                      onToggle={handleQuizAlcoholToggle}
