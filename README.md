@@ -15,6 +15,8 @@ A **React-based web application** designed for bars in Spain to showcase an inte
 - **Clear Filters Button:** A subtle button to reset category and spirit filters, displayed only when filters are active.
 - **Filter Logic Abstraction:** Uses a custom hook (useDrinkFilters) and a FilterControls component for modular and reusable filter management.
 - **Recommendation Quiz:** A quick, 3-step quiz to suggest drinks based on user preferences (e.g., alcohol content, flavor profile, spirit type).
+   - **With Alcohol:** Occasion + Flavor Style + Multi-select Spirits
+   - **No Alcohol:** Flavor Profile + Smooth/Bubbly Texture
    - **Auto-advance** single-choice questions (150ms UX delay)
    - **Multi-choice** spirit selection with visual toggle
    - **Smart navigation**: Discreet "‹ Back" + prominent "See Results" button
@@ -51,9 +53,9 @@ src/
 │   ├── layout/         # Layout components (e.g., Navbar, Footer)
 │   └── features/       # Feature-specific components (e.g., Quiz, DrinkCard, FilterControls)
 ├── pages/              # Page-level components (e.g., HomePage, DrinkDetailPage)
-├── hooks/              # Custom hooks (e.g., useDrinkFilters, useLazyBackground)
+├── hooks/              # Custom hooks (e.g., useDrinkFilters, useLazyBackground, useQuizLogic)
 ├── locales/            # Translation files (es.json, en.json)
-├── data/               # Mock data (e.g., drinks.json)
+├── data/               # Mock data (e.g., drinks.json, questions/)
 ├── styles/             # Global styles (index.css)
 ├── i18n.js             # i18next configuration
 ├── App.jsx             # Main app component
@@ -91,12 +93,17 @@ This project is built with a modular and scalable approach from the start. Key d
 - **Cocktail Count and Filters:** Added a cocktail count display with a highlighted number in gold (--accent) for better UX, along with a subtle "Clear filters" button that appears only when filters are active.
 - **Filter Logic Abstraction:** Extracted filter logic into a custom hook (useDrinkFilters) and UI into FilterControls to improve modularity and maintainability.
 - **Quiz Implementation:**
+   - **Multilingual Standardization:** ANSWER_MAP converts Spanish/English answers to English keys for precise filtering
+   - **Conditional Logic:** Separate filters for alcohol (occasion+style+spirit) vs no-alcohol (flavor+texture)
    - **State Management:** answers, currentStep, lastAnsweredStep for smooth navigation
    - **Auto-advance Logic:** useEffect + 150ms timeout for visual feedback
    - **Reset Pattern:** Back button resets target step
    - **Unified Styling:** .menu-filter-btn for options + navigation consistency
    - **UX Flow:** Confirmation -> Progress -> Questions -> Results
-- **Custom Hooks:** Developed useLazyBackground for efficient image loading in DrinkCard components and useDrinkFilters to improve modularity and mantainability.
+- **Custom Hooks:** 
+   - **useLazyBackground** for efficient image loading in DrinkCard components 
+   - **useDrinkFilters** for modular filter management
+   - **useQuizLogic** for quiz state + filtering logic
 - **Git Workflow:** Descriptive commits (e.g., `feat: setup i18n with react-i18next`) to maintain a clean codebase.
 
 ---
