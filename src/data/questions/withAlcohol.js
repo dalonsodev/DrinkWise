@@ -2,7 +2,7 @@ export default [
    {
       textKey: "quiz.whenDrink",
       options: [
-         { key: "quiz.appetizer" },
+         { key: "quiz.aperitif" },
          { key: "quiz.withMeal" },
          { key: "quiz.dessert" },
          { key: "quiz.eveningNight" }

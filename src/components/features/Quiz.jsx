@@ -5,15 +5,17 @@ import Question from "../common/Question"
 import Option from "../common/Option"
 import QuizConfirmation from "./QuizConfirmation"
 import useQuizLogic from "../../hooks/useQuizLogic"
+import useCocktailLayout from "../../hooks/useCocktailLayout"
+import NotFound from "../common/NotFound"
 
 export default function Quiz() {
    const { t } = useTranslation()
    const {
       showConfirmation,
       quizAlcohol,
-      answers,
       currentStep,
       currentQuestions,
+      filteredCocktails,
       handleQuizAlcoholToggle,
       handleStartQuiz,
       getIsSelected,
@@ -22,7 +24,6 @@ export default function Quiz() {
       handleNextStep,
       isResultsBtnDisabled
    } = useQuizLogic()
-
 
    function renderQuestion() {
       const question = currentQuestions[currentStep] || { options: [], isMulti: false }
@@ -40,17 +41,30 @@ export default function Quiz() {
          </Question>
       )
    }
+   
+   const { items, hasResults } = useCocktailLayout(filteredCocktails)
+   
+   console.log(items)
 
    function renderResults() {
+
       return (
          <div className="results-container">
-            Resultados aquí (answers: {JSON.stringify(answers)})
+            <h2>
+               <span
+                  className="cocktail-count-number cocktail-count-number-results"
+               >{items?.length}</span> 
+               Resultados
+            </h2>
+            <div className="cocktail-list carousel">
+               {hasResults ? items : <NotFound />}
+            </div>
          </div>
       )
    }
 
    return (
-      <section className="page quiz-page">
+      <section className={`page quiz-page ${currentStep === currentQuestions.length ? "results-active" : ""}`}>
          <div className="quiz-container">
             {showConfirmation ? (
                <>
@@ -63,18 +77,20 @@ export default function Quiz() {
                </>
                ) : (
                   <>
-                     <ProgressIndicator 
-                        progress={(currentStep + 1) / currentQuestions.length} 
-                     />
+                     <div className="progress-wrapper">
+                        <ProgressIndicator 
+                           progress={(currentStep + 1) / currentQuestions.length} 
+                        />
 
-                     {currentStep > 0 && (
-                        <button 
-                           className="quiz-prev-btn"
-                           onClick={handlePrevStep}
-                        >
-                           {t("quiz.back")}
-                        </button>
-                     )}
+                        {currentStep > 0 && (
+                           <button 
+                              className="quiz-prev-btn"
+                              onClick={handlePrevStep}
+                           >
+                              {t("quiz.back")}
+                           </button>
+                        )}
+                     </div>
 
                      {currentStep < currentQuestions.length 
                         ? renderQuestion() 

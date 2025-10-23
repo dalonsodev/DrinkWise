@@ -31,7 +31,7 @@ export default function Menu() {
       return matchesAlcohol && matchesCategory && matchesSpirit
    })
    
-   const { items, hasResults, layout } = useCocktailLayout(drinksToDisplay)
+   const { items, hasResults } = useCocktailLayout(drinksToDisplay)
 
    if (!cocktails || !Array.isArray(cocktails)) {
       console.error("Error: cocktails data is not an array or is undefined")
@@ -57,7 +57,7 @@ export default function Menu() {
             handleCategoryFilterChange={handleCategoryFilterChange}
             handleSpiritFilterChange={handleSpiritFilterChange}
          />
-         <div className={layout.containerClass}>
+         <div className="cocktail-list carousel">
             {hasResults ? items : <NotFound />}
          </div>
       </section>
