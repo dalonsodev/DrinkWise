@@ -480,6 +480,15 @@ body {
    gap: 1em;
 }
 
+.question-container.two-col {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+
+.question-container.two-col :first-child {
+  grid-column: 1 / -1;
+}
+
 .question-container h2 {
    margin-bottom: 0.5em;
 }
