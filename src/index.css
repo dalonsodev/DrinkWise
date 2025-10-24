@@ -575,7 +575,7 @@ body {
    width: 100%;
    aspect-ratio: 3 / 4.5;
    background-size: 130%;
-   background-position: center 80%;
+   background-position: center 100%;
    position: relative;
 }
 
@@ -584,11 +584,11 @@ body {
    bottom: 0;
    left: 0;
    width: 100%;
-   height: 30%;
-   padding: 1em;
-   background: rgba(0, 0, 0, 0.2); 
+   height: 45%;
+   padding: 1.5em;
+   background: rgba(0, 0, 0, 0.4); 
    mask: linear-gradient(#0000, #000f 20%);
-   backdrop-filter: blur(8px); 
+   backdrop-filter: blur(9px); 
    -webkit-backdrop-filter: blur(8px); 
    display: flex;
    flex-direction: column;
@@ -597,13 +597,14 @@ body {
 
 .cocktail-heading {
    display: flex;
-   gap: 1em;
+   flex-direction: column;
+   gap: 0.25em;
    align-items: center;
    margin: 0 0 0.5em 0;
 }
 
 .cocktail-name {
-   font-size: 1.6rem;
+   font-size: 1.8rem;
    font-weight: 600;
    color: #fff; 
    text-align: left; 
@@ -622,13 +623,14 @@ body {
    letter-spacing: 0.75px;
    white-space: nowrap;
    background-color: #5b5b5b45;
+   margin-bottom: 0.5em;
 }
 
 .cocktail-description {
    font-size: 0.9rem;
    color: #ddd; 
    margin: 0;
-   text-align: left;
+   text-align: center;
 }
 
 .cocktail-content {
