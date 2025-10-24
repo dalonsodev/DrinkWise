@@ -17,8 +17,9 @@ A **React-based web application** designed for bars in Spain to showcase an inte
 - **Recommendation Quiz:** A quick, 3-step quiz to suggest drinks based on user preferences (e.g., alcohol content, flavor profile, spirit type).
    - **With Alcohol:** Occasion + Flavor Style + Multi-select Spirits
    - **No Alcohol:** Flavor Profile + Smooth/Bubbly Texture
-   - **Auto-advance** single-choice questions (150ms UX delay)
+   - **Auto-advance** single-choice questions (150ms UX delay). Also, if after q2 there are not enough options (cocktails) to select from, skip q3 entirely and auto-advance to results
    - **Multi-choice** spirit selection with visual toggle
+   - **Dinamic options:** render options for Q3 based on occasion and flavor selection (avoids showing NotFound component)
    - **Smart navigation**: Discreet "‹ Back" + prominent "See Results" button
    - **Confirmation flow**: Back button resets previous step for re-selection
 - **Multilingual Support:** Fully localized in Spanish and English using `react-i18next` for seamless language switching.
@@ -99,6 +100,7 @@ This project is built with a modular and scalable approach from the start. Key d
    - **Auto-advance Logic:** useEffect + 150ms timeout for visual feedback
    - **Reset Pattern:** Back button resets target step
    - **Unified Styling:** .menu-filter-btn for options + navigation consistency
+   - **Dynamic options for q3:** based on occasion and flavor selection, to avoid user disappointment via unnecesarily showing the NotFound component.
    - **UX Flow:** Confirmation -> Progress -> Questions -> Results
 - **Custom Hooks:** 
    - **useLazyBackground** for efficient image loading in DrinkCard components 
@@ -114,6 +116,7 @@ This project is built with a modular and scalable approach from the start. Key d
 - [x] Implement the recommendation quiz with a maximum of 3 questions (e.g., alcohol preference, flavor profile, spirit type).
 - [x] Implement cocktail carousel in ManuPage.
 - [x] Implement cocktail carousel to show suggested cocktail drinks.
+- [x] Implement conditional options rendering in q3
 - [] Add ability for the user to see cocktail details (e.g. ingredients, allergens) by tapping the drink card.
 - [] Enhance responsiveness with media queries in index.css for better mobile support (e.g., adjust cocktail-card layout).
 - [] Deploy to Netlify for a live demo.
