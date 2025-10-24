@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import cocktails from "../data/cocktails.json"
 import questionsWithAlcohol from "../data/questions/withAlcohol"
@@ -12,8 +12,10 @@ export default function useQuizLogic() {
    const [answers, setAnswers] = useState([])
    const [currentStep, setCurrentStep] = useState(0)
    const [lastAnsweredStep, setLastAnsweredStep] = useState(-1)
+   const [skippedQ3, setSkippedQ3] = useState(false)
 
-   const ANSWER_MAP = {
+   // useMemo
+   const ANSWER_MAP = useMemo(() => ({
       // WITH ALCOHOL
       // Ocassion (q1) 
       "Aperitif": "Aperitif",
@@ -57,16 +59,56 @@ export default function useQuizLogic() {
       "Let's go bubbly!": "Bubbly",
       "Suave y sedoso": "Smooth",
       "Burbujeante": "Bubbly"
-   }
+   }), [])
 
-   function standardizeAnswer(answer) {
+   // useCallback 1
+   const standardizeAnswer = useCallback((answer) => {
       if (Array.isArray(answer)) {
          return answer.map(opt => ANSWER_MAP[opt] || opt)
       }
       return ANSWER_MAP[answer] || answer
-   }
+   }, [ANSWER_MAP])
 
    const stdAnswers = answers.map(answer => standardizeAnswer(answer))
+
+   // useCallback 2
+   const getFilteredAfterQ2 = useCallback(() => {
+      if (answers[0] === null || answers[1] === null) return []
+      const q1 = standardizeAnswer(answers[0])
+      const q2 = standardizeAnswer(answers[1])
+      
+      return cocktails.filter(cocktail => {
+         if (!cocktail.hasAlcohol) return false
+         const matchesOccasion = cocktail.occasion.includes(q1)
+         const matchesCategory = cocktail.category === q2
+         
+         return matchesOccasion && matchesCategory
+      })
+   }, [answers, standardizeAnswer])
+   
+   // useCallback 3
+   const getQ3Options = useCallback(() => {
+      if (!quizAlcohol || currentStep !== 2) return []
+
+      const filteredAfterQ2 = getFilteredAfterQ2()
+      if (filteredAfterQ2.length < 2) return []
+
+      const spiritsCounts = {}
+      filteredAfterQ2.forEach(cocktail => {
+         const spirit = cocktail.spirit
+         spiritsCounts[spirit] = (spiritsCounts[spirit] || 0) + 1
+      })
+
+      let validSpirits = Object.keys(spiritsCounts)
+         .filter(spirit => spiritsCounts[spirit] >= 1)
+
+      return validSpirits
+         .sort((a, b) => {
+            if (a === "Others") return 1
+            if (b === "Others") return -1
+            return a.localeCompare(b)
+         })
+   }, [quizAlcohol, currentStep, getFilteredAfterQ2])
 
    function translateQuestions(questions) {
       return questions.map(q => ({
@@ -100,20 +142,45 @@ export default function useQuizLogic() {
             if (!cocktail.hasAlcohol) return false
             const matchesOccasion = !q1 || cocktail.occasion.includes(q1)
             const matchesCategory = !q2 || cocktail.category === q2
-            const matchesSpirit = !q3 || Array.isArray(q3) 
-               ? q3.includes(cocktail.spirit) 
-               : cocktail.spirit === q3
+            let matchesSpirit = true
+            if (q3) {
+               matchesSpirit = q3.includes(cocktail.spirit)
+            }
 
             return matchesOccasion && matchesCategory && matchesSpirit
          })
       }
    }
 
-
    useEffect(() => {
       if (currentStep < currentQuestions.length) {
          const question = currentQuestions[currentStep] || { isMulti: false }
          const answer = answers[currentStep]
+
+         // Special case: In q2 (step 1) with alcohol, check if it should skip q3
+         if (quizAlcohol && 
+               currentStep === 1 && 
+               answer !== null && 
+               !question.isMulti 
+               && currentStep === lastAnsweredStep) {
+            const filteredAfterQ2 = getFilteredAfterQ2()
+            
+            if (filteredAfterQ2.length === 1) {
+               setAnswers(prev => {
+                  const newAnswers = [...prev]
+                  newAnswers[2] = null // Ignore q3 in final filter
+                  return newAnswers
+               })
+               setSkippedQ3(true)
+               setTimeout(() => {
+                  setCurrentStep(currentQuestions.length)
+                  setLastAnsweredStep(-1)
+               }, 150)
+               return // Early exit to avoid normal/original auto-advance
+            }
+         }
+
+         // Original filter for auto-advance questions
          if (!question.isMulti &&
                answer !== null &&
                currentStep === lastAnsweredStep &&
@@ -124,7 +191,7 @@ export default function useQuizLogic() {
             }, 150)
          }
       }
-   }, [answers, currentStep, currentQuestions, lastAnsweredStep])
+   }, [answers, currentStep, currentQuestions, lastAnsweredStep, quizAlcohol, getFilteredAfterQ2])
 
    function handleQuizAlcoholToggle() {
       setQuizAlcohol(prev => !prev)
@@ -171,8 +238,15 @@ export default function useQuizLogic() {
    }
 
    function handlePrevStep() {
-      const prevStep = currentStep - 1
-      setCurrentStep(prev => prev - 1)
+      let prevStep = currentStep - 1
+      const isSkippingQ3 = skippedQ3 && prevStep === 2
+
+      if (isSkippingQ3) {
+         prevStep -= 1 // Jumps to q2
+         setSkippedQ3(false)
+      }
+
+      setCurrentStep(prevStep)
       setLastAnsweredStep(-1)
       setAnswers(prev => {
          const newAnswers = [...prev]
@@ -192,6 +266,8 @@ export default function useQuizLogic() {
       return question?.isMulti ? !(currentAnswer?.length > 0) : !currentAnswer
    }
 
+   const q3DynamicOptions = getQ3Options()
+
    return {
       // States
       showConfirmation,
@@ -199,6 +275,7 @@ export default function useQuizLogic() {
       currentStep,
       currentQuestions,
       filteredCocktails: filterCocktails(),
+      q3DynamicOptions,
       
       // Functions
       handleQuizAlcoholToggle,

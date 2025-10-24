@@ -16,6 +16,7 @@ export default function Quiz() {
       currentStep,
       currentQuestions,
       filteredCocktails,
+      q3DynamicOptions,
       handleQuizAlcoholToggle,
       handleStartQuiz,
       getIsSelected,
@@ -27,17 +28,31 @@ export default function Quiz() {
 
    function renderQuestion() {
       const question = currentQuestions[currentStep] || { options: [], isMulti: false }
+      const isQ3Alcohol = quizAlcohol && currentStep === 2
+
+      const optionsToDisplay = isQ3Alcohol && q3DynamicOptions.length > 0
+         ? q3DynamicOptions.map(spirit => ({
+            value: spirit,
+            label: t(`spirit.${spirit}`)
+         }))
+         : question.options
+
       return (
          <Question question={question.text}>
-            {question.options.map((opt, idx) => (
-               <Option 
-                  key={idx}
-                  option={opt}
-                  selected={getIsSelected(question, opt)}
-                  onSelect={() => handleOptionSelect(opt, currentStep)}
-                  isMulti={question.isMulti}
-               />
-            ))}
+            {optionsToDisplay.map((item, idx) => {
+               const opt = typeof item === "object" ? item.label : item
+               const value = typeof item === "object" ? item.value : item
+
+               return (
+                  <Option 
+                     key={idx}
+                     option={opt}
+                     selected={getIsSelected(question, value)}
+                     onSelect={() => handleOptionSelect(value, currentStep)}
+                     isMulti={question.isMulti}
+                  />
+               )
+            })}
          </Question>
       )
    }
@@ -61,7 +76,9 @@ export default function Quiz() {
    }
 
    return (
-      <section className={`page quiz-page ${currentStep === currentQuestions.length ? "results-active" : ""}`}>
+      <section className={`page quiz-page ${currentStep === currentQuestions.length 
+         ? "results-active" 
+         : ""}`}>
          <div className="quiz-container">
             {showConfirmation ? (
                <>
