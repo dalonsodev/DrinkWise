@@ -9,9 +9,14 @@ export default function Home() {
       <div className="page home-hero">
          <h1 className="page-title">{t("welcome")}</h1>
          <p className="page-description">{t("welcome.description")}</p>
-         <Link to="/quiz" className="btn-primary">
-            {t("button.startQuiz")}
-         </Link>
+         <div className="hero-links-wrapper">
+            <Link to="/quiz" className="btn-primary">
+               {t("button.startQuiz")}
+            </Link>
+            <Link to="/menu" className="btn-alt">
+               {t("button.seeMenu")}
+            </Link>
+         </div>
       </div>
    )
 }

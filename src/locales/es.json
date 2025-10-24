@@ -1,10 +1,11 @@
 {
    "title": "Bienvenidos a DrinkWise Menu",
    "welcome": "Encuentra tu cóctel perfecto",
-   "welcome.description": "Explora nuestro menú de cócteles y mocktails o haz nuestro quiz para encontrar la bebida ideal para ti.",
+   "welcome.description": "Explora nuestro menú de cócteles o haz nuestro test para encontrar la bebida ideal para ti.",
    "button": {
       "filter": "Filtrar",
-      "startQuiz": "Iniciar Quiz"
+      "startQuiz": "Iniciar Quiz",
+      "seeMenu": "Ver menu"
    },
    "nav": {
       "home": "Inicio",

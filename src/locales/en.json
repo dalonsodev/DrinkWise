@@ -1,10 +1,11 @@
 {
    "title": "Welcome to DrinkWise Menu",
    "welcome": "Find your perfect cocktail",
-   "welcome.description": "Explore our cocktail and mocktail menu or take our quiz to find your ideal drink.",
+   "welcome.description": "Explore our cocktail and mocktail menu or take our little quiz to find your ideal drink.",
    "button": {
       "filter": "Filter",
-      "startQuiz": "Start Quiz"
+      "startQuiz": "Start Quiz",
+      "seeMenu": "See menu"
    },
    "nav": {
       "home": "Home",

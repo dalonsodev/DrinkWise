@@ -41,14 +41,8 @@ body {
    min-height: 80vh;
 }
 
-/* main {
-   margin-top: 100px;
-} */
-
-/* Header & Navigation */
 .header {
-   /* position: fixed; */
-   /* margin-top: -84px; */
+   position: relative;
    margin: 1em auto;
    width: calc(100% - 1.5em);
    background-color: var(--surface);
@@ -150,6 +144,42 @@ body {
    transform: scale(1);
 }
 
+.btn-alt {
+   font-size: 1rem;
+   padding: 0.75em 2em;
+   border-radius: var(--pill-radius);
+   color: var(--primary);
+   font-weight: bold;
+   text-decoration: none;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   transition: var(--transition);
+   position: relative;
+   overflow: hidden;
+   border: 3px solid var(--primary);
+   background-color: color-mix(in srgb, var(--background) 70%, transparent);
+   background-origin: border-box;
+   background-clip: padding-box, border-box;
+}
+
+.btn-alt:hover {
+   background-image: linear-gradient(135deg, var(--primary), var(--secondary));
+   color: var(--text);
+   box-shadow: 0 6px 16px rgba(255, 69, 0, 0.5);
+}
+
+.btn-alt:active {
+   color: var(--text);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-alt:disabled {
+   opacity: 0.5;
+   cursor: default;
+}
+
 .btn-quiz {
    font-size: 1rem;
    padding: 0.75em 2em;
@@ -188,6 +218,7 @@ body {
    width: 1.75em;
    height: 1.75em;
    font-size: 1rem;
+   padding: 1em;
    border: 1px solid var(--text-subtle);
    border-radius: 50%; 
    background: transparent;
@@ -354,16 +385,16 @@ body {
 .home-hero {
    position: relative;
    width: 100%;
-   min-height: 60vh;
-   background-image: url('/images/hero-home.webp');
-   background-size: cover;
-   background-position: center;
+   min-height: 70vh;
+   background-image: url('/images/hero-home-mobile.webp');
+   background-size: 110%;
+   background-position: center 80%;
    background-repeat: no-repeat;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   padding: 2em 1em;
+   padding: 2em 1em 6em;
    overflow: hidden;
 }
 
@@ -382,6 +413,12 @@ body {
    z-index: 1;
 }
 
+.hero-links-wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5em;
+}
+
 .home-hero .page-title {
    font-size: 2.5rem;
    font-weight: 700;
@@ -396,8 +433,9 @@ body {
 
 .home-hero .page-description {
    font-size: 1.2rem;
+   color: var(--text);
    color: var(--text-subtle);
-   margin-bottom: 2.5em;
+   margin-bottom: 1.5em;
    max-width: 90%;
    margin-left: auto;
    margin-right: auto;
@@ -406,17 +444,27 @@ body {
    z-index: 2;
 }
 
-.home-hero .btn-primary {
+.home-hero .btn-primary,
+.home-hero .btn-alt {
    font-size: 1.2rem;
-   padding: 0.75em 2em;
+   padding: 0.6em 2em;
    box-shadow: 0 4px 12px rgba(255, 69, 0, 0.5);
    position: relative;
    z-index: 2;
 }
 
+.home-hero .btn-alt {
+   padding-block: 0.5em;
+}
+
 .home-hero .btn-primary:hover {
    transform: translateY(-4px);
    box-shadow: 0 6px 16px rgba(255, 69, 0, 0.7);
+}
+
+.home-hero .btn-alt,
+.home-hero .btn-alt:hover {
+   box-shadow: none;
 }
 
 /* Quiz Page */
@@ -798,5 +846,9 @@ body {
       width: 2.5em;
       height: 2.5em;
       font-size: 1.2rem; 
+   }
+
+   .home-hero {
+      background-image: url('/images/hero-home.webp');
    }
 }
