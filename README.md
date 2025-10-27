@@ -54,7 +54,16 @@ src/
 │   ├── layout/         # Layout components (e.g., Navbar, Footer)
 │   └── features/       # Feature-specific components (e.g., Quiz, DrinkCard, FilterControls)
 ├── pages/              # Page-level components (e.g., HomePage, DrinkDetailPage)
-├── hooks/              # Custom hooks (e.g., useDrinkFilters, useLazyBackground, useQuizLogic)
+├── hooks/              # Custom hooks
+│   ├── useDrinkFilters.js
+│   ├── useLazyBackground.js
+│   └── quiz/           # Quiz-specific hooks
+│       ├── useQuizState.js
+│       ├── useAnswerMapping.js
+│       ├── useCocktailFiltering.js
+│       ├── useQ3Options.js
+│       ├── useQuizAutoAdvance.js
+│       └── useQuizLogic.js
 ├── locales/            # Translation files (es.json, en.json)
 ├── data/               # Mock data (e.g., drinks.json, questions/)
 ├── styles/             # Global styles (index.css)
@@ -102,7 +111,15 @@ This project is built with a modular and scalable approach from the start. Key d
    - **Unified Styling:** .menu-filter-btn for options + navigation consistency
    - **Dynamic options for q3:** based on occasion and flavor selection, to avoid user disappointment via unnecesarily showing the NotFound component.
    - **UX Flow:** Confirmation -> Progress -> Questions -> Results
-- **Custom Hooks:** 
+- **Quiz Refactor (major):** Extracted useQuizLogic (~200 lines) into 6 focused hooks:
+   - **useQuizState:** State, navigation, answers
+   - **useAnswerMapping:** Multilanguage answer normalization
+   - **useCocktailFiltering:** Filter logic after Q2 and final
+   - **useQ3Options:** Dynamic spirit options
+   - **useQuizAutoAdvance:** Auto-advance + Q3 skip (with useRef to prevent loops)
+   - **useQuizLogic:** Orchestrates all hooks (~60 lines)
+- **Custom Hooks:**
+   - (All of the above hooks +)
    - **useLazyBackground** for efficient image loading in DrinkCard components 
    - **useDrinkFilters** for modular filter management
    - **useQuizLogic** for quiz state + filtering logic
@@ -117,6 +134,8 @@ This project is built with a modular and scalable approach from the start. Key d
 - [x] Implement cocktail carousel in ManuPage.
 - [x] Implement cocktail carousel to show suggested cocktail drinks.
 - [x] Implement conditional options rendering in q3
+- [x] Auto-advance + skip q3 if only one (1) result.
+- [x] Refactor quiz logic into 6 modular hooks.
 - [] Add ability for the user to see cocktail details (e.g. ingredients, allergens) by tapping the drink card.
 - [] Enhance responsiveness with media queries in index.css for better mobile support (e.g., adjust cocktail-card layout).
 - [] Deploy to Netlify for a live demo.
