@@ -137,8 +137,8 @@ export default function FilterControls({
             </p>
             {categoryFilter || spiritFilter ? (
                <button
-               onClick={() => handleClearFilters()}
-               className="clear-filters-btn"   
+                  onClick={() => handleClearFilters()}
+                  className="clear-filters-btn"   
                >
                   {t("menu.clearFilters")}
                </button>

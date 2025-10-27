@@ -50,7 +50,6 @@ export default function QuizContent({
          </Question>
       )
    }
-   
 
    function renderResults() {
       return (
