@@ -34,6 +34,7 @@ body {
    font-size: 1rem;
 }
 
+
 /* Layout */
 .site-wrapper {
    max-width: 1200px;
@@ -91,6 +92,7 @@ body {
    display: flex;
    gap: 0.5em;
 }
+
 
 /* Buttons */
 .btn-primary {
@@ -234,11 +236,11 @@ body {
    transform: translateY(0);
 }
 
+
 /* Menu Filters */
 .menu-filter-alcohol {
    display: flex;
    align-items: center;
-   margin-bottom: 1em;
 }
 
 .toggle-label {
@@ -318,7 +320,7 @@ body {
    justify-content: center;
    align-items: center;
    gap: 1em;
-   margin: 1.2em 0 0 0;
+   margin: 1.2em 0 0.5em 0;
    padding: 0;
 }
 
@@ -380,6 +382,7 @@ body {
    font-size: 1rem;
    margin-bottom: 1em;
 }
+
 
 /* Home Hero */
 .home-hero {
@@ -467,6 +470,7 @@ body {
    box-shadow: none;
 }
 
+
 /* Quiz Page */
 .quiz-page .menu-filter-alcohol {
    justify-self: center;
@@ -541,11 +545,13 @@ body {
    margin-bottom: 0.5em;
 }
 
+
 /* MenuPage */
 .menu-header {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   margin-bottom: 0.5em;
 }
 
 .menu-title {
@@ -564,7 +570,7 @@ body {
 }
 
 .quiz-page.results-active {
-   padding: 0 0 1.5em;      /* ✅ 0 L/R para carousel */
+   padding: 0 0 1.5em;
 }
 .quiz-page.results-active .quiz-container {
    align-items: initial;
@@ -596,9 +602,9 @@ body {
 .quiz-title {
    font-size: 1.8rem;
    font-weight: bold;
-   margin-bottom: 0.5em;
    text-align: center;
 }
+
 
 /* Cocktail Cards */
 .cocktail-list {
@@ -616,7 +622,6 @@ body {
    overflow: hidden;
    background: #2D2D2D;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-   margin-top: 1em; 
 }
 
 .cocktail-image {
@@ -845,10 +850,137 @@ body {
    .btn-language {
       width: 2.5em;
       height: 2.5em;
-      font-size: 1.2rem; 
+      font-size: 1.2rem;
    }
 
    .home-hero {
       background-image: url('/images/hero-home.webp');
+   }
+}
+
+@media (min-width: 600px) {
+   .cocktail-list.carousel {
+      grid-auto-columns: clamp(60vw, 72vw, 460px);
+      gap: clamp(4vw, 6vw, 35px);
+      padding: clamp(1em, 1.5em, 20px) clamp(8vw, 12vw, 90px);
+      height: clamp(70vh, calc(100vh - 220px), 800px);
+   }
+
+   .cocktail-card-wrapper.carousel-item {
+      height: clamp(70vh, 82vh, 700px);
+   }
+
+   .menu-filters { 
+      margin-top: 0.5em; 
+   }
+
+   .clear-filters-container { 
+      margin: 2em 0 0; 
+      padding: 0 2em; 
+   }
+
+   .cocktail-overlay { 
+      padding: 1.8em; 
+   }
+
+   .cocktail-name { 
+      font-size: 2rem; 
+   }
+
+   .cocktail-description { 
+      font-size: 1rem; 
+   }
+
+   .quiz-page:not(.results-active),
+   .quiz-page.results-active .progress-wrapper,
+   .menu-header { 
+      padding: 0 2em 2em; 
+   }
+}
+
+@media (min-width: 650px) {
+   .cocktail-list.carousel {
+      grid-auto-columns: min(420px, 68vw);
+      padding: 1.8em min(70px, 10vw);
+      height: calc(100vh - 240px);
+   }
+
+   .cocktail-card-wrapper.carousel-item {
+      height: min(720px, 80vh);
+   }
+
+   .cocktail-overlay { 
+      padding: 2em; 
+   }
+
+   .cocktail-name { 
+      font-size: 2.1rem; 
+   }
+
+   .cocktail-description { 
+      font-size: 1.05rem; 
+   }
+
+   .menu-filter-btn { 
+      font-size: 1rem; 
+      padding: 0.7em 2em; 
+   }
+}
+
+@media (min-width: 900px) {
+   .cocktail-list.carousel {
+      grid-auto-columns: min(410px, 42vw);
+      gap: min(30px, 4vw);
+      padding: 2em min(60px, 8vw);
+      height: calc(100vh - 260px);
+   }
+
+   .cocktail-card-wrapper.carousel-item {
+      height: min(740px, 78vh);
+   }
+
+   .cocktail-overlay { 
+      height: 50%; 
+      padding: 2.2em; 
+   }
+   .cocktail-name { 
+      font-size: 2.3rem; 
+   }
+   .cocktail-description { 
+      font-size: 1.1rem; 
+   }
+
+   .menu-filters { 
+      margin-top: 0.75em; 
+      padding-bottom: 1em; 
+   }
+   .footer { 
+      margin-bottom: 1.5em; 
+   }
+}
+
+@media (min-width: 1200px) {
+   .cocktail-list.carousel {
+      grid-auto-columns: min(420px, 38vw);
+      gap: min(30px, 4vw);
+      padding: 2em min(60px, 6vw);
+      height: calc(100vh - 280px);
+   }
+
+   .cocktail-card-wrapper.carousel-item {
+      height: min(780px, 78vh);
+   }
+
+   .menu-filter-btn { 
+      font-size: 1rem; 
+      padding: 0.7em 2em; 
+   }
+
+   .cocktail-name { 
+      font-size: 2.3rem; 
+   }
+
+   .cocktail-description { 
+      font-size: 1.1rem; 
    }
 }
