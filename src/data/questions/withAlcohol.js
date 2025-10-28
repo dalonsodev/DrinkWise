@@ -12,9 +12,9 @@ export default [
    {
       textKey: "quiz.cocktailStyle",
       options: [
-         { key: "quiz.sweetFruity" },
+         { key: "quiz.strongClassic" },
          { key: "quiz.refreshingLight" },
-         { key: "quiz.strongClassic" }
+         { key: "quiz.sweetFruity" }
       ],
       isMulti: false
    },

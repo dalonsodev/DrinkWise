@@ -1,6 +1,7 @@
 /* Variables & Reset */
 :root {
-   --primary: #E01B5A;
+   /* --primary: #E01B5A; */
+   --primary: #c30743d1;
    --secondary: #FFB347;
    --background: #1A1A1A;
    --surface: #232323;
@@ -13,9 +14,6 @@
    --transition: all 0.3s ease;
    --font-main: 'Arial', sans-serif;
 }
-
-
-
 
 *, 
 *::before, 
@@ -255,8 +253,14 @@ body {
    cursor: pointer;
 }
 
-.toggle-text { font-weight: bold; }
-.toggle-input { display: none; }
+.toggle-text { 
+   font-weight: bold; 
+}
+
+.toggle-input { 
+   display: none; 
+}
+
 .toggle-slider {
    position: relative;
    width: 4em;
@@ -282,15 +286,12 @@ body {
 .toggle-input:checked + .toggle-slider {
    background-color: var(--accent); 
    border-color: var(--accent);
+   box-shadow: 0 4px 12px rgba(255, 191, 0, 0.5); 
 }
 
 .toggle-input:checked + .toggle-slider::before {
    transform: translateX(2em); 
    background-color: var(--background); 
-}
-
-.toggle-label:hover .toggle-slider {
-   box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5); 
 }
 
 .menu-filter {
