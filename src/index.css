@@ -392,8 +392,9 @@ body {
    width: 100%;
    height: 100vh;
    background-image: url('/images/hero-home-mobile.webp');
-   background-size: 163%;
-   background-position: center 167%;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
    background-repeat: no-repeat;
    z-index: -2;
    pointer-events: none;
@@ -857,37 +858,14 @@ body {
 
 
 /* Media Queries */
-@media (min-width: 430px) {
-   .hero-bg {
-      background-position: center 147%;
-   }
-}
 
-@media (min-width: 450px) {
+@media (min-width: 500px) and (max-width: 646px) {
    .hero-bg {
-      background-position: center 127%;
-   }
-}
-
-@media (min-width: 500px) {
-   .hero-bg {
-      background-position: center 97%;
-   }
-
-   .btn-language {
-      width: 2.5em;
-      height: 2.5em;
-      font-size: 1.2rem;
+      background-size: 160%;
    }
 
    .home-hero {
-      padding: 3em;
-   }
-}
-
-@media (min-width: 550px) {
-   .hero-bg {
-      background-position: center 87%;
+      padding: 4em;
    }
 }
 
@@ -939,7 +917,17 @@ body {
    }
 }
 
-@media (min-width: 650px) {
+@media (min-width: 646px) and (max-width: 878px) {
+   .hero-bg {
+      background-size: 120%;
+   }
+}
+
+@media (min-width: 646px) {
+   .hero-bg {
+      background-size: 120%;
+   }
+
    .home-hero {
       padding: 6em;
    }
@@ -977,22 +965,10 @@ body {
    }
 }
 
-@media (min-width: 700px) {
-   .hero-bg {
-      background-size: 147%;
-   }
-}
-
-@media (min-width: 800px) {
-   .hero-bg {
-      background-size: 127%;
-   }
-}
-
 @media (min-width: 900px) {
    .hero-bg {
-      background-size: 117%;
-      background-position: center 85%;
+      background-size: 1200px auto;
+      background-position: center 45%;
    }
 
    .cocktail-list.carousel {
@@ -1027,11 +1003,6 @@ body {
 }
 
 @media (min-width: 1200px) {
-   .hero-bg {
-      background-size: 100%;
-      background-position: center 70%;
-   }
-
    .cocktail-list.carousel {
       grid-auto-columns: min(420px, 38vw);
       gap: min(30px, 4vw);
