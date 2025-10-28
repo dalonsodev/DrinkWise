@@ -23,7 +23,16 @@ export default function ToggleAlcohol({
                onChange={onToggle}
                className="toggle-input"
             />
-            <span className="toggle-slider"></span>
+            <span 
+               className="toggle-slider" 
+               tabindex="0"
+               onKeyDown={(e) => {
+                  if (e.key === " " || e.key === "Enter") {
+                     e.preventDefault()
+                     onToggle()
+                  }
+               }}
+            ></span>
          </label>
       </div>
    )
