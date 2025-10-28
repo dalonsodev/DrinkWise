@@ -4,6 +4,13 @@ export default function Option({ option, selected, onSelect, isMulti = false }) 
    return (
       <label 
          className={`menu-filter-btn quiz-option ${selected ? "active" : ""}`}
+         tabindex="0"
+         onKeyDown={(e) => {
+            if (e.key === " " || e.key === "Enter") {
+               e.preventDefault()
+               onSelect()
+            }
+         }}
       >
          <input 
             type={isMulti ? "checkbox" : "radio"}
