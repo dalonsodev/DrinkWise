@@ -1,18 +1,21 @@
 /* Variables & Reset */
 :root {
-   --primary: #FF4500;
-   --secondary: #FF6347;
+   --primary: #E01B5A;
+   --secondary: #FFB347;
    --background: #1A1A1A;
-   --surface: #2D2D2D;
+   --surface: #232323;
    --text: #FFFFFF;
-   --text-subtle: #ccc;
-   --accent: #FFD700;
+   --text-subtle: #CCCCCC;
+   --accent: #FFB703;
    --border-radius: 8px;
    --pill-radius: 50px;
-   --shadow: 0 4px 8px rgba(0,0,0,0.2);
+   --shadow: 0 4px 16px rgba(0,0,0,0.5);
    --transition: all 0.3s ease;
    --font-main: 'Arial', sans-serif;
 }
+
+
+
 
 *, 
 *::before, 
@@ -83,9 +86,9 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-   background-color: var(--secondary);
-   color: var(--background);
-   border-color: var(--secondary);
+   background-color: var(--primary);
+   color: var(--text);
+   border-color: var(--primary);
 }
 
 .nav-language {
@@ -99,7 +102,7 @@ body {
    font-size: 1rem;
    padding: 0.75em 2em;
    border-radius: var(--pill-radius);
-   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
    color: var(--text);
    border: none;
    cursor: pointer;
@@ -437,7 +440,7 @@ body {
 .home-hero .page-title {
    font-size: 2.5rem;
    font-weight: 700;
-   color: var(--accent);
+   color: var(--secondary);
    margin-bottom: 0.5em;
    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
    transition: var(--transition);
@@ -632,7 +635,7 @@ body {
    border: 6px solid #2D2D2D; 
    border-radius: 2rem;
    overflow: hidden;
-   background: #2D2D2D;
+   background: var(--surface);
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
