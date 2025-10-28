@@ -162,7 +162,7 @@ body {
    position: relative;
    overflow: hidden;
    border: 3px solid var(--primary);
-   background-color: color-mix(in srgb, var(--background) 70%, transparent);
+   background-color: color-mix(in srgb, var(--background) 85%, transparent);
    background-origin: border-box;
    background-clip: padding-box, border-box;
 }
@@ -337,6 +337,11 @@ body {
    gap: 0.2em;
 }
 
+.cocktail-count-results {
+   gap: 0;
+   margin-bottom: 0.5em;
+}
+
 .cocktail-count-number {
    font-size: 1.2rem;
    color: var(--accent);
@@ -344,7 +349,6 @@ body {
 }
 
 .cocktail-count-number-results {
-   font-size: inherit;
    margin-right: 0.4em;
 }
 
@@ -514,7 +518,7 @@ body {
 
 .quiz-confirmation p:last-of-type {
    font-style: italic;
-   margin-top: 0.4em;
+   margin-top: 1em;
 }
 
 .quiz-confirmation button {
@@ -863,6 +867,12 @@ body {
 
 /* Media Queries */
 
+@media (max-width: 500px) {
+   .quiz-confirmation {
+      width: 70%;
+   }
+}
+
 @media (min-width: 500px) and (max-width: 646px) {
    .hero-bg {
       background-size: 160%;
@@ -870,6 +880,10 @@ body {
 
    .home-hero {
       padding: 4em;
+   }
+
+   .quiz-confirmation {
+      width: 50%;
    }
 }
 
@@ -918,6 +932,10 @@ body {
    .quiz-page.results-active .progress-wrapper,
    .menu-header { 
       padding: 0 2em 2em; 
+   }
+
+   .quiz-confirmation {
+      width: 50%;
    }
 }
 

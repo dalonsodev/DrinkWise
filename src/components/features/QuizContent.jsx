@@ -54,12 +54,12 @@ export default function QuizContent({
    function renderResults() {
       return (
          <div className="results-container">
-            <h2>
+            <p className="cocktail-count cocktail-count-results">
                <span
                   className="cocktail-count-number cocktail-count-number-results"
                >{items?.length}</span> 
-               Resultados
-            </h2>
+               {t("menu.cocktailCountQuiz", { count: items?.length })}
+            </p>
             <div className="cocktail-list carousel">
                {hasResults ? items : <NotFound />}
             </div>

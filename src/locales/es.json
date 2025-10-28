@@ -60,6 +60,7 @@
          "mainSpirit": "Destilado"
       },
       "cocktailCount": "{count, plural, one {Cóctel encontrado} other {Cócteles encontrados}}",
+      "cocktailCountQuiz": "{count, plural, one {Cóctel recomendado} other {Cócteles recomendados}}",
       "clearFilters": "Limpiar filtros",
       "no-results": "No se encontraron cócteles con esos filtros."
    },

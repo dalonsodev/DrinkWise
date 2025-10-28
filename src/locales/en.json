@@ -60,6 +60,7 @@
          "mainSpirit": "Main spirit"
       },
       "cocktailCount": "{count, plural, one {Cocktail found} other {Cocktails found}}",
+      "cocktailCountQuiz": "{count, plural, one {Recommended cocktail} other {Recommended cocktails}}",
       "clearFilters": "Clear filters",
       "no-results": "No cocktails found with your selected filters."
    },
