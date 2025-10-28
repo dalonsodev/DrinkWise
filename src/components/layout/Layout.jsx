@@ -5,7 +5,7 @@ import Navbar from "./Navbar"
 import Footer from "./Footer"
 
 export default function Layout() {
-   const { i18n } = useTranslation()
+   const { t, i18n } = useTranslation()
 
    const changeLanguage = (lng) => {
       i18n.changeLanguage(lng)

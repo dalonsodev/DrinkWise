@@ -60,7 +60,12 @@ export default function QuizContent({
                >{items?.length}</span> 
                {t("menu.cocktailCountQuiz", { count: items?.length })}
             </p>
-            <div className="cocktail-list carousel">
+            <div 
+               className="cocktail-list carousel"
+               role="region"
+               aria-label={t("a11y.carousel")}
+               aria-roledescription={t("a11y.carouselRoleDesc")}
+            >
                {hasResults ? items : <NotFound />}
             </div>
          </div>

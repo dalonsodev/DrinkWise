@@ -40,6 +40,7 @@ export default function Menu() {
 
    return (
       <section className="menu-page">
+         <a href="#cocktail-list" className="skip-link">{t("a11y.skipLink")}</a>
          <div className="menu-header">
             <h1 className="menu-title">{t("menu.title")}</h1>
             <ToggleAlcohol 
@@ -57,7 +58,14 @@ export default function Menu() {
             handleCategoryFilterChange={handleCategoryFilterChange}
             handleSpiritFilterChange={handleSpiritFilterChange}
          />
-         <div className="cocktail-list carousel">
+         <div 
+            className="cocktail-list carousel"
+            role="region"
+            id="cocktail-list"
+            tabindex="-1"
+            aria-label={t("a11y.carousel")}
+            aria-roledescription={t("a11y.carouselRoleDesc")}
+         >
             {hasResults ? items : <NotFound />}
          </div>
       </section>

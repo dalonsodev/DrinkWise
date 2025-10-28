@@ -18,14 +18,16 @@ export default function ToggleAlcohol({
             </span>
             <input 
                id="alcohol-toggle"
+               className="toggle-input"
                type="checkbox"
                checked={alcoholFilter}
                onChange={onToggle}
-               className="toggle-input"
+               aria-label={t("a11y.toggleAlcohol")}
             />
             <span 
                className="toggle-slider" 
                tabindex="0"
+               aria-hidden="true"
                onKeyDown={(e) => {
                   if (e.key === " " || e.key === "Enter") {
                      e.preventDefault()

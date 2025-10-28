@@ -203,5 +203,14 @@
       "Cachaça": "Cachaça",
       "Tequila": "Tequila",
       "Others": "Otros"
+   },
+   "a11y": {
+      "toggleAlcohol": "Filtrar cócteles con o sin alcohol",
+      "languageFlag": "Change language to English",
+      "carousel": "Carrusel de cócteles",
+      "carouselRoleDesc": "carrusel",
+      "cocktailRoleDesc": "diapositiva",
+      "of": "de",
+      "skipLink": "Saltar al contenido principal"
    }
 }

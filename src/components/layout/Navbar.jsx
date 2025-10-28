@@ -15,6 +15,7 @@ export default function Navbar({ changeLanguage }) {
             <button 
                className="btn-language"
                onClick={() => changeLanguage(nextLanguage)}
+               aria-label={t("a11y.languageFlag")}
             >
                {flagIcon}
             </button>

@@ -52,6 +52,7 @@ export default function FilterControls({
                   onClick={() => handleCategoryFilterChange("citrus")}
                   className={`menu-filter-btn 
                      ${categoryFilter === "citrus" ? "active" : ""}`}
+                  aria-pressed={categoryFilter === "citrus"}
                >
                   {t("category.citrus")}
                </button>
@@ -60,6 +61,7 @@ export default function FilterControls({
                   onClick={() => handleCategoryFilterChange("fruity")}
                   className={`menu-filter-btn 
                      ${categoryFilter === "fruity" ? "active" : ""}`}
+                  aria-pressed={categoryFilter === "fruity"}
                >
                   {t("category.fruity")}
                </button>
@@ -68,6 +70,7 @@ export default function FilterControls({
                   onClick={() => handleCategoryFilterChange("herbal")}
                   className={`menu-filter-btn 
                      ${categoryFilter === "herbal" ? "active" : ""}`}
+                  aria-pressed={categoryFilter === "herbal"}
                >
                   {t("category.herbal")}
                </button>
@@ -82,6 +85,7 @@ export default function FilterControls({
                      onClick={() => handleSpiritFilterChange("Whisky")}
                      className={`menu-filter-btn 
                         ${spiritFilter === "Whisky" ? "active" : ""}`}
+                     aria-pressed={spiritFilter === "Whisky"}
                   >
                      {t("spirit.Whisky")}
                   </button>
@@ -90,6 +94,7 @@ export default function FilterControls({
                      onClick={() => handleSpiritFilterChange("Gin")}
                      className={`menu-filter-btn 
                         ${spiritFilter === "Gin" ? "active" : ""}`}
+                     aria-pressed={spiritFilter === "Gin"}
                   >
                      {t("spirit.Gin")}
                   </button>
@@ -98,6 +103,7 @@ export default function FilterControls({
                      onClick={() => handleSpiritFilterChange("Vodka")}
                      className={`menu-filter-btn 
                         ${spiritFilter === "Vodka" ? "active" : ""}`}
+                     aria-pressed={spiritFilter === "Vodka"}
                   >
                      {t("spirit.Vodka")}
                   </button>
@@ -106,6 +112,7 @@ export default function FilterControls({
                      onClick={() => handleSpiritFilterChange("Rum")}
                      className={`menu-filter-btn 
                         ${spiritFilter === "Rum" ? "active" : ""}`}
+                     aria-pressed={spiritFilter === "Rum"}
                   >
                      {t("spirit.Rum")}
                   </button>
@@ -114,6 +121,7 @@ export default function FilterControls({
                      onClick={() => handleSpiritFilterChange("Tequila")}
                      className={`menu-filter-btn 
                         ${spiritFilter === "Tequila" ? "active" : ""}`}
+                     aria-pressed={spiritFilter === "Tequila"}
                   >
                      {t("spirit.Tequila")}
                   </button>
@@ -122,6 +130,7 @@ export default function FilterControls({
                      onClick={() => handleSpiritFilterChange("Others")}
                      className={`menu-filter-btn 
                         ${spiritFilter === "Others" ? "active" : ""}`}
+                     aria-pressed={spiritFilter === "Others"}
                   >
                      {t("spirit.Others")}
                   </button>
