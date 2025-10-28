@@ -89,11 +89,6 @@ body {
    border-color: var(--primary);
 }
 
-/* .menu-filter-btn:focus-visible {
-   outline: 3px solid var(--primary);
-   outline-offset: -3px;
-} */
-
 .nav-language {
    display: flex;
    gap: 0.5em;
@@ -123,7 +118,7 @@ body {
 .btn-primary:hover {
    transform: translateY(-3px);
    box-shadow: 0 6px 16px rgba(255, 69, 0, 0.7); 
-   background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+   background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
 }
 
 .btn-primary:active {
@@ -173,9 +168,8 @@ body {
 }
 
 .btn-alt:hover {
-   background-image: linear-gradient(135deg, var(--primary), var(--secondary));
+   background-color: var(--primary);
    color: var(--text);
-   box-shadow: 0 6px 16px rgba(255, 69, 0, 0.5);
 }
 
 .btn-alt:active {
@@ -298,12 +292,6 @@ body {
    transform: translateX(2em); 
    background-color: var(--background); 
 }
-
-/* .toggle-input:focus-visible + .toggle-slider {
-   outline: 3px solid var(--primary);
-   outline-offset: 2px;
-   border-radius: var(--pill-radius);
-} */
 
 .menu-filter {
    display: flex;
@@ -482,23 +470,27 @@ body {
 .home-hero .btn-alt {
    font-size: 1.2rem;
    padding: 0.6em 2em;
-   box-shadow: 0 4px 12px rgba(255, 69, 0, 0.5);
    position: relative;
    z-index: 2;
 }
 
+.home-hero .btn-primary {
+   box-shadow: 
+      0 4px 12px rgba(161, 12, 64, 0.4),
+      0 2px 6px rgba(255, 183, 3, 0.2);
+}
+
 .home-hero .btn-alt {
    padding-block: 0.5em;
+   box-shadow: none;
 }
 
 .home-hero .btn-primary:hover {
    transform: translateY(-4px);
-   box-shadow: 0 6px 16px rgba(255, 69, 0, 0.7);
-}
-
-.home-hero .btn-alt,
-.home-hero .btn-alt:hover {
-   box-shadow: none;
+   box-shadow: 
+      0 8px 20px rgba(161, 12, 64, 0.5),
+      0 4px 10px rgba(255, 183, 3, 0.3),
+      0 0 12px rgba(255, 183, 3, 0.2);
 }
 
 
@@ -775,11 +767,6 @@ body {
    height: 90vh;
 }
 
-/* .cocktail-card-wrapper:focus-visible {
-   outline: 3px solid var(--primary);
-   outline-offset: 4px;
-} */
-
 
 /* NotFound */
 .not-found-wrapper {
@@ -866,6 +853,10 @@ body {
 
 .quiz-prev-btn:active {
    color: var(--accent);
+}
+
+.menu-filter-btn:hover {
+   border-color: var(--accent);
 }
 
 /* Custom Focus */
