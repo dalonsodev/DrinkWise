@@ -65,6 +65,7 @@ export default function Menu() {
             tabindex="-1"
             aria-label={t("a11y.carousel")}
             aria-roledescription={t("a11y.carouselRoleDesc")}
+            tabIndex="0"
          >
             {hasResults ? items : <NotFound />}
          </div>

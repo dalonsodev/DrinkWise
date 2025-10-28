@@ -89,10 +89,10 @@ body {
    border-color: var(--primary);
 }
 
-.menu-filter-btn:focus-visible {
+/* .menu-filter-btn:focus-visible {
    outline: 3px solid var(--primary);
    outline-offset: -3px;
-}
+} */
 
 .nav-language {
    display: flex;
@@ -299,6 +299,12 @@ body {
    background-color: var(--background); 
 }
 
+/* .toggle-input:focus-visible + .toggle-slider {
+   outline: 3px solid var(--primary);
+   outline-offset: 2px;
+   border-radius: var(--pill-radius);
+} */
+
 .menu-filter {
    display: flex;
    align-items: center;
@@ -438,13 +444,13 @@ body {
    justify-content: center;
    align-items: center;
    padding: 2em 2.5em 6em;
-   overflow: hidden;
+   /* overflow: hidden; */
 }
 
 .hero-links-wrapper {
    display: flex;
    flex-direction: column;
-   gap: 0.5em;
+   gap: 1em;
 }
 
 .home-hero .page-title {
@@ -769,6 +775,11 @@ body {
    height: 90vh;
 }
 
+/* .cocktail-card-wrapper:focus-visible {
+   outline: 3px solid var(--primary);
+   outline-offset: 4px;
+} */
+
 
 /* NotFound */
 .not-found-wrapper {
@@ -857,6 +868,76 @@ body {
    color: var(--accent);
 }
 
+/* Custom Focus */
+*:focus-visible:not(.hero-links-wrapper .btn-primary, .hero-links-wrapper .btn-alt) {
+   position: relative;
+   z-index: 1;
+   outline: none !important;
+}
+
+.hero-links-wrapper .btn-primary:focus-visible, 
+.hero-links-wrapper .btn-alt:focus-visible {
+   outline: 3px solid var(--primary);
+   outline-offset: 4px;
+}
+
+*:focus-visible::after {
+   content: '';
+   position: absolute;
+   top: -4px;
+   left: -4px;
+   right: -4px;
+   bottom: -4px;
+   border: 2px solid var(--primary);
+   border-radius: var(--pill-radius);
+   pointer-events: none;
+   z-index: 3;
+   transition: all 0.2s ease;
+}
+
+.btn-language:focus-visible::after,
+.toggle-input:focus-visible + .toggle-slider::after {
+   top: -6px;
+   left: -6px;
+   right: -6px;
+   bottom: -6px;
+}
+
+.cocktail-card:focus-visible {
+   overflow: visible !important;
+   border-radius: 2rem !important;
+}
+
+.cocktail-card:focus-visible::after {
+   top: -10px;
+   left: -10px;
+   right: -10px;
+   bottom: -10px;
+   border-radius: 2.5rem;
+   background: color-mix(in srgb, var(--primary) 12%, transparent);
+}
+
+.cocktail-card-wrapper:focus-visible::after {
+   display: none;
+}
+
+/* Excepciones: skip link, sr-only */
+.skip-link:focus-visible::after,
+.sr-only:focus-visible::after {
+   top: -2px;
+   left: -2px;
+   right: -2px;
+   bottom: -2px;
+   border-radius: var(--pill-radius);
+}
+
+.menu-filter-btn:focus-visible::after {
+   top: -2px;
+   left: -2px;
+   right: -2px;
+   bottom: -2px;     
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -884,13 +965,12 @@ body {
 }
 
 .skip-link:focus {
-   top: 1.45em;
+   top: -0.25em;
    outline: 3px solid white;
 }
 
 
 /* Media Queries */
-
 @media (max-width: 500px) {
    .quiz-confirmation {
       width: 70%;
