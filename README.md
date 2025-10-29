@@ -94,6 +94,18 @@ src/
 
 ---
 
+## Accessibility (WCAG 2.1 AA)
+
+This project is buit with an accessible aproach, copliant to WCAG standards. Key accessibility features include:
+
+- **Keyboard Navigation:** Every control focusable and operable
+- **Screen Readers:** Clear ARIA labels ("aria-label", "aria-pressed", "role='group'")
+- **Skip to Main Content:** Direct access to main content
+- **Contrast:** > 4.5:1 in text
+- **Focus visible:** Custom outline in every interactive element
+
+---
+
 ## 🔄 Development Process
 
 This project is built with a modular and scalable approach from the start. Key decisions include:
@@ -136,8 +148,9 @@ This project is built with a modular and scalable approach from the start. Key d
 - [x] Implement conditional options rendering in q3
 - [x] Auto-advance + skip q3 if only one (1) result.
 - [x] Refactor quiz logic into 6 modular hooks.
+- [x] Implement accessibility standards.
+- [x] Enhance responsiveness with media queries in index.css for better mobile support (e.g., adjust cocktail-card layout).
 - [] Add ability for the user to see cocktail details (e.g. ingredients, allergens) by tapping the drink card.
-- [] Enhance responsiveness with media queries in index.css for better mobile support (e.g., adjust cocktail-card layout).
 - [] Deploy to Netlify for a live demo.
 
 ---
