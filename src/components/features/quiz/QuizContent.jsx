@@ -1,10 +1,7 @@
 import React from "react"
-import ProgressIndicator from "../../common/ProgressIndicator"
-import Question from "../../common/Question"
-import Option from "../../common/Option"
-import NotFound from "../../common/NotFound"
-import CocktailCarousel from "../../common/CocktailCarousel"
 import QuizProgress from "./QuizProgress"
+import QuizStep from "./QuizStep"
+import QuizResults from "./QuizResults"
 
 export default function QuizContent({
    currentStep,
@@ -32,47 +29,19 @@ export default function QuizContent({
          : question.options
 
       return (
-         <Question question={question.text}>
-            {optionsToDisplay.map((item, idx) => {
-               const opt = typeof item === "object" ? item.label : item
-               const value = typeof item === "object" ? item.value : item
-
-               return (
-                  <Option 
-                     key={idx}
-                     option={opt}
-                     selected={getIsSelected(question, value)}
-                     onSelect={() => handleOptionSelect(value, currentStep)}
-                     isMulti={question.isMulti}
-                  />
-               )
-            })}
-         </Question>
+         <QuizStep 
+            question={question}
+            options={optionsToDisplay}
+            getIsSelected={getIsSelected}
+            onSelect={(value) => handleOptionSelect(value, currentStep)}
+            isMulti={question.isMulti}
+         />
       )
    }
 
    function renderResults() {
-      const hasResults = filteredCocktails.length > 0
       return (
-         <div className="results-container">
-            <p className="cocktail-count cocktail-count-results">
-               <span
-                  className="cocktail-count-number cocktail-count-number-results"
-               >{filteredCocktails.length}</span> 
-               {t("menu.cocktailCountQuiz", { count: filteredCocktails.length })}
-            </p>
-            <div 
-               className="cocktail-list carousel"
-               role="region"
-               aria-label={t("a11y.carousel")}
-               aria-roledescription={t("a11y.carouselRoleDesc")}
-            >
-               {hasResults 
-                  ? <CocktailCarousel cocktails={filteredCocktails} /> 
-                  : <NotFound />
-               }
-            </div>
-         </div>
+         <QuizResults cocktails={filteredCocktails} t={t} />
       )
    }
 
