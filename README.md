@@ -8,9 +8,10 @@ A **React-based web application** designed for bars in Spain to showcase an inte
 
 - **Interactive Drink Menu:** Browse and filter cocktails by category (e.g., alcoholic, non-alcoholic, flavor profile, main spirit).
    -**Horizontal swipe:** Achieve 0 vertical scroll
-   -**CSS Grid:** 80vw cards + 10vw padding + 5vw gaps
+   -**CSS Carousel:** 80vw cards + 10vw padding + 5vw gaps
    -**Scroll Snap:** x mandatory + center align
    -**Peek Cards:** 10% next cocktail visible (invitation to swipe)
+   -**Click in card to show details:** Ingredients & allergens (mandatory by law for bars at least in Spain)
 - **Cocktail Count Display:** Shows the number of cocktails available after applying filters, with the number highlighted in gold (--accent) for better UX.
 - **Clear Filters Button:** A subtle button to reset category and spirit filters, displayed only when filters are active.
 - **Filter Logic Abstraction:** Uses a custom hook (useDrinkFilters) and a FilterControls component for modular and reusable filter management.
@@ -114,6 +115,11 @@ This project is built with a modular and scalable approach from the start. Key d
 - **CSS Units:** Using `rem` for font sizes, `em` for margins/paddings, and `px` for border-radius to ensure accessibility and responsiveness.
 - **Cocktail Count and Filters:** Added a cocktail count display with a highlighted number in gold (--accent) for better UX, along with a subtle "Clear filters" button that appears only when filters are active.
 - **Filter Logic Abstraction:** Extracted filter logic into a custom hook (useDrinkFilters) and UI into FilterControls to improve modularity and maintainability.
+- **Cocktails Carousel:** Fully responsive carousel to show full cocktail list without vertical scroll
+   - **Click to Show Cocktail Details:** Implemented useEffect with state that reveals ingredients and allergens lists.
+   - **Click Outside to Close Details:** Implemented useEffect with event listener in the whole document to close details tapping anywhere outside of the card to improve UX
+   - **Card Details (Only 1):** Implemented useEffect with state to allow details shown in just one card, achieving better consistency and UX while browsing the cocktail menu.
+   - **CSS Transitions in DrinkCards:** Improved visual UX by using smooth transitions with strategic delays.
 - **Quiz Implementation:**
    - **Multilingual Standardization:** ANSWER_MAP converts Spanish/English answers to English keys for precise filtering
    - **Conditional Logic:** Separate filters for alcohol (occasion+style+spirit) vs no-alcohol (flavor+texture)
@@ -121,7 +127,7 @@ This project is built with a modular and scalable approach from the start. Key d
    - **Auto-advance Logic:** useEffect + 150ms timeout for visual feedback
    - **Reset Pattern:** Back button resets target step
    - **Unified Styling:** .menu-filter-btn for options + navigation consistency
-   - **Dynamic options for q3:** based on occasion and flavor selection, to avoid user disappointment via unnecesarily showing the NotFound component.
+   - **Dynamic Options for q3:** based on occasion and flavor selection, to avoid user disappointment via unnecesarily showing the NotFound component.
    - **UX Flow:** Confirmation -> Progress -> Questions -> Results
 - **Quiz Refactor (major):** Extracted useQuizLogic (~200 lines) into 6 focused hooks:
    - **useQuizState:** State, navigation, answers
@@ -150,7 +156,9 @@ This project is built with a modular and scalable approach from the start. Key d
 - [x] Refactor quiz logic into 6 modular hooks.
 - [x] Implement accessibility standards.
 - [x] Enhance responsiveness with media queries in index.css for better mobile support (e.g., adjust cocktail-card layout).
-- [] Add ability for the user to see cocktail details (e.g. ingredients, allergens) by tapping the drink card.
+- [x] Add ability for the user to see cocktail details (e.g. ingredients, allergens) by tapping the drink card.
+- [] Assess potential file refactorings to improve readability, mantainability and preserve alignment with best practices.
+- [] Polish some loose ends and testing in diferent devices.
 - [] Deploy to Netlify for a live demo.
 
 ---
