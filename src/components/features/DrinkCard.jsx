@@ -1,28 +1,25 @@
 import React, { useState, useEffect, useRef } from "react"
 import { useTranslation } from "react-i18next"
 
-export default function DrinkCard({ cocktail, isActive, cardIndex, onToggle }) {
+export default function DrinkCard({ cocktail, isActive, onToggle }) {
    const { t } = useTranslation()
    const [isExpanded, setIsExpanded] = useState(false)
    const cardRef = useRef(null)
-
-   function handleToggle(e) {
-      e.stopPropagation()
-
-      const newState = !isExpanded
-      setIsExpanded(newState)
-      onToggle?.()
-   }
 
    useEffect(() => {
       setIsExpanded(isActive)
    }, [isActive])
 
+   function handleToggle(e) {
+      e.stopPropagation()
+      onToggle?.()
+      setIsExpanded(prev => !prev)
+   }
+
    useEffect(() => {
       const handleClickOutside = (e) => {
          if (cardRef.current && !cardRef.current.contains(e.target) && isExpanded) {
             setIsExpanded(false)
-            onToggle?.(cardIndex, false)
          }
       }
 
@@ -33,7 +30,7 @@ export default function DrinkCard({ cocktail, isActive, cardIndex, onToggle }) {
       return () => {
          document.removeEventListener("click", handleClickOutside)
       }
-   }, [isExpanded, cardIndex, onToggle])
+   }, [isExpanded])
 
    function handleKeyDown(e) {
       if (e.key === " " || e.key === "Enter") {
@@ -42,16 +39,12 @@ export default function DrinkCard({ cocktail, isActive, cardIndex, onToggle }) {
       }
    }
 
-   function getCocktailIngredients() {
-      return cocktail.ingredients
-         .map(ing => t(`ingredients.${ing}`))
-         .join(", ")
+   function getIngredients() {
+      return cocktail.ingredients.map(ing => t(`ingredients.${ing}`)).join(", ")
    }
 
-   function getCocktailAllergens() {
-      return cocktail.allergens
-         .map(all => t(`allergens.${all}`))
-         .join(", ")
+   function getAllergens() {
+      return cocktail.allergens.map(all => t(`allergens.${all}`)).join(", ")
    }
    
    return (
@@ -74,11 +67,13 @@ export default function DrinkCard({ cocktail, isActive, cardIndex, onToggle }) {
             <div className="cocktail-overlay">
                <div className="cocktail-heading">
                   <h2 className="cocktail-name">{cocktail.name}</h2>
+
                   {!isExpanded && (
                      <i className="cocktail-category">
                         {t(`category.${cocktail.name}`)}
                      </i>
                   )}
+
                   <p className="cocktail-description">
                      {t(`description.${cocktail.name}`) || cocktail.description}
                   </p>
@@ -88,13 +83,13 @@ export default function DrinkCard({ cocktail, isActive, cardIndex, onToggle }) {
                         <span className="cocktail-details-label">
                            {t("drinkCard.ingredientsLabel")}:{" "}
                         </span>
-                        {getCocktailIngredients()}
+                        {getIngredients()}
                      </p>
                      <p className="cocktail-details">
                         <span className="cocktail-details-label">
                            {t("drinkCard.allergensLabel")}:{" "} 
                         </span>
-                        {getCocktailAllergens()}
+                        {getAllergens()}
                      </p>
                   </div>
                </div>

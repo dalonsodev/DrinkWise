@@ -162,7 +162,7 @@ body {
    position: relative;
    overflow: hidden;
    border: 3px solid var(--primary);
-   background-color: color-mix(in srgb, var(--background) 85%, transparent);
+   background-color: color-mix(in srgb, var(--background) 90%, transparent);
    background-origin: border-box;
    background-clip: padding-box, border-box;
 }
@@ -686,14 +686,12 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: flex-end;
-   /* transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s; */
    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 }
 
 .cocktail-card.expanded .cocktail-overlay {
    height: 70%;
    min-height: 45%;
-   /* transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.2s; */
    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 
@@ -751,7 +749,6 @@ body {
    padding-bottom: 0;
    margin-bottom: 0;
    pointer-events: none;
-   /* Estado expandido: delay 0.3s para segunda fase */
    transition: 
       opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
       max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
@@ -791,12 +788,6 @@ body {
    opacity: 1;
    transform: translateY(0);
    padding-top: 0.5em;
-   /* transition:
-      max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
-      opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
-      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
-      padding-top 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
-      padding-bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s; */
    transition:
       max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
       opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
@@ -818,9 +809,6 @@ body {
    font-weight: bold;
    color: var(--text)
 }
-
-
-
 
 /* Footer */
 .footer {
@@ -846,7 +834,6 @@ body {
    gap: 5vw;
    overflow-x: auto;
    overflow-y: hidden;
-   /* height: calc(100vh - 320px); */
    height: calc(100vh - 180px);
    padding: 1em 10vw 1em 10vw;
    scroll-snap-type: x mandatory;

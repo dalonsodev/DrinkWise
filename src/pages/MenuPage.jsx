@@ -5,7 +5,7 @@ import FilterControls from "../components/features/FilterControls"
 import NotFound from "../components/common/NotFound"
 import ToggleAlcohol from "../components/common/ToggleAlcohol"
 import useDrinkFilters from "../hooks/useDrinkFilters"
-import useCocktailLayout from "../hooks/useCocktailLayout"
+import CocktailCarousel from "../components/common/CocktailCarousel"
 
 export default function Menu() {
    const { t } = useTranslation()
@@ -30,13 +30,13 @@ export default function Menu() {
       
       return matchesAlcohol && matchesCategory && matchesSpirit
    })
-   
-   const { items, hasResults } = useCocktailLayout(drinksToDisplay)
 
    if (!cocktails || !Array.isArray(cocktails)) {
       console.error("Error: cocktails data is not an array or is undefined")
       return <p>{t("menu.error")}</p>
    }
+
+   const hasResults = drinksToDisplay.length > 0
 
    return (
       <section className="menu-page">
@@ -67,7 +67,10 @@ export default function Menu() {
             aria-roledescription={t("a11y.carouselRoleDesc")}
             tabIndex="0"
          >
-            {hasResults ? items : <NotFound />}
+            {hasResults 
+               ? <CocktailCarousel cocktails={drinksToDisplay} /> 
+               : <NotFound />
+            }
          </div>
       </section>
   );

@@ -3,7 +3,7 @@ import ProgressIndicator from "../common/ProgressIndicator"
 import Question from "../common/Question"
 import Option from "../common/Option"
 import NotFound from "../common/NotFound"
-import useCocktailLayout from "../../hooks/useCocktailLayout"
+import CocktailCarousel from "../common/CocktailCarousel"
 
 export default function QuizContent({
    currentStep,
@@ -18,7 +18,6 @@ export default function QuizContent({
    isResultsBtnDisabled,
    t
 }) {
-   const { items, hasResults } = useCocktailLayout(filteredCocktails)
 
    function renderQuestion() {
       const question = currentQuestions[currentStep] || { options: [], isMulti: false }
@@ -52,13 +51,14 @@ export default function QuizContent({
    }
 
    function renderResults() {
+      const hasResults = filteredCocktails.length > 0
       return (
          <div className="results-container">
             <p className="cocktail-count cocktail-count-results">
                <span
                   className="cocktail-count-number cocktail-count-number-results"
-               >{items?.length}</span> 
-               {t("menu.cocktailCountQuiz", { count: items?.length })}
+               >{filteredCocktails.length}</span> 
+               {t("menu.cocktailCountQuiz", { count: filteredCocktails.length })}
             </p>
             <div 
                className="cocktail-list carousel"
@@ -66,7 +66,10 @@ export default function QuizContent({
                aria-label={t("a11y.carousel")}
                aria-roledescription={t("a11y.carouselRoleDesc")}
             >
-               {hasResults ? items : <NotFound />}
+               {hasResults 
+                  ? <CocktailCarousel cocktails={filteredCocktails} /> 
+                  : <NotFound />
+               }
             </div>
          </div>
       )
