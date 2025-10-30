@@ -346,6 +346,7 @@ body {
    font-size: 1.2rem;
    color: var(--accent);
    font-weight: bold;
+   
 }
 
 .cocktail-count-number-results {
@@ -1059,6 +1060,31 @@ body {
    .quiz-confirmation {
       width: 50%;
    }
+
+   .cocktail-overlay {
+      height: 45%;
+      mask: linear-gradient(#0000, #000f 40%);
+      backdrop-filter: blur(11px);
+   }
+}
+
+@media (min-width: 450px) {
+   .cocktail-card.expanded .cocktail-image {
+      transform: translateY(-10%) scale(1.1);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+   }
+
+   .cocktail-card.expanded .cocktail-overlay {
+      height: 60%;
+   }
+
+   .cocktail-name {
+      font-size: 2.1rem;
+   }
+
+   .cocktail-description {
+      font-size: 1.05rem;
+   }
 }
 
 @media (min-width: 600px) {
@@ -1152,7 +1178,7 @@ body {
    }
 
    .cocktail-description { 
-      font-size: 1.05rem; 
+      font-size: 1.1rem; 
    }
 
    .menu-filter-btn { 
