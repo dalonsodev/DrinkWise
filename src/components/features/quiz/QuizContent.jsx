@@ -1,9 +1,10 @@
 import React from "react"
-import ProgressIndicator from "../common/ProgressIndicator"
-import Question from "../common/Question"
-import Option from "../common/Option"
-import NotFound from "../common/NotFound"
-import CocktailCarousel from "../common/CocktailCarousel"
+import ProgressIndicator from "../../common/ProgressIndicator"
+import Question from "../../common/Question"
+import Option from "../../common/Option"
+import NotFound from "../../common/NotFound"
+import CocktailCarousel from "../../common/CocktailCarousel"
+import QuizProgress from "./QuizProgress"
 
 export default function QuizContent({
    currentStep,
@@ -77,20 +78,11 @@ export default function QuizContent({
 
    return (
       <>
-         <div className="progress-wrapper">
-            <ProgressIndicator 
-               progress={(currentStep + 1) / currentQuestions.length} 
-            />
-
-            {currentStep > 0 && (
-               <button 
-                  className="quiz-prev-btn"
-                  onClick={handlePrevStep}
-               >
-                  {t("quiz.back")}
-               </button>
-            )}
-         </div>
+         <QuizProgress 
+            currentStep={currentStep}
+            totalSteps={currentQuestions.length}
+            onPrev={handlePrevStep}
+         />
 
          {currentStep < currentQuestions.length 
             ? renderQuestion() 
