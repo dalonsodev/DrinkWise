@@ -194,6 +194,15 @@
       "Lemonade": "Lemonade",
       "Ginger Ale": "Ginger Ale"
    },
+   "allergens": {
+      "Gluten": "Gluten",
+      "Sulphites": "Sulphites",
+      "Egg": "Egg",
+      "Fish": "Fish",
+      "Nuts (Almonds)": "Nuts (almonds)",
+      "Nuts (Coconut)": "Nuts (coconut)",
+      "None known": "None known"
+   },
    "spirit": {
       "Whisky": "Whisky",
       "Rye Whisky": "Rye Whisky",
@@ -212,5 +221,9 @@
       "cocktailRoleDesc": "slide",
       "of": "of",
       "skipLink": "Jump to main content"
+   },
+   "drinkCard": {
+      "ingredientsLabel": "Ingredients",
+      "allergensLabel": "Allergens"
    }
 }
