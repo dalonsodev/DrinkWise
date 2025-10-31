@@ -1,9 +1,7 @@
-import cocktails from "../data/cocktails.json"
 import { useTranslation } from "react-i18next"
-import NotFound from "../components/common/NotFound"
-import CocktailCarousel from "../components/common/CocktailCarousel"
-import FilterControls from "../components/features/FilterControls"
 import MenuHeader from "../components/features/menu/MenuHeader"
+import MenuContent from "../components/features/menu/MenuContent"
+import cocktails from "../data/cocktails.json"
 import useDrinkFilters from "../hooks/useDrinkFilters"
 
 export default function Menu() {
@@ -45,29 +43,17 @@ export default function Menu() {
             onToggle={handleAlcoholFilterChange}
             t={t}
          />
-         <FilterControls 
-            drinksToDisplayLength={drinksToDisplay.length}
+         <MenuContent 
+            drinks={drinksToDisplay}
+            hasResults={hasResults}
             alcoholFilter={alcoholFilter}
             categoryFilter={categoryFilter}
             spiritFilter={spiritFilter}
             handleClearFilters={handleClearFilters}
-            handleAlcoholFilterChange={handleAlcoholFilterChange}
             handleCategoryFilterChange={handleCategoryFilterChange}
+            handleAlcoholFilterChange={handleAlcoholFilterChange}
             handleSpiritFilterChange={handleSpiritFilterChange}
          />
-         <div 
-            className="cocktail-list carousel"
-            role="region"
-            id="cocktail-list"
-            aria-label={t("a11y.carousel")}
-            aria-roledescription={t("a11y.carouselRoleDesc")}
-            tabIndex="-1"
-         >
-            {hasResults 
-               ? <CocktailCarousel cocktails={drinksToDisplay} /> 
-               : <NotFound />
-            }
-         </div>
       </section>
   );
 }
