@@ -1,4 +1,5 @@
 import { t } from "i18next"
+import ProgressIndicator from "../../common/ProgressIndicator"
 
 export default function QuizProgress({ currentStep, totalSteps, onPrev }) {
    const progress = (currentStep + 1) / totalSteps

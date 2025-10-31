@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next"
-import FilterControls from "../FilterControls"
+import FilterControls from "../filter-controls/FilterControls"
 import CocktailCarousel from "../../common/CocktailCarousel"
 import NotFound from "../../common/NotFound"
 
