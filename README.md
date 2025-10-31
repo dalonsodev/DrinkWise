@@ -28,12 +28,13 @@ A **React-based web application** designed for bars in Spain to showcase an inte
    - `rem` for font sizes to ensure consistent scaling.
    - `em` for margins and paddings for proportional spacing.
    - `px` for border-radius and specific width constraints.
-- **Modular Architecture:** Organized component structure with reusable components (DrinkCard, Layout), custom hooks (useLazyBackground), and centralized styles in **5 archivos CSS separados**:
-  - `globals.css`: Reset + variables
-  - `layout.css`: Header, footer, page
-  - `components.css`: Buttons, toggle, filters, card
+- **Modular Architecture:** Organized component structure with reusable components (DrinkCard, Layout), custom hooks (useLazyBackground), and centralized styles in **6 CSS separarated files**:
+  - `globals.css`: Variables + Reset
+  - `layout.css`: Layout + Header + Nav + Footer + Page + MenuPage
+  - `components.css`: Buttons + Filters/Toggle + Cocktail Cards + Carousel + NotFound + Quiz Nav
   - `pages.css`: Home, Quiz, Menu
-  - `utils.css`: Media queries + hover
+  - `utils.css`: Focus + Skip + SR
+  - `index.css`: @imports + Media queries
 
 ---
 
