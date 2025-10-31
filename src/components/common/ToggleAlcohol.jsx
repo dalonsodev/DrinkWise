@@ -1,20 +1,13 @@
-import React from "react"
 import { useTranslation } from "react-i18next"
 
-export default function ToggleAlcohol({
-   alcoholFilter,
-   onToggle
-}) {
+export default function ToggleAlcohol({ alcoholFilter, onToggle }) {
    const { t } = useTranslation()
 
    return (
       <div className="menu-filter-alcohol">
          <label className="toggle-label" htmlFor="alcohol-toggle">
             <span className="toggle-text">
-               {t(`menu.filter.${alcoholFilter 
-                  ? "withAlcohol" 
-                  : "noAlcohol"}`
-               )}
+               {t(`menu.filter.${alcoholFilter ? "withAlcohol" : "noAlcohol"}`)}
             </span>
             <input 
                id="alcohol-toggle"

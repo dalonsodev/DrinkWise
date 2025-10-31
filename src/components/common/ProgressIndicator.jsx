@@ -1,5 +1,3 @@
-import React from "react"
-
 export default function ProgressIndicator({ progress = 0 }) {
    return (
       <div className="progress-container">

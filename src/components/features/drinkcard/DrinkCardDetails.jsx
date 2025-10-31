@@ -1,5 +1,3 @@
-import React from "react"
-
 export default function DrinkCardDetails({ cocktail, t }) {
    const ingredients = cocktail.ingredients
       .map(ingre => (t(`ingredients.${ingre}`))).join(", ")

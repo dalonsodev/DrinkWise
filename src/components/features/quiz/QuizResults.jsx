@@ -1,4 +1,3 @@
-import React from "react"
 import CocktailCarousel from "../../common/CocktailCarousel"
 import NotFound from "../../common/NotFound"
 

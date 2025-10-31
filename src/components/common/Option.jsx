@@ -1,5 +1,3 @@
-import React from "react"
-
 export default function Option({ option, selected, onSelect, isMulti = false }) {
    return (
       <label 

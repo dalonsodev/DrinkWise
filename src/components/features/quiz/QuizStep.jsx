@@ -1,4 +1,3 @@
-import React from "react"
 import Question from "../../common/Question"
 import Option from "../../common/Option"
 

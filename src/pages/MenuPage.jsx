@@ -1,4 +1,3 @@
-import React from "react"
 import cocktails from "../data/cocktails.json"
 import { useTranslation } from "react-i18next"
 import FilterControls from "../components/features/FilterControls"

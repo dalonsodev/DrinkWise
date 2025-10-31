@@ -1,5 +1,3 @@
-import React from "react"
-
 export default function Question({ question, children }) {
    const optLength = children.length
    return (

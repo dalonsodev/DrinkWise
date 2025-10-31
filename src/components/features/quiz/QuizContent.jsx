@@ -1,4 +1,3 @@
-import React from "react"
 import QuizProgress from "./QuizProgress"
 import QuizStep from "./QuizStep"
 import QuizResults from "./QuizResults"
