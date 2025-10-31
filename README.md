@@ -73,12 +73,13 @@ src/
 │       └── useQuizLogic.js
 ├── locales/            # Translation files (es.json, en.json)
 ├── data/               # Mock data (e.g., drinks.json, questions/)
-├── styles/             # Global styles (5 files)
+├── styles/             # Global styles (6 files)
 │   ├── globals.css
 │   ├── layout.css
 │   ├── components.css
 │   ├── pages.css
-│   └── utils.css
+│   ├── utils.css
+│   └── index.css
 ├── i18n.js             # i18next configuration
 ├── App.jsx             # Main app component
 └── index.jsx           # Entry point
