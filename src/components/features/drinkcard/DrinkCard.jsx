@@ -59,24 +59,7 @@ export default function DrinkCard({ cocktail, isActive, onToggle }) {
                      {t(`description.${cocktail.name}`) || cocktail.description}
                   </p>
 
-                  {/* <div className="cocktail-content">
-                     <p className="cocktail-details">
-                        <span className="cocktail-details-label">
-                           {t("drinkCard.ingredientsLabel")}:{" "}
-                        </span>
-                        {getIngredients()}
-                     </p>
-                     <p className="cocktail-details">
-                        <span className="cocktail-details-label">
-                           {t("drinkCard.allergensLabel")}:{" "} 
-                        </span>
-                        {getAllergens()}
-                     </p>
-                  </div> */}
-                  <DrinkCardDetails
-                     cocktail={cocktail}
-                     t={t}
-                  />
+                  <DrinkCardDetails cocktail={cocktail} t={t}/>
                </div>
             </div>
          </div>
