@@ -1,10 +1,10 @@
 import cocktails from "../data/cocktails.json"
 import { useTranslation } from "react-i18next"
-import FilterControls from "../components/features/FilterControls"
 import NotFound from "../components/common/NotFound"
-import ToggleAlcohol from "../components/common/ToggleAlcohol"
-import useDrinkFilters from "../hooks/useDrinkFilters"
 import CocktailCarousel from "../components/common/CocktailCarousel"
+import FilterControls from "../components/features/FilterControls"
+import MenuHeader from "../components/features/menu/MenuHeader"
+import useDrinkFilters from "../hooks/useDrinkFilters"
 
 export default function Menu() {
    const { t } = useTranslation()
@@ -40,13 +40,11 @@ export default function Menu() {
    return (
       <section className="menu-page">
          <a href="#cocktail-list" className="skip-link">{t("a11y.skipLink")}</a>
-         <div className="menu-header">
-            <h1 className="menu-title">{t("menu.title")}</h1>
-            <ToggleAlcohol 
-               alcoholFilter={alcoholFilter}
-               onToggle={handleAlcoholFilterChange}
-            />
-         </div>
+         <MenuHeader 
+            alcoholFilter={alcoholFilter}
+            onToggle={handleAlcoholFilterChange}
+            t={t}
+         />
          <FilterControls 
             drinksToDisplayLength={drinksToDisplay.length}
             alcoholFilter={alcoholFilter}
