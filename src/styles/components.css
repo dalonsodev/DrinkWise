@@ -1,0 +1,356 @@
+/* Buttons */
+.btn-primary,
+.btn-alt,
+.btn-quiz,
+.btn-language {
+   font-size: 1rem;
+   padding: 0.75em 2em;
+   border-radius: var(--pill-radius);
+   cursor: pointer;
+   transition: var(--transition);
+   font-weight: bold;
+   text-decoration: none;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   overflow: hidden;
+}
+
+.btn-primary {
+   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+   color: var(--text);
+   border: none;
+   box-shadow: 0 4px 12px rgba(255, 69, 0, 0.5);
+}
+
+.btn-primary:hover {
+   transform: translateY(-0.1875em);
+   box-shadow: 0 6px 16px rgba(255, 69, 0, 0.7);
+}
+
+.btn-alt {
+   color: var(--primary);
+   border: 3px solid var(--primary);
+   background-color: color-mix(in srgb, var(--background) 90%, transparent);
+   background-origin: border-box;
+   background-clip: padding-box, border-box;
+}
+
+.btn-alt:hover {
+   background-color: var(--primary);
+   color: var(--text);
+}
+
+.btn-quiz {
+   background: var(--surface);
+   color: var(--text);
+   border: 2px solid var(--accent);
+   box-shadow: var(--shadow);
+}
+
+.btn-quiz.active {
+   background: var(--accent);
+   color: var(--background);
+   border-color: var(--accent);
+   transform: translateY(-0.125em);
+   box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
+}
+
+.btn-language {
+   width: 1.75em;
+   height: 1.75em;
+   padding: 1em;
+   border: 1px solid var(--text-subtle);
+   background: transparent;
+}
+
+.btn-language:hover {
+   border-color: var(--secondary);
+}
+
+/* Toggle */
+.menu-filter-alcohol {
+   display: flex;
+   align-items: center;
+}
+
+.toggle-label {
+   display: flex;
+   align-items: center;
+   gap: 0.75em;
+   font-size: 1rem;
+   color: var(--text);
+   cursor: pointer;
+}
+
+.toggle-text { 
+   font-weight: bold; 
+}
+
+.toggle-input { 
+   display: none; 
+}
+
+.toggle-slider {
+   position: relative;
+   width: 4em;
+   height: 2em;
+   background-color: var(--surface);
+   border: 2px solid var(--accent);
+   border-radius: var(--pill-radius);
+   transition: var(--transition);
+}
+
+.toggle-slider::before {
+   content: "";
+   position: absolute;
+   width: 1.6em;
+   height: 1.6em;
+   top: 0.05em;
+   left: 0.15em;
+   background-color: var(--text);
+   border-radius: 50%;
+   transition: var(--transition);
+}
+
+.toggle-input:checked + .toggle-slider {
+   background-color: var(--accent);
+   border-color: var(--accent);
+   box-shadow: 0 4px 12px rgba(255, 191, 0, 0.5);
+}
+
+.toggle-input:checked + .toggle-slider::before {
+   transform: translateX(2em);
+   background-color: var(--background);
+}
+
+/* Filters */
+.menu-filter {
+   display: flex;
+   align-items: center;
+   gap: 0.5em;
+   overflow-x: auto;
+   padding-bottom: 0.5em;
+   margin-bottom: 0.5em;
+   scrollbar-width: none;
+}
+
+.menu-filter-btn {
+   padding: 0.5em 1.5em;
+   border: 2px solid var(--surface);
+   background: transparent;
+   color: var(--text-subtle);
+   white-space: nowrap;
+   letter-spacing: 1px;
+   border-radius: var(--pill-radius);
+   transition: var(--transition);
+}
+
+.menu-filter-btn.active {
+   background-color: var(--background);
+   color: var(--text);
+   border-color: var(--accent);
+}
+
+.menu-filter-label {
+   white-space: nowrap;
+   font-weight: bold;
+}
+
+.clear-filters-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1em;
+   margin: 1.2em 0 0.5em 0;
+}
+
+.cocktail-count {
+   font-size: 1rem;
+   color: var(--text-subtle);
+   opacity: 0.7;
+   display: inline-flex;
+   align-items: center;
+   gap: 0.2em;
+}
+
+.cocktail-count-number {
+   font-size: 1.2rem;
+   color: var(--accent);
+   font-weight: bold;
+}
+
+.clear-filters-btn {
+   font-size: 0.8rem;
+   padding: 0.3em 0.8em;
+   border: 1px solid var(--text-subtle);
+   border-radius: var(--pill-radius);
+   background: transparent;
+   color: var(--text-subtle);
+   opacity: 0.6;
+   cursor: pointer;
+   transition: var(--transition);
+}
+
+/* Cocktail Card */
+.cocktail-card {
+   display: flex;
+   flex-direction: column;
+   border: 6px solid var(--surface);
+   border-radius: 2rem;
+   overflow: hidden;
+   background: var(--surface);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+   margin-bottom: 0.5em;
+}
+
+.cocktail-image-wrapper {
+   position: relative;
+   width: 100%;
+   aspect-ratio: 3 / 4.5;
+   overflow: hidden;
+   border-radius: 2rem;
+}
+
+.cocktail-image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center 100%;
+   display: block;
+   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+.cocktail-card.expanded .cocktail-image {
+   transform: translateY(-15%) scale(1.25);
+   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.cocktail-overlay {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 48%;
+   padding: 1em;
+   background: rgba(0, 0, 0, 0.4);
+   mask: linear-gradient(#0000, #000f 20%);
+   backdrop-filter: blur(9px);
+   -webkit-backdrop-filter: blur(8px);
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+.cocktail-card.expanded .cocktail-overlay {
+   height: 70%;
+   min-height: 45%;
+   transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.cocktail-heading {
+   display: flex;
+   flex-direction: column;
+   gap: 0.25em;
+   align-items: center;
+   margin: 0 0 0.5em 0;
+   transition: gap 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cocktail-card.expanded .cocktail-heading {
+   gap: 0;
+}
+
+.cocktail-name {
+   font-size: 1.8rem;
+   font-weight: 600;
+   color: var(--text);
+   text-align: left;
+   white-space: nowrap;
+}
+
+.cocktail-card.expanded .cocktail-name {
+   margin-bottom: 0.5em;
+}
+
+.cocktail-category {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid var(--accent);
+   border-radius: var(--pill-radius);
+   padding: 0.1em 1em;
+   font-style: normal;
+   font-size: 0.75rem;
+   letter-spacing: 0.75px;
+   white-space: nowrap;
+   background-color: #5b5b5b45;
+   margin-bottom: 0.5em;
+   opacity: 1;
+   max-height: 2em;
+   transition: 
+      opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+      max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+      padding 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+      margin-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.cocktail-card.expanded .cocktail-category {
+   opacity: 0;
+   max-height: 0;
+   padding: 0;
+   margin-bottom: 0;
+   pointer-events: none;
+}
+
+.cocktail-description {
+   font-size: 0.9rem;
+   color: var(--text-subtle);
+   margin: 0;
+   text-align: center;
+   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cocktail-card.expanded .cocktail-description {
+   transform: translateY(-0.5em);
+}
+
+.cocktail-content {
+   max-height: 0;
+   opacity: 0;
+   transform: translateY(10px);
+   overflow: hidden;
+   padding: 0 1.25em;
+   text-align: center;
+   transition:
+      max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cocktail-card.expanded .cocktail-content {
+   max-height: 300px;
+   opacity: 1;
+   transform: translateY(0);
+   padding-top: 0.5em;
+   transition-delay: 0.3s;
+}
+
+.cocktail-details {
+   font-size: 0.9rem;
+   color: var(--text-subtle);
+}
+
+.cocktail-details:first-of-type {
+   margin-bottom: 1em;
+}
+
+.cocktail-details-label {
+   font-weight: bold;
+   color: var(--text);
+}
