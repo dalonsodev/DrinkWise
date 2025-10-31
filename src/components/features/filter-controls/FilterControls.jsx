@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next"
 import FlavorFilter from "./FlavorFilter"
 import SpiritFilter from "./SpiritFilter"
 import FiltersFooter from "./FiltersFooter"
@@ -10,9 +9,9 @@ export default function FilterControls({
    handleClearFilters,
    handleCategoryFilterChange,
    handleSpiritFilterChange,
-   drinksToDisplayLength
+   drinksToDisplayLength,
+   t
 }) {
-   const { t } = useTranslation()
    const hasActiveFilters = categoryFilter || spiritFilter
 
    return (

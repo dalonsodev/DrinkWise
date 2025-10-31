@@ -53,6 +53,7 @@ export default function Menu() {
             handleCategoryFilterChange={handleCategoryFilterChange}
             handleAlcoholFilterChange={handleAlcoholFilterChange}
             handleSpiritFilterChange={handleSpiritFilterChange}
+            t={t}
          />
       </section>
   );

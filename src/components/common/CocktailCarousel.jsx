@@ -1,8 +1,9 @@
 import useActiveCard from "../../hooks/useActiveCard"
 import DrinkCard from "../features/drinkcard/DrinkCard"
-import { t } from "i18next"
+import { useTranslation } from "react-i18next"
 
 export default function CocktailCarousel({ cocktails }) {
+   const { t } = useTranslation()
    const { activeIndex, activateCard } = useActiveCard()
 
    if (!cocktails || cocktails.length === 0) {

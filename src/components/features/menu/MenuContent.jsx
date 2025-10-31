@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next"
 import FilterControls from "../filter-controls/FilterControls"
 import CocktailCarousel from "../../common/CocktailCarousel"
 import NotFound from "../../common/NotFound"
@@ -12,10 +11,9 @@ export default function MenuContent({
    handleClearFilters, 
    handleAlcoholFilterChange,
    handleCategoryFilterChange, 
-   handleSpiritFilterChange
+   handleSpiritFilterChange,
+   t
 }) {
-   const { t } = useTranslation()
-
    return (
       <>
          <FilterControls 
@@ -27,6 +25,7 @@ export default function MenuContent({
             handleAlcoholFilterChange={handleAlcoholFilterChange}
             handleCategoryFilterChange={handleCategoryFilterChange}
             handleSpiritFilterChange={handleSpiritFilterChange}
+            t={t}
          />
          <div 
             className="cocktail-list carousel"
