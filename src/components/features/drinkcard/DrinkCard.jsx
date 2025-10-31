@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import { useTranslation } from "react-i18next"
 import useClickOutside from "../../../hooks/useClickOutside"
 import DrinkCardHeader from "./DrinkCardHeader"
+import DrinkCardDetails from "./DrinkCardDetails"
 
 export default function DrinkCard({ cocktail, isActive, onToggle }) {
    const { t } = useTranslation()
@@ -28,14 +29,6 @@ export default function DrinkCard({ cocktail, isActive, onToggle }) {
          handleToggle(e)
       }
    }
-
-   function getIngredients() {
-      return cocktail.ingredients.map(ing => t(`ingredients.${ing}`)).join(", ")
-   }
-
-   function getAllergens() {
-      return cocktail.allergens.map(all => t(`allergens.${all}`)).join(", ")
-   }
    
    return (
       <article 
@@ -56,13 +49,6 @@ export default function DrinkCard({ cocktail, isActive, onToggle }) {
             />
             <div className="cocktail-overlay">
                <div className="cocktail-heading">
-                  {/* <h2 className="cocktail-name">{cocktail.name}</h2>
-
-                  {!isExpanded && (
-                     <i className="cocktail-category">
-                        {t(`category.${cocktail.name}`)}
-                     </i>
-                  )} */}
                   <DrinkCardHeader
                      isExpanded={isExpanded}
                      name={cocktail.name}
@@ -73,7 +59,7 @@ export default function DrinkCard({ cocktail, isActive, onToggle }) {
                      {t(`description.${cocktail.name}`) || cocktail.description}
                   </p>
 
-                  <div className="cocktail-content">
+                  {/* <div className="cocktail-content">
                      <p className="cocktail-details">
                         <span className="cocktail-details-label">
                            {t("drinkCard.ingredientsLabel")}:{" "}
@@ -86,7 +72,11 @@ export default function DrinkCard({ cocktail, isActive, onToggle }) {
                         </span>
                         {getAllergens()}
                      </p>
-                  </div>
+                  </div> */}
+                  <DrinkCardDetails
+                     cocktail={cocktail}
+                     t={t}
+                  />
                </div>
             </div>
          </div>
