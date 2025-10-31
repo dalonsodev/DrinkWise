@@ -2,7 +2,7 @@ import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Layout from "./components/layout/Layout"
 import Quiz from "./components/features/quiz/Quiz"
-import DrinkCard from "./components/features/DrinkCard"
+import DrinkCard from "./components/features/drinkcard/DrinkCard"
 import HomePage from "./pages/HomePage"
 import MenuPage from "./pages/MenuPage"
 

@@ -1,6 +1,6 @@
 import React from "react"
 import useActiveCard from "../../hooks/useActiveCard"
-import DrinkCard from "../features/DrinkCard"
+import DrinkCard from "../features/drinkcard/DrinkCard"
 import { t } from "i18next"
 
 export default function CocktailCarousel({ cocktails }) {

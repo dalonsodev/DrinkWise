@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import { useTranslation } from "react-i18next"
+import useClickOutside from "../../../hooks/useClickOutside"
 
 export default function DrinkCard({ cocktail, isActive, onToggle }) {
    const { t } = useTranslation()
@@ -16,21 +17,9 @@ export default function DrinkCard({ cocktail, isActive, onToggle }) {
       setIsExpanded(prev => !prev)
    }
 
-   useEffect(() => {
-      const handleClickOutside = (e) => {
-         if (cardRef.current && !cardRef.current.contains(e.target) && isExpanded) {
-            setIsExpanded(false)
-         }
-      }
-
-      if (isExpanded) {
-         document.addEventListener("click", handleClickOutside)
-      }
-
-      return () => {
-         document.removeEventListener("click", handleClickOutside)
-      }
-   }, [isExpanded])
+   useClickOutside(cardRef, () => {
+      if (isExpanded) setIsExpanded(false)
+   })
 
    function handleKeyDown(e) {
       if (e.key === " " || e.key === "Enter") {
