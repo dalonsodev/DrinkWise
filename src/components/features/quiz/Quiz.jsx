@@ -1,6 +1,6 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
-import QuizConfirmation from "../QuizConfirmation"
+import QuizConfirmation from "../quiz/QuizConfirmation"
 import useQuizLogic from "../../../hooks/useQuizLogic"
 import QuizContent from "./QuizContent"
 

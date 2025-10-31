@@ -62,10 +62,9 @@ export default function Menu() {
             className="cocktail-list carousel"
             role="region"
             id="cocktail-list"
-            tabindex="-1"
             aria-label={t("a11y.carousel")}
             aria-roledescription={t("a11y.carouselRoleDesc")}
-            tabIndex="0"
+            tabIndex="-1"
          >
             {hasResults 
                ? <CocktailCarousel cocktails={drinksToDisplay} /> 

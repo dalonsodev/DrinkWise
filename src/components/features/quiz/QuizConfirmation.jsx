@@ -1,6 +1,6 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
-import ToggleAlcohol from "../common/ToggleAlcohol"
+import ToggleAlcohol from "../../common/ToggleAlcohol"
 
 export default function QuizConfirmation({
    quizAlcohol,

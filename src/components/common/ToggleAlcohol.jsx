@@ -27,7 +27,6 @@ export default function ToggleAlcohol({
             <span 
                className="toggle-slider" 
                tabIndex="0"
-               aria-hidden="true"
                onKeyDown={(e) => {
                   if (e.key === " " || e.key === "Enter") {
                      e.preventDefault()
