@@ -28,7 +28,12 @@ A **React-based web application** designed for bars in Spain to showcase an inte
    - `rem` for font sizes to ensure consistent scaling.
    - `em` for margins and paddings for proportional spacing.
    - `px` for border-radius and specific width constraints.
-- **Modular Architecture:** Organized component structure with reusable components (DrinkCard, Layout), custom hooks (useLazyBackground), and centralized styles in index.css.
+- **Modular Architecture:** Organized component structure with reusable components (DrinkCard, Layout), custom hooks (useLazyBackground), and centralized styles in **5 archivos CSS separados**:
+  - `globals.css`: Reset + variables
+  - `layout.css`: Header, footer, page
+  - `components.css`: Buttons, toggle, filters, card
+  - `pages.css`: Home, Quiz, Menu
+  - `utils.css`: Media queries + hover
 
 ---
 
@@ -56,8 +61,9 @@ src/
 │   └── features/       # Feature-specific components (e.g., Quiz, DrinkCard, FilterControls)
 ├── pages/              # Page-level components (e.g., HomePage, DrinkDetailPage)
 ├── hooks/              # Custom hooks
+│   ├── useActiveCard.js
+│   ├── useClickOutside.js
 │   ├── useDrinkFilters.js
-│   ├── useLazyBackground.js
 │   └── quiz/           # Quiz-specific hooks
 │       ├── useQuizState.js
 │       ├── useAnswerMapping.js
@@ -67,11 +73,15 @@ src/
 │       └── useQuizLogic.js
 ├── locales/            # Translation files (es.json, en.json)
 ├── data/               # Mock data (e.g., drinks.json, questions/)
-├── styles/             # Global styles (index.css)
+├── styles/             # Global styles (5 files)
+│   ├── globals.css
+│   ├── layout.css
+│   ├── components.css
+│   ├── pages.css
+│   └── utils.css
 ├── i18n.js             # i18next configuration
 ├── App.jsx             # Main app component
-├── index.jsx           # Entry point
-└── index.css           # Global styles
+└── index.jsx           # Entry point
 ```
 
 ---
@@ -138,9 +148,20 @@ This project is built with a modular and scalable approach from the start. Key d
    - **useQuizLogic:** Orchestrates all hooks (~60 lines)
 - **Custom Hooks:**
    - (All of the above hooks +)
-   - **useLazyBackground** for efficient image loading in DrinkCard components 
    - **useDrinkFilters** for modular filter management
-   - **useQuizLogic** for quiz state + filtering logic
+   - **useActiveCard** to control when card details are shown/hidden
+   - **useClickOutside** to hide card details when tapping/clicking out of the card
+- **UI Refactor (modular):** Extracted components into its own folders for mantainability:
+  - `features/drinkcard/`: `DrinkCard`, `DrinkCardHeader`, `DrinkCardDetails`
+  - `features/filter-controls/`: `FilterControls`, `FlavorFilter`, `SpiritFilter`, `FilterFooter`
+  - `features/menu/`: `MenuHeader`, `MenuContent`
+  - `features/quiz/`: `Quiz`, `QuizConfirmation`, `QuizContent`, `QuizProgress`, `QuizResults`, `QuizStep`
+- **CSS Split:** 1300 lines → **5 files** for mantainability:
+  - `globals.css`: Reset + variables
+  - `layout.css`: Header, footer, page
+  - `components.css`: Buttons, toggle, filters, card
+  - `pages.css`: Home, Quiz, Menu
+  - `utils.css`: Media queries + hover
 - **Git Workflow:** Descriptive commits (e.g., `feat: setup i18n with react-i18next`) to maintain a clean codebase.
 
 ---
@@ -157,13 +178,13 @@ This project is built with a modular and scalable approach from the start. Key d
 - [x] Implement accessibility standards.
 - [x] Enhance responsiveness with media queries in index.css for better mobile support (e.g., adjust cocktail-card layout).
 - [x] Add ability for the user to see cocktail details (e.g. ingredients, allergens) by tapping the drink card.
-- [] Assess potential file refactorings to improve readability, mantainability and preserve alignment with best practices.
+- [x] Assess potential file refactorings to improve readability, mantainability and preserve alignment with best practices.
+- [x] Deploy to Netlify for a live demo.
 - [] Polish some loose ends and testing in diferent devices.
-- [] Deploy to Netlify for a live demo.
 
 ---
 
 ## 📬 Contact
 
-For questions or feedback, reach out at **[email]**.  
-A live demo will be available at **[Netlify/Vercel link]** once deployed.
+For questions or feedback, reach out at **masdavidalonso@gmail.com**.  
+A live demo will be available at **https://drinkwisemenu.netlify.app/** once deployed.
