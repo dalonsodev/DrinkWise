@@ -1,21 +1,21 @@
 /* Layout */
 .site-wrapper {
-   margin: 0 auto;
    max-width: 1200px;
+   margin: 0 auto;
    min-height: 80vh;
 }
 
 .header {
-   align-items: center;
+   position: relative;
+   margin: 1em auto;
+   width: calc(100% - 1.5em);
    background-color: var(--surface);
+   padding: 0.5em;
    border-radius: var(--pill-radius);
-   box-shadow: var(--shadow);
    display: flex;
    justify-content: space-between;
-   margin: 1em auto;
-   padding: 0.5em;
-   position: relative;
-   width: calc(100% - 1.5em);
+   align-items: center;
+   box-shadow: var(--shadow);
    z-index: 10;
 }
 
@@ -23,8 +23,8 @@
    color: var(--text);
    font-size: 1.5rem;
    font-weight: bold;
-   letter-spacing: -1px;
    text-decoration: none;
+   letter-spacing: -1px;
 }
 
 .nav-links {
@@ -34,21 +34,21 @@
 
 .nav-link,
 .menu-filter-btn {
-   background: transparent;
-   border: 1px solid var(--text);
-   border-radius: var(--pill-radius);
    color: var(--text);
+   text-decoration: none;
    font-size: 0.9rem;
    padding: 0.25em 1em;
-   text-decoration: none;
+   border-radius: var(--pill-radius);
    transition: var(--transition);
+   background: transparent;
+   border: 1px solid var(--text);
 }
 
-.nav-link.active,
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
    background-color: var(--primary);
-   border-color: var(--primary);
    color: var(--text);
+   border-color: var(--primary);
 }
 
 .nav-language {
@@ -56,27 +56,14 @@
    gap: 0.5em;
 }
 
-.footer {
-   align-items: center;
-   background-color: var(--surface);
-   border-radius: var(--pill-radius);
-   box-shadow: var(--shadow);
-   display: flex;
-   justify-content: space-between;
-   margin-bottom: 1em;
-   margin-left: 0.75em;
-   padding: 1em;
-   text-align: center;
-   width: calc(100% - 1.5em);
-}
-
+/* Page Styles */
 .page {
    text-align: center;
 }
 
 .page-title {
-   color: var(--accent);
    font-size: 1.5rem;
+   color: var(--accent);
    margin-bottom: 1em;
 }
 
@@ -85,44 +72,23 @@
    margin-bottom: 1em;
 }
 
-.menu-header,
-.clear-filters-container {
-   padding: 0 1.5em;
-}
-
+/* MenuPage */
 .menu-header {
-   align-items: center;
    display: flex;
    justify-content: space-between;
+   align-items: center;
    margin-bottom: 0.5em;
-}
-
-.menu-title,
-.quiz-title {
-   font-size: 1.8rem;
-   font-weight: bold;
-   text-align: center;
 }
 
 .menu-title {
    font-size: 1.5rem;
+   font-weight: bold;
    margin: 0;
    text-align: left;
 }
 
-.menu-filters,
-.clear-filters-container {
-   padding-left: 1.5em;
-}
-
 .menu-filters {
    margin-top: 0.25em;
-}
-
-.menu-page,
-.quiz-page {
-   margin: 0 auto;
-   max-width: 600px;
 }
 
 .quiz-page:not(.results-active) {
@@ -141,9 +107,48 @@
    padding: 0 1.5em 1.5em;
 }
 
+.menu-header,
+.clear-filters-container {
+   padding: 0 1.5em;
+}
+
+.menu-page,
+.quiz-page {
+   max-width: 600px;
+   margin: 0 auto;
+}
+
+.menu-header,
+.menu-filters,
+.clear-filters-container {
+   padding-left: 1.5em;
+}
+
+.menu-title,
+.quiz-title {
+   font-size: 1.8rem;
+   font-weight: bold;
+   text-align: center;
+}
+
 .cocktail-list {
-   align-items: center;
    display: flex;
    flex-direction: column;
+   align-items: center;
    gap: 1.5em;
+}
+
+/* Footer */
+.footer {
+   background-color: var(--surface);
+   text-align: center;
+   padding: 1em;
+   box-shadow: var(--shadow);
+   margin-bottom: 1em;
+   margin-left: 0.75em;
+   width: calc(100% - 1.5em);
+   border-radius: var(--pill-radius);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }

@@ -1,33 +1,33 @@
 /* Variables & Reset */
 :root {
-   --accent: #FFB703;
-   --background: #1A1A1A;
-   --border-radius: 8px;
-   --font-main: 'Arial', sans-serif;
-   --pill-radius: 50px;
    --primary: #A10C40;
    --secondary: #FFB347;
-   --shadow: 0 4px 16px rgba(0,0,0,0.5);
+   --background: #1A1A1A;
    --surface: #232323;
    --text: #FFFFFF;
    --text-subtle: #CCCCCC;
+   --accent: #FFB703;
+   --border-radius: 8px;
+   --pill-radius: 50px;
+   --shadow: 0 4px 16px rgba(0,0,0,0.5);
    --transition: all 0.3s ease;
+   --font-main: 'Arial', sans-serif;
 }
 
-*, *::after, *::before {
-   box-sizing: border-box;
+*, *::before, *::after {
    margin: 0;
    padding: 0;
-}
-
-body {
-   background-color: var(--background);
-   color: var(--text);
-   font-family: var(--font-main);
-   font-size: 1rem;
-   line-height: 1.6;
+   box-sizing: border-box;
 }
 
 html {
    scrollbar-width: none;
+}
+
+body {
+   font-family: var(--font-main);
+   background-color: var(--background);
+   color: var(--text);
+   line-height: 1.6;
+   font-size: 1rem;
 }

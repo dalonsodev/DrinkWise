@@ -1,49 +1,49 @@
 /* Buttons */
 .btn-primary {
-   align-items: center;
-   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-   border: none;
-   border-radius: var(--pill-radius);
-   box-shadow: 0 4px 12px rgba(255, 69, 0, 0.5);
-   color: var(--text);
-   cursor: pointer;
-   display: inline-flex;
    font-size: 1rem;
-   font-weight: bold;
-   justify-content: center;
-   overflow: hidden;
    padding: 0.75em 2em;
-   position: relative;
-   text-decoration: none;
+   border-radius: var(--pill-radius);
+   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+   color: var(--text);
+   border: none;
+   cursor: pointer;
    transition: var(--transition);
+   font-weight: bold;
+   text-decoration: none;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 4px 12px rgba(255, 69, 0, 0.5);
+   position: relative;
+   overflow: hidden;
 }
 
 .btn-primary:hover {
-   background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
-   box-shadow: 0 6px 16px rgba(255, 69, 0, 0.7);
    transform: translateY(-3px);
+   box-shadow: 0 6px 16px rgba(255, 69, 0, 0.7);
+   background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
 }
 
 .btn-primary:active {
-   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
    transform: translateY(0);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:disabled {
-   cursor: default;
    opacity: 0.5;
+   cursor: default;
 }
 
 .btn-primary::after {
-   background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 40%);
-   content: '';
-   height: 200%;
-   left: -50%;
+   content: "";
    position: absolute;
    top: -50%;
+   left: -50%;
+   width: 200%;
+   height: 200%;
+   background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 40%);
    transform: scale(0);
    transition: transform 0.4s ease;
-   width: 200%;
 }
 
 .btn-primary:hover::after {
@@ -51,23 +51,23 @@
 }
 
 .btn-alt {
-   align-items: center;
-   background-clip: padding-box, border-box;
-   background-color: color-mix(in srgb, var(--background) 90%, transparent);
-   background-origin: border-box;
-   border: 3px solid var(--primary);
+   font-size: 1rem;
+   padding: 0.75em 2em;
    border-radius: var(--pill-radius);
    color: var(--primary);
-   cursor: pointer;
-   display: inline-flex;
-   font-size: 1rem;
    font-weight: bold;
-   justify-content: center;
-   overflow: hidden;
-   padding: 0.75em 2em;
-   position: relative;
    text-decoration: none;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
    transition: var(--transition);
+   position: relative;
+   overflow: hidden;
+   border: 3px solid var(--primary);
+   background-color: color-mix(in srgb, var(--background) 90%, transparent);
+   background-origin: border-box;
+   background-clip: padding-box, border-box;
 }
 
 .btn-alt:hover {
@@ -76,58 +76,58 @@
 }
 
 .btn-alt:active {
-   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
    color: var(--text);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .btn-alt:disabled {
-   cursor: default;
    opacity: 0.5;
+   cursor: default;
 }
 
 .btn-quiz {
-   align-items: center;
-   background: var(--surface);
-   border: 2px solid var(--accent);
-   border-radius: var(--pill-radius);
-   box-shadow: var(--shadow);
-   color: var(--text);
-   cursor: pointer;
-   display: inline-flex;
    font-size: 1rem;
-   font-weight: bold;
-   justify-content: center;
    padding: 0.75em 2em;
-   text-decoration: none;
+   border-radius: var(--pill-radius);
+   background: var(--surface);
+   color: var(--text);
+   border: 2px solid var(--accent);
+   cursor: pointer;
    transition: var(--transition);
+   font-weight: bold;
+   text-decoration: none;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: var(--shadow);
 }
 
 .btn-quiz.active {
    background: var(--accent);
-   border-color: var(--accent);
-   box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
    color: var(--background);
+   border-color: var(--accent);
    transform: translateY(-2px);
+   box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
 }
 
 .btn-quiz:active {
-   box-shadow: var(--shadow);
    transform: translateY(0);
+   box-shadow: var(--shadow);
 }
 
 .btn-language {
+   display: flex;
    align-items: center;
-   background: transparent;
+   justify-content: center;
+   width: 1.75em;
+   height: 1.75em;
+   font-size: 1rem;
+   padding: 1em;
    border: 1px solid var(--text-subtle);
    border-radius: 50%;
+   background: transparent;
    cursor: pointer;
-   display: flex;
-   font-size: 1rem;
-   height: 1.75em;
-   justify-content: center;
-   padding: 1em;
    transition: border-color 0.3s ease;
-   width: 1.75em;
 }
 
 .btn-language:hover {
@@ -138,19 +138,19 @@
    transform: translateY(0);
 }
 
-/* Filters & Toggle */
+/* Menu Filters */
 .menu-filter-alcohol {
-   align-items: center;
    display: flex;
+   align-items: center;
 }
 
 .toggle-label {
+   display: flex;
    align-items: center;
+   gap: 0.75em;
+   font-size: 1rem;
    color: var(--text);
    cursor: pointer;
-   display: flex;
-   font-size: 1rem;
-   gap: 0.75em;
 }
 
 .toggle-text {
@@ -162,25 +162,25 @@
 }
 
 .toggle-slider {
+   position: relative;
+   width: 4em;
+   height: 2em;
    background-color: var(--surface);
    border: 2px solid var(--accent);
    border-radius: var(--pill-radius);
-   height: 2em;
-   position: relative;
    transition: var(--transition);
-   width: 4em;
 }
 
 .toggle-slider::before {
+   content: "";
+   position: absolute;
+   width: 1.6em;
+   height: 1.6em;
+   top: 0.05em;
+   left: 0.15em;
    background-color: var(--text);
    border-radius: 50%;
-   content: '';
-   height: 1.6em;
-   left: 0.15em;
-   position: absolute;
-   top: 0.05em;
    transition: var(--transition);
-   width: 1.6em;
 }
 
 .toggle-input:checked + .toggle-slider {
@@ -190,53 +190,53 @@
 }
 
 .toggle-input:checked + .toggle-slider::before {
-   background-color: var(--background);
    transform: translateX(2em);
+   background-color: var(--background);
 }
 
 .menu-filter {
-   align-items: center;
    display: flex;
+   align-items: center;
    gap: 0.5em;
-   margin-bottom: 0.5em;
    overflow-x: auto;
    padding-bottom: 0.5em;
+   margin-bottom: 0.5em;
    scrollbar-width: none;
 }
 
 .menu-filter-btn {
-   background: transparent;
-   border: 2px solid var(--surface);
-   border-radius: var(--pill-radius);
-   color: var(--text-subtle);
-   letter-spacing: 1px;
    padding: 0.5em 1.5em;
-   transition: var(--transition);
+   border: 2px solid var(--surface);
+   background: transparent;
+   color: var(--text-subtle);
    white-space: nowrap;
+   letter-spacing: 1px;
+   border-radius: var(--pill-radius);
+   transition: var(--transition);
 }
 
 .menu-filter-btn.active {
    background-color: var(--background);
-   border-color: var(--accent);
    color: var(--text);
+   border-color: var(--accent);
 }
 
 .clear-filters-container {
-   align-items: center;
    display: flex;
-   gap: 1em;
    justify-content: center;
+   align-items: center;
+   gap: 1em;
    margin: 1.2em 0 0.5em 0;
    padding: 0;
 }
 
 .cocktail-count {
-   align-items: center;
-   color: var(--text-subtle);
-   display: inline-flex;
    font-size: 1rem;
-   gap: 0.2em;
+   color: var(--text-subtle);
    opacity: 0.7;
+   display: inline-flex;
+   align-items: center;
+   gap: 0.2em;
 }
 
 .cocktail-count-results {
@@ -245,8 +245,8 @@
 }
 
 .cocktail-count-number {
-   color: var(--accent);
    font-size: 1.2rem;
+   color: var(--accent);
    font-weight: bold;
 }
 
@@ -255,52 +255,52 @@
 }
 
 .clear-filters-btn {
-   background: transparent;
+   font-size: 0.8rem;
+   padding: 0.3em 0.8em;
+   margin: 0;
    border: 1px solid var(--text-subtle);
    border-radius: var(--pill-radius);
+   background: transparent;
    color: var(--text-subtle);
-   cursor: pointer;
-   font-size: 0.8rem;
-   margin: 0;
    opacity: 0.6;
-   padding: 0.3em 0.8em;
+   cursor: pointer;
    transition: var(--transition);
 }
 
 .menu-filter-label {
-   font-weight: bold;
    white-space: nowrap;
+   font-weight: bold;
 }
 
 /* Cocktail Cards */
 .cocktail-card {
-   background: var(--surface);
-   border: 6px solid var(--surface);
-   border-radius: 2rem;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-   cursor: pointer;
    display: flex;
    flex-direction: column;
-   margin-bottom: 0.5em;
+   border: 6px solid var(--surface);
+   border-radius: 2rem;
    overflow: hidden;
+   background: var(--surface);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
    transition: transform 0.2s ease, box-shadow 0.2s ease;
+   margin-bottom: 0.5em;
 }
 
 .cocktail-image-wrapper {
-   aspect-ratio: 3 / 4.5;
-   border-radius: 2rem;
-   overflow: hidden;
    position: relative;
    width: 100%;
+   aspect-ratio: 3 / 4.5;
+   overflow: hidden;
+   border-radius: 2rem;
 }
 
 .cocktail-image {
-   display: block;
+   width: 100%;
    height: 100%;
    object-fit: cover;
    object-position: center 100%;
+   display: block;
    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-   width: 100%;
 }
 
 .cocktail-card.expanded .cocktail-image {
@@ -309,20 +309,20 @@
 }
 
 .cocktail-overlay {
-   -webkit-backdrop-filter: blur(8px);
-   backdrop-filter: blur(9px);
-   background: rgba(0, 0, 0, 0.4);
+   position: absolute;
    bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 48%;
+   padding: 1em;
+   background: rgba(0, 0, 0, 0.4);
+   mask: linear-gradient(#0000, #000f 20%);
+   backdrop-filter: blur(9px);
+   -webkit-backdrop-filter: blur(8px);
    display: flex;
    flex-direction: column;
-   height: 48%;
    justify-content: flex-end;
-   left: 0;
-   mask: linear-gradient(#0000, #000f 20%);
-   padding: 1em;
-   position: absolute;
    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-   width: 100%;
 }
 
 .cocktail-card.expanded .cocktail-overlay {
@@ -332,10 +332,10 @@
 }
 
 .cocktail-heading {
-   align-items: center;
    display: flex;
    flex-direction: column;
    gap: 0.25em;
+   align-items: center;
    margin: 0 0 0.5em 0;
    transition: gap 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -345,9 +345,9 @@
 }
 
 .cocktail-name {
-   color: var(--text);
    font-size: 1.8rem;
    font-weight: 600;
+   color: var(--text);
    text-align: left;
    white-space: nowrap;
 }
@@ -357,43 +357,36 @@
 }
 
 .cocktail-category {
+   display: flex;
+   justify-content: center;
    align-items: center;
-   background-color: #5b5b5b45;
    border: 1px solid var(--accent);
    border-radius: var(--pill-radius);
-   display: flex;
-   font-size: 0.75rem;
-   font-style: normal;
-   justify-content: center;
-   letter-spacing: 0.75px;
-   margin-bottom: 0.5em;
-   max-height: 2em;
-   opacity: 1;
    padding: 0.1em 1em;
-   transition: 
-      opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-      max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-      padding 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-      margin-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+   font-style: normal;
+   font-size: 0.75rem;
+   letter-spacing: 0.75px;
    white-space: nowrap;
+   background-color: #5b5b5b45;
+   margin-bottom: 0.5em;
+   opacity: 1;
+   max-height: 2em;
+   transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, padding 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, margin-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 
 .cocktail-card.expanded .cocktail-category {
-   margin-bottom: 0;
-   max-height: 0;
    opacity: 0;
-   padding: 0;
+   max-height: 0;
+   padding-top: 0;
+   padding-bottom: 0;
+   margin-bottom: 0;
    pointer-events: none;
-   transition: 
-      opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-      max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-      padding 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-      margin-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cocktail-description {
-   color: var(--text-subtle);
    font-size: 0.9rem;
+   color: var(--text-subtle);
    margin: 0;
    text-align: center;
    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -406,34 +399,24 @@
 .cocktail-content {
    max-height: 0;
    opacity: 0;
+   transform: translateY(10px);
    overflow: hidden;
    padding: 0 1.25em;
    text-align: center;
-   transform: translateY(10px);
-   transition:
-      max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-      opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-      padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-      padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cocktail-card.expanded .cocktail-content {
    max-height: 300px;
    opacity: 1;
-   padding-top: 0.5em;
    transform: translateY(0);
-   transition:
-      max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-      opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-      padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
-      padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+   padding-top: 0.5em;
+   transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s, padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 
 .cocktail-details {
-   color: var(--text-subtle);
    font-size: 0.9rem;
+   color: var(--text-subtle);
 }
 
 .cocktail-details:first-of-type {
@@ -441,24 +424,24 @@
 }
 
 .cocktail-details-label {
-   color: var(--text);
    font-weight: bold;
+   color: var(--text);
 }
 
 /* Carousel */
 .cocktail-list.carousel {
-   -ms-overflow-style: none;
-   -webkit-overflow-scrolling: touch;
    display: grid;
-   gap: 5vw;
    grid-auto-columns: 80vw;
    grid-auto-flow: column;
-   height: calc(100vh - 180px);
+   gap: 5vw;
    overflow-x: auto;
    overflow-y: hidden;
-   padding: 1em 10vw;
+   height: calc(100vh - 180px);
+   padding: 1em 10vw 1em 10vw;
    scroll-snap-type: x mandatory;
    scrollbar-width: none;
+   -ms-overflow-style: none;
+   -webkit-overflow-scrolling: touch;
 }
 
 .cocktail-list.carousel::-webkit-scrollbar {
@@ -466,44 +449,44 @@
 }
 
 .cocktail-card-wrapper.carousel-item {
-   height: 90vh;
    scroll-snap-align: center;
+   height: 90vh;
 }
 
 /* NotFound */
 .not-found-wrapper {
-   align-items: center;
-   align-self: center;
    display: flex;
    flex-direction: column;
+   align-items: center;
    justify-content: center;
-   justify-self: center;
-   margin: 1em 0;
-   max-width: 80%;
-   min-height: 400px;
-   padding: 1em;
    text-align: center;
+   margin: 1em 0;
+   padding: 1em;
+   min-height: 400px;
+   max-width: 80%;
+   justify-self: center;
+   align-self: center;
 }
 
 .not-found-icon {
-   color: var(--text-subtle);
    font-size: 5rem;
-   margin-bottom: 0.25em;
+   color: var(--text-subtle);
    opacity: 0.5;
+   margin-bottom: 0.25em;
 }
 
 .not-found-wrapper p {
-   color: var(--text-subtle);
-   font-size: 1rem;
-   font-weight: bold;
    opacity: 0.7;
+   font-size: 1rem;
+   color: var(--text-subtle);
+   font-weight: bold;
 }
 
 /* Quiz Navigation */
 .quiz-page .menu-filter-btn.active {
    background-color: var(--background);
-   border-color: var(--accent);
    color: var(--text);
+   border-color: var(--accent);
 }
 
 .quiz-navigation {
@@ -514,130 +497,27 @@
 }
 
 .quiz-navigation button:disabled {
-   border-color: var(--surface);
-   color: var(--text-subtle);
-   cursor: not-allowed;
    opacity: 0.5;
+   cursor: not-allowed;
+   color: var(--text-subtle);
+   border-color: var(--surface);
 }
 
 .quiz-prev-btn {
-   align-items: center;
-   align-self: flex-start;
    background: none;
    border: none;
    color: var(--text-subtle);
-   cursor: pointer;
-   display: inline-flex;
    font-size: 0.9rem;
-   gap: 0.25em;
+   cursor: pointer;
    padding: 0.5em 0;
-   text-decoration: none;
+   display: inline-flex;
+   align-items: center;
+   gap: 0.25em;
    transition: color 0.2s ease;
+   text-decoration: none;
+   align-self: flex-start;
 }
 
 .quiz-prev-btn:active {
    color: var(--accent);
-}
-
-/* Focus & Accessibility */
-*:focus-visible:not(.hero-links-wrapper .btn-primary, .hero-links-wrapper .btn-alt) {
-   outline: none !important;
-   position: relative;
-   z-index: 1;
-}
-
-.hero-links-wrapper .btn-primary:focus-visible,
-.hero-links-wrapper .btn-alt:focus-visible {
-   outline: 3px solid var(--primary);
-   outline-offset: 4px;
-}
-
-*:focus-visible::after {
-   border: 2px solid var(--primary);
-   border-radius: var(--pill-radius);
-   bottom: -4px;
-   content: '';
-   left: -4px;
-   pointer-events: none;
-   position: absolute;
-   right: -4px;
-   top: -4px;
-   transition: all 0.2s ease;
-   z-index: 3;
-}
-
-.btn-language:focus-visible::after,
-.toggle-input:focus-visible + .toggle-slider::after {
-   bottom: -6px;
-   left: -6px;
-   right: -6px;
-   top: -6px;
-}
-
-.cocktail-card:focus-visible {
-   border-radius: 2rem !important;
-   overflow: visible !important;
-}
-
-.cocktail-list:focus-visible::after {
-   border: none;
-}
-
-.cocktail-card:focus-visible::after {
-   border-radius: 2.5rem;
-   bottom: -10px;
-   left: -10px;
-   right: -10px;
-   top: -10px;
-}
-
-.cocktail-card-wrapper:focus-visible::after {
-   display: none;
-}
-
-.skip-link:focus-visible::after,
-.sr-only:focus-visible::after {
-   border-radius: var(--pill-radius);
-   bottom: -2px;
-   left: -2px;
-   right: -2px;
-   top: -2px;
-}
-
-.menu-filter-btn:focus-visible::after {
-   bottom: -2px;
-   left: -2px;
-   right: -2px;
-   top: -2px;
-}
-
-.sr-only {
-   border: 0;
-   clip: rect(0, 0, 0, 0);
-   height: 1px;
-   margin: -1px;
-   overflow: hidden;
-   padding: 0;
-   position: absolute;
-   white-space: nowrap;
-   width: 1px;
-}
-
-.skip-link {
-   background: var(--primary);
-   border-radius: var(--pill-radius);
-   color: white;
-   font-weight: bold;
-   left: -1em;
-   letter-spacing: 1px;
-   padding: 0.5em 2em 0.5em 2.5em;
-   position: absolute;
-   top: -3em;
-   transition: top 0.2s ease;
-   z-index: 100;
-}
-
-.skip-link:focus {
-   outline: 3px solid white;
-   top: -0.25em;
 }
