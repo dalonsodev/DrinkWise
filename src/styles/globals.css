@@ -1,109 +1,33 @@
 /* Variables & Reset */
 :root {
+   --accent: #FFB703;
+   --background: #1A1A1A;
+   --border-radius: 8px;
+   --font-main: 'Arial', sans-serif;
+   --pill-radius: 50px;
    --primary: #A10C40;
    --secondary: #FFB347;
-   --background: #1A1A1A;
+   --shadow: 0 4px 16px rgba(0,0,0,0.5);
    --surface: #232323;
    --text: #FFFFFF;
    --text-subtle: #CCCCCC;
-   --accent: #FFB703;
-   --border-radius: 8px;
-   --pill-radius: 50px;
-   --shadow: 0 4px 16px rgba(0,0,0,0.5);
    --transition: all 0.3s ease;
-   --font-main: 'Arial', sans-serif;
 }
 
-*, *::before, *::after {
+*, *::after, *::before {
+   box-sizing: border-box;
    margin: 0;
    padding: 0;
-   box-sizing: border-box;
+}
+
+body {
+   background-color: var(--background);
+   color: var(--text);
+   font-family: var(--font-main);
+   font-size: 1rem;
+   line-height: 1.6;
 }
 
 html {
    scrollbar-width: none;
-}
-
-body {
-   font-family: var(--font-main);
-   background-color: var(--background);
-   color: var(--text);
-   line-height: 1.6;
-   font-size: 1rem;
-}
-
-/* Utils: Focus */
-*:focus-visible:not(.hero-links-wrapper .btn-primary, 
-.hero-links-wrapper .btn-alt) {
-   position: relative;
-   z-index: 1;
-   outline: none !important;
-}
-
-*:focus-visible::after {
-   content: "";
-   position: absolute;
-   top: -0.25em;
-   left: -0.25em;
-   right: -0.25em;
-   bottom: -0.25em;
-   border: 2px solid var(--primary);
-   border-radius: var(--pill-radius);
-   pointer-events: none;
-   z-index: 3;
-   transition: var(--transition);
-}
-
-.btn-language:focus-visible::after,
-.toggle-input:focus-visible + .toggle-slider::after {
-   top: -0.375em;
-   left: -0.375em;
-   right: -0.375em;
-   bottom: -0.375em;
-}
-
-.cocktail-card:focus-visible::after {
-   top: -0.625em;
-   left: -0.625em;
-   right: -0.625em;
-   bottom: -0.625em;
-   border-radius: 2.5rem;
-}
-
-.menu-filter-btn:focus-visible::after {
-   top: -0.125em;
-   left: -0.125em;
-   right: -0.125em;
-   bottom: -0.125em;
-}
-
-.sr-only {
-   position: absolute;
-   width: 1px;
-   height: 1px;
-   padding: 0;
-   margin: -1px;
-   overflow: hidden;
-   clip: rect(0, 0, 0, 0);
-   white-space: nowrap;
-   border: 0;
-}
-
-.skip-link {
-   position: absolute;
-   top: -3em;
-   left: -1em;
-   background: var(--primary);
-   color: white;
-   padding: 0.5em 2em 0.5em 2.5em;
-   border-radius: var(--pill-radius);
-   font-weight: bold;
-   z-index: 100;
-   transition: top 0.2s ease;
-   letter-spacing: 1px;
-}
-
-.skip-link:focus {
-   top: -0.25em;
-   outline: 3px solid white;
 }
