@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { useTranslation } from "react-i18next"
 import useClickOutside from "../../../hooks/useClickOutside"
+import DrinkCardHeader from "./DrinkCardHeader"
 
 export default function DrinkCard({ cocktail, isActive, onToggle }) {
    const { t } = useTranslation()
@@ -55,13 +56,18 @@ export default function DrinkCard({ cocktail, isActive, onToggle }) {
             />
             <div className="cocktail-overlay">
                <div className="cocktail-heading">
-                  <h2 className="cocktail-name">{cocktail.name}</h2>
+                  {/* <h2 className="cocktail-name">{cocktail.name}</h2>
 
                   {!isExpanded && (
                      <i className="cocktail-category">
                         {t(`category.${cocktail.name}`)}
                      </i>
-                  )}
+                  )} */}
+                  <DrinkCardHeader
+                     isExpanded={isExpanded}
+                     name={cocktail.name}
+                     t={t}
+                  />
 
                   <p className="cocktail-description">
                      {t(`description.${cocktail.name}`) || cocktail.description}
