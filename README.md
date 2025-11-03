@@ -1,4 +1,4 @@
-# DrinkWise Menu 🍹
+# SipMatch Menu 🍹
 
 A **React-based web application** designed for bars in Spain to showcase an interactive drink menu. The app allows users to browse cocktails, filter by category, and receive personalized recommendations through a concise quiz. Built with a focus on **responsiveness** and **multilingual support** (Spanish and English) to cater to both local and international customers.
 
@@ -92,7 +92,7 @@ src/
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/dalonsodev/drinkwise-menu.git
+    git clone https://github.com/dalonsodev/sip-match-menu.git
     ```
 
 2. **Install dependencies:**
@@ -189,4 +189,4 @@ This project is built with a modular and scalable approach from the start. Key d
 ## 📬 Contact
 
 For questions or feedback, reach out at **masdavidalonso@gmail.com**.  
-A live demo will be available at **https://drinkwisemenu.netlify.app/** once deployed.
+A live demo will be available at **https://sipmatch.netlify.app/** once deployed.
