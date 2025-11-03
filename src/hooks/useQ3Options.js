@@ -20,8 +20,7 @@ export default function useQ3Options(
       let validSpirits = Object.keys(spiritsCounts)
          .filter(spirit => spiritsCounts[spirit] >= 1)
 
-      return validSpirits
-         .sort((a, b) => {
+      return validSpirits.sort((a, b) => {
             if (a === "Others") return 1
             if (b === "Others") return -1
             return a.localeCompare(b)

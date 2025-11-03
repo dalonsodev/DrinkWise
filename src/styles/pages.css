@@ -138,9 +138,12 @@
 }
 
 .progress-fill {
+   position: relative;
    height: 100%;
    background-color: var(--accent, #4caf50);
    transition: width 0.3s ease;
+   border-radius: var(--pill-radius);
+   overflow: visible;
 }
 
 .question-container {

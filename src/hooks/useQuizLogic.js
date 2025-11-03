@@ -49,7 +49,9 @@ export default function useQuizLogic() {
 
          const question = currentQuestions[step]
          if (question.isMulti) {
-            const current = Array.isArray(newAnswers[step]) ? newAnswers[step] : []
+            const current = Array.isArray(newAnswers[step]) 
+               ? newAnswers[step] 
+               : []
 
             newAnswers[step] = current.includes(selectedOption)
                ? current.filter(opt => opt !== selectedOption)

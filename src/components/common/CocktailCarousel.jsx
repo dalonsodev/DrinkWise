@@ -1,6 +1,6 @@
+import { useTranslation } from "react-i18next"
 import useActiveCard from "../../hooks/useActiveCard"
 import DrinkCard from "../features/drinkcard/DrinkCard"
-import { useTranslation } from "react-i18next"
 
 export default function CocktailCarousel({ cocktails }) {
    const { t } = useTranslation()
