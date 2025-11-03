@@ -1,5 +1,5 @@
 {
-   "title": "Bienvenidos a DrinkWise Menu",
+   "title": "Bienvenidos a SipMatch Menu",
    "welcome": "Encuentra tu cóctel perfecto",
    "welcome.description": "Explora nuestro menú de cócteles o haz nuestro test para encontrar la bebida ideal para ti.",
    "button": {
@@ -69,7 +69,7 @@
       "description": "Detalles de la bebida"
    },
    "footer": {
-      "text-copy": "© 2025 DrinkWise Menu.",
+      "text-copy": "© 2025 SipMatch Menu.",
       "text-other": "Proyecto Portafolio"
    },
    "category": {
