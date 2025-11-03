@@ -13,7 +13,6 @@ export default function App() {
                <Route index element={<HomePage />} />
                <Route path="quiz" element={<Quiz />} />
                <Route path="menu" element={<MenuPage />} />
-               <Route path="menu/:id" element={<DrinkCard />} />
             </Route>
          </Routes>
       </BrowserRouter>
