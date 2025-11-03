@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function useDrinkFilters(deactivateCard) {
+export default function useDrinkFiltering(deactivateCard) {
    const [alcoholFilter, setAlcoholFilter] = useState(true)
    const [categoryFilter, setCategoryFilter] = useState("")
    const [spiritFilter, setSpiritFilter] = useState("")

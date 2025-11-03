@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 import useQuizState from "./useQuizState"
 import useAnswerMapping from "./useAnswerMapping"
 import useQuizAutoAdvance from "./useQuizAutoAdvance"
-import useCocktailFiltering from "./useCocktailFiltering"
+import useQuizFiltering from "./useQuizFiltering"
 import useQ3Options from "./useQ3Options"
 
 export default function useQuizLogic() {
@@ -14,7 +14,7 @@ export default function useQuizLogic() {
    const { 
       getFilteredAfterQ2, 
       filterCocktails 
-   } = useCocktailFiltering(state.answers, state.quizAlcohol, standardizeAnswer)
+   } = useQuizFiltering(state.answers, state.quizAlcohol, standardizeAnswer)
    
    const getQ3Options = useQ3Options(
       state.currentStep, 

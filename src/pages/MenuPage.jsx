@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next"
 import MenuHeader from "../components/features/menu/MenuHeader"
 import MenuContent from "../components/features/menu/MenuContent"
 import cocktails from "../data/cocktails.json"
-import useDrinkFilters from "../hooks/useDrinkFilters"
+import useDrinkFiltering from "../hooks/useDrinkFiltering"
 import useActiveCard from "../hooks/useActiveCard"
 
 export default function Menu() {
@@ -17,7 +17,7 @@ export default function Menu() {
       handleCategoryFilterChange,
       handleSpiritFilterChange,
       handleClearFilters
-   } = useDrinkFilters(activeCard.deactivateCard)
+   } = useDrinkFiltering(activeCard.deactivateCard)
 
    const drinksToDisplay = cocktails.filter(cocktail => {
       const matchesAlcohol = cocktail.hasAlcohol === alcoholFilter

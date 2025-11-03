@@ -1,7 +1,7 @@
 import { useCallback } from "react"
 import cocktails from "../data/cocktails.json"
 
-export default function useCocktailFiltering(answers, quizAlcohol, standardizeAnswer) {
+export default function useQuizFiltering(answers, quizAlcohol, standardizeAnswer) {
    const getFilteredAfterQ2 = useCallback(() => {
       if (answers[0] === null || answers[1] === null) return []
       const q1 = standardizeAnswer(answers[0])
