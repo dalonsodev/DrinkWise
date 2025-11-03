@@ -12,7 +12,8 @@ export default function MenuContent({
    handleAlcoholFilterChange,
    handleCategoryFilterChange, 
    handleSpiritFilterChange,
-   t
+   t,
+   activeCard
 }) {
    return (
       <>
@@ -36,7 +37,10 @@ export default function MenuContent({
             tabIndex="-1"
          >
             {hasResults 
-               ? <CocktailCarousel cocktails={drinks} /> 
+               ? <CocktailCarousel 
+                  cocktails={drinks} 
+                  activeCard={activeCard} 
+               /> 
                : <NotFound />
             }
          </div>

@@ -1,8 +1,10 @@
+import useActiveCard from "../../../hooks/useActiveCard"
 import CocktailCarousel from "../../common/CocktailCarousel"
 import NotFound from "../../common/NotFound"
 
 export default function QuizResults({ cocktails, t }) {
    const hasResults = cocktails.length > 0
+   const activeCard = useActiveCard()
 
    return (
       <div className="results-container">
@@ -19,7 +21,7 @@ export default function QuizResults({ cocktails, t }) {
             aria-roledescription={t("a11y.carouselRoleDesc")}
          >
             {hasResults 
-               ? <CocktailCarousel cocktails={cocktails} /> 
+               ? <CocktailCarousel cocktails={cocktails} activeCard={activeCard} /> 
                : <NotFound />
             }
          </div>

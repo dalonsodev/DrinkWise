@@ -3,9 +3,12 @@ import MenuHeader from "../components/features/menu/MenuHeader"
 import MenuContent from "../components/features/menu/MenuContent"
 import cocktails from "../data/cocktails.json"
 import useDrinkFilters from "../hooks/useDrinkFilters"
+import useActiveCard from "../hooks/useActiveCard"
 
 export default function Menu() {
    const { t } = useTranslation()
+   const activeCard = useActiveCard()
+
    const {
       alcoholFilter,
       categoryFilter,
@@ -14,7 +17,7 @@ export default function Menu() {
       handleCategoryFilterChange,
       handleSpiritFilterChange,
       handleClearFilters
-   } = useDrinkFilters()
+   } = useDrinkFilters(activeCard.deactivateCard)
 
    const drinksToDisplay = cocktails.filter(cocktail => {
       const matchesAlcohol = cocktail.hasAlcohol === alcoholFilter
@@ -54,6 +57,7 @@ export default function Menu() {
             handleAlcoholFilterChange={handleAlcoholFilterChange}
             handleSpiritFilterChange={handleSpiritFilterChange}
             t={t}
+            activeCard={activeCard}
          />
       </section>
   );
