@@ -119,6 +119,12 @@ This project is buit with an accessible aproach, copliant to WCAG standards. Key
 
 ---
 
+### SEO on-page
+- `public/robots.txt` → `Allow: /`
+- `public/sitemap.xml` → Home + Quiz + Menu (2025-11-04)
+
+---
+
 ## 🔄 Development Process
 
 This project is built with a modular and scalable approach from the start. Key decisions include:
