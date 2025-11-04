@@ -109,7 +109,7 @@ src/
 
 ## Accessibility (WCAG 2.1 AA)
 
-This project is buit with an accessible aproach, copliant to WCAG standards. Key accessibility features include:
+This project is buit with an accessible aproach, compliant to WCAG standards. Key accessibility features include:
 
 - **Keyboard Navigation:** Every control focusable and operable
 - **Screen Readers:** Clear ARIA labels ("aria-label", "aria-pressed", "role='group'")
@@ -120,8 +120,13 @@ This project is buit with an accessible aproach, copliant to WCAG standards. Key
 ---
 
 ### SEO on-page
+
+A simple initial on-page optimisation was made, including:
+
 - `public/robots.txt` → `Allow: /`
 - `public/sitemap.xml` → Home + Quiz + Menu (2025-11-04)
+- OG image → sipmatch-cocktail-quiz-og.jpg (1200×630 px)
+- Lighthouse incognito → 100/100
 
 ---
 
